@@ -1,9 +1,13 @@
 # Claude Skill Hub
 
+[![Browse the catalog](https://img.shields.io/badge/Browse_the_catalog-jeonck.github.io%2Fskill--hub-c2410c?style=for-the-badge)](https://jeonck.github.io/skill-hub)
+
+[![Skills](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fjeonck.github.io%2Fskill-hub%2Fcatalog.json&query=%24.count&label=skills&color=1b1917)](https://jeonck.github.io/skill-hub)
+[![Deploy](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml)
+[![License](https://img.shields.io/badge/license-MIT-1b1917)](LICENSE)
+
 A public catalog of installable [Claude](https://claude.com/claude-code) skills — site
 builders, content pipelines, design systems, video production and dev tooling.
-
-**→ [jeonck.github.io/skill-hub](https://jeonck.github.io/skill-hub)**
 
 Every skill on the site has a copy-paste install command. Nothing to sign up for, no
 package manager.

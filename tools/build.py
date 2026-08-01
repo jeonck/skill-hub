@@ -230,12 +230,15 @@ def human_size(n: int) -> str:
 
 def collect(meta: dict) -> list[dict]:
     skills = []
+    broken = []
     for d in sorted(SKILLS_DIR.iterdir()):
         if not d.is_dir() or d.name.startswith("."):
             continue
+        # Case-sensitive on purpose: macOS resolves skill.md to SKILL.md but the
+        # Linux CI runner does not, which silently drops the skill from the site.
         skill_md = d / "SKILL.md"
-        if not skill_md.exists():
-            print(f"  ! {d.name}: no SKILL.md, skipped")
+        if "SKILL.md" not in {p.name for p in d.iterdir()}:
+            broken.append(d.name)
             continue
         fm, body = parse_frontmatter(skill_md.read_text(encoding="utf-8"))
         m = meta["skills"].get(d.name, {})
@@ -262,6 +265,11 @@ def collect(meta: dict) -> list[dict]:
                 "body_html": rewrite_relative_links(markdown_to_html(body), d.name),
                 "zip": f"dist/{d.name}.zip",
             }
+        )
+    if broken:
+        raise SystemExit(
+            "error: these skill directories have no SKILL.md (exact case):\n  "
+            + "\n  ".join(broken)
         )
     return skills
 
