@@ -1,8 +1,8 @@
 # Claude Skill Hub
 
-[![Browse the catalog](https://img.shields.io/badge/Browse_the_catalog-jeonck.github.io%2Fskill--hub-c2410c?style=for-the-badge)](https://jeonck.github.io/skill-hub)
+[![Browse the catalog](https://img.shields.io/badge/Browse_the_catalog-skill.metacog.co.kr-c2410c?style=for-the-badge)](https://skill.metacog.co.kr)
 
-[![Skills](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fjeonck.github.io%2Fskill-hub%2Fcatalog.json&query=%24.count&label=skills&color=1b1917)](https://jeonck.github.io/skill-hub)
+[![Skills](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fskill.metacog.co.kr%2Fcatalog.json&query=%24.count&label=skills&color=1b1917)](https://skill.metacog.co.kr)
 [![Deploy](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml)
 [![License](https://img.shields.io/badge/license-MIT-1b1917)](LICENSE)
 
@@ -15,11 +15,11 @@ package manager.
 ## Install one skill
 
 ```bash
-mkdir -p ~/.claude/skills && curl -fsSL https://jeonck.github.io/skill-hub/dist/hugo-blog-builder.zip \
+mkdir -p ~/.claude/skills && curl -fsSL https://skill.metacog.co.kr/dist/hugo-blog-builder.zip \
   -o /tmp/skill.zip && unzip -oq /tmp/skill.zip -d ~/.claude/skills
 ```
 
-Swap `hugo-blog-builder` for any slug in the [catalog](https://jeonck.github.io/skill-hub).
+Swap `hugo-blog-builder` for any slug in the [catalog](https://skill.metacog.co.kr).
 
 ## Install all of them
 
@@ -68,7 +68,7 @@ No dependencies beyond Python 3.9+.
 
 ## Machine-readable catalog
 
-[`catalog.json`](https://jeonck.github.io/skill-hub/catalog.json) lists every skill with
+[`catalog.json`](https://skill.metacog.co.kr/catalog.json) lists every skill with
 its slug, summary, category, tags, size and zip path.
 
 ## License and attribution

@@ -32,7 +32,11 @@ SITE = {
     "tagline": "A public catalog of installable Claude skills.",
     "owner": "jeonck",
     "repo": "jeonck/skill-hub",
-    "base_url": "https://jeonck.github.io/skill-hub",
+    "base_url": "https://skill.metacog.co.kr",
+    # Written to _site/CNAME on every build. Pages deploys from a workflow
+    # artifact, and a deploy whose artifact has no CNAME clears the custom
+    # domain -- so this file has to ship with the site, not just sit in the repo.
+    "custom_domain": "skill.metacog.co.kr",
 }
 
 EXCLUDE_FROM_ZIP = {".git", ".DS_Store", "node_modules", "__pycache__", ".pytest_cache"}
@@ -526,6 +530,8 @@ def main() -> None:
         encoding="utf-8",
     )
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    if SITE.get("custom_domain"):
+        (OUT / "CNAME").write_text(SITE["custom_domain"] + "\n", encoding="utf-8")
 
     print(f"built {len(skills)} skills -> {OUT}")
 
