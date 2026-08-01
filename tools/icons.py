@@ -157,6 +157,19 @@ CATEGORY_SLUGS: dict[str, str] = {
     "Research": "research",
 }
 
+# Tint per category. Kept mid-tone on purpose: these same values are baked into
+# the standalone SVGs the README embeds, which sit on either a white or a dark
+# GitHub background with no way to react to the theme.
+CATEGORY_COLORS: dict[str, str] = {
+    "design": "#8b5cf6",
+    "content": "#d97706",
+    "docs": "#3b82f6",
+    "pipeline": "#14b8a6",
+    "media": "#f43f5e",
+    "dev": "#6366f1",
+    "research": "#22c55e",
+}
+
 FALLBACK_ICON = "puzzle"
 
 
@@ -166,6 +179,17 @@ def icon_svg(key: str, size: int = 22, extra: str = "") -> str:
         f'<svg class="icon" width="{size}" height="{size}" viewBox="0 0 24 24" '
         f'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" '
         f'stroke-linejoin="round" aria-hidden="true"{extra}>{inner}</svg>'
+    )
+
+
+def icon_file_svg(key: str, color: str) -> str:
+    """A self-contained .svg file for the README. `currentColor` has nothing to
+    inherit from inside an <img>, so the stroke colour is written in."""
+    inner = ICONS.get(key) or ICONS[FALLBACK_ICON]
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" '
+        f'viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="1.7" '
+        f'stroke-linecap="round" stroke-linejoin="round">{inner}</svg>\n'
     )
 
 

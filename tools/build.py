@@ -27,10 +27,12 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from icons import (  # noqa: E402
+    CATEGORY_COLORS,
     CATEGORY_SLUGS,
     FALLBACK_ICON,
     SKILL_ICONS,
     icon_data_uri,
+    icon_file_svg,
     icon_svg,
 )
 
@@ -534,6 +536,56 @@ def build_zip(slug: str, dest: Path) -> None:
 
 # --------------------------------------------------------------------------
 
+README_START = "<!-- icons:start -->"
+README_END = "<!-- icons:end -->"
+
+
+def write_repo_icons(skills: list[dict]) -> None:
+    """Emit assets/icons/<slug>.svg (committed, referenced by the README) and
+    regenerate the README's icon table between its marker comments."""
+    icon_dir = ROOT / "assets" / "icons"
+    icon_dir.mkdir(parents=True, exist_ok=True)
+
+    keep = set()
+    for s in skills:
+        color = CATEGORY_COLORS.get(s["cat_slug"], "#6366f1")
+        (icon_dir / f"{s['slug']}.svg").write_text(
+            icon_file_svg(s["icon"], color), encoding="utf-8"
+        )
+        keep.add(f"{s['slug']}.svg")
+    for stale in icon_dir.glob("*.svg"):
+        if stale.name not in keep:
+            stale.unlink()
+
+    by_cat: dict[str, list[dict]] = {}
+    for s in skills:
+        by_cat.setdefault(s["category"], []).append(s)
+
+    rows = [
+        f"{len(skills)} skills, one glyph each. Click any name for its install command.",
+        "",
+    ]
+    for cat, group in by_cat.items():
+        rows += [f"### {cat}", "", "| | Skill | What it does |", "| :-: | --- | --- |"]
+        for s in sorted(group, key=lambda x: x["title"].lower()):
+            img = f'<img src="assets/icons/{s["slug"]}.svg" width="22" alt="">'
+            link = f'[**{s["title"]}**]({SITE["base_url"]}/s/{s["slug"]}/)<br>`{s["slug"]}`'
+            rows.append(f"| {img} | {link} | {s['summary']} |")
+        rows.append("")
+
+    table = "\n".join(rows).rstrip() + "\n"
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    if README_START not in text or README_END not in text:
+        print("  ! README markers missing, skipped the icon table")
+        return
+    head, rest = text.split(README_START, 1)
+    _, tail = rest.split(README_END, 1)
+    readme.write_text(
+        f"{head}{README_START}\n\n{table}\n{README_END}{tail}", encoding="utf-8"
+    )
+
+
 def main() -> None:
     meta = json.loads((ROOT / "catalog" / "meta.json").read_text(encoding="utf-8"))
     skills = collect(meta)
@@ -567,6 +619,8 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
+    write_repo_icons(skills)
+
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     if SITE.get("custom_domain"):
         (OUT / "CNAME").write_text(SITE["custom_domain"] + "\n", encoding="utf-8")

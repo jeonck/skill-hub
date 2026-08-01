@@ -27,6 +27,16 @@ jobs:
       - name: Build site and per-skill zips
         run: python3 tools/build.py
 
+      # build.py also regenerates assets/icons/ and the README table. A diff here
+      # means someone changed a skill without rerunning it -- the site is still
+      # correct, so warn rather than block the deploy.
+      - name: Check generated README icons are current
+        run: |
+          if ! git diff --quiet -- README.md assets/icons; then
+            echo "::warning::README icon table or assets/icons is stale. Run 'python3 tools/build.py' and commit the result."
+            git diff --stat -- README.md assets/icons
+          fi
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
