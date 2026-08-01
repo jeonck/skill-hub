@@ -1,0 +1,318 @@
+{
+  "_comment": "English display metadata for the hub site. The canonical name/description always come from each skill's SKILL.md frontmatter; this file supplies the English title, summary, category and tags used by the catalog UI.",
+  "categories": [
+    "Design & UI",
+    "Content & Writing",
+    "Sites & Docs",
+    "Automation Pipelines",
+    "Media & Video",
+    "Dev Tooling",
+    "Research"
+  ],
+  "skills": {
+    "algolia-docusaurus": {
+      "title": "Algolia for Docusaurus",
+      "summary": "Wire Algolia DocSearch into a Docusaurus v3 site on GitHub Pages — automates every config file, then walks you through the manual Algolia account steps.",
+      "category": "Sites & Docs",
+      "tags": ["docusaurus", "algolia", "search", "github-pages"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "algorithmic-art": {
+      "title": "Algorithmic Art",
+      "summary": "Generative art with p5.js — seeded randomness, flow fields, particle systems, and an interactive parameter-exploration loop.",
+      "category": "Design & UI",
+      "tags": ["p5js", "generative", "creative-coding"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "artifacts-builder": {
+      "title": "Artifacts Builder",
+      "summary": "Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library.",
+      "category": "Dev Tooling",
+      "tags": ["react", "tailwind", "shadcn", "artifacts"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "brand-guidelines": {
+      "title": "Brand Guidelines",
+      "summary": "Apply Anthropic's official brand colors and typography to any artifact that benefits from a consistent house look-and-feel.",
+      "category": "Design & UI",
+      "tags": ["branding", "typography", "color"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "brandkit": {
+      "title": "Brand Kit Generator",
+      "summary": "Premium brand-guideline boards, logo systems and identity decks — minimalist, cinematic, editorial, dark-tech and luxury systems with art-directed mockups.",
+      "category": "Design & UI",
+      "tags": ["branding", "logo", "identity", "image-generation"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "brutalist-skill": {
+      "title": "Industrial Brutalist UI",
+      "summary": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics — rigid grids, extreme type contrast, analog degradation.",
+      "category": "Design & UI",
+      "tags": ["brutalism", "ui", "typography", "dashboard"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "canvas-design": {
+      "title": "Canvas Design",
+      "summary": "Design posters, art and static pieces as .png or .pdf using a real design philosophy rather than default template output.",
+      "category": "Design & UI",
+      "tags": ["poster", "print", "pdf", "layout"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "ccnp-ccie-writer": {
+      "title": "CCNP / CCIE Knowledge Writer",
+      "summary": "Write Cisco CCNP/CCIE knowledge-base docs in a fixed structure — definition, characteristics, components, packet flow, comparison tables, config and exam points — with Mermaid diagrams.",
+      "category": "Content & Writing",
+      "tags": ["networking", "cisco", "docusaurus", "mermaid"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "cisa-content-writer": {
+      "title": "CISA Content Writer",
+      "summary": "Author CISA (IS audit) best-practice guides across the six ISACA domains — a standard 10-section layout with Mermaid diagrams and HTML audit checklists.",
+      "category": "Content & Writing",
+      "tags": ["security", "audit", "isaca", "docusaurus"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "code-explainer-video": {
+      "title": "Code Explainer Video",
+      "summary": "Render a cinematic chaptered explainer video for any CLI or dev tool — Remotion \"Terminal Noir\": code that types itself, streaming terminal output, growing dependency graphs, continuous BGM.",
+      "category": "Media & Video",
+      "tags": ["remotion", "video", "devrel", "tutorial"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "daily-diary-pipeline": {
+      "title": "Daily Diary Pipeline",
+      "summary": "Scaffold a pipeline where editing one line in a GitHub file triggers a scheduled Claude run that writes a post and publishes it to Hugo + GitHub Pages.",
+      "category": "Automation Pipelines",
+      "tags": ["hugo", "github-actions", "cron", "publishing"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "daily-insight-pipeline": {
+      "title": "Daily Insight Pipeline",
+      "summary": "Scaffold a daily collect-and-triage pipeline — pull from RSS, Reddit, HN and GitHub, have Claude rate each item act-now / backlog / learn / ignore, then ship it to a site.",
+      "category": "Automation Pipelines",
+      "tags": ["rss", "curation", "hugo", "github-actions"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "docusaurus-english-site": {
+      "title": "Docusaurus Site Scaffold",
+      "summary": "Stand up a Docusaurus documentation site with GitHub Pages deployment, grouped navigation, per-topic sidebars, Korean locale and Mermaid support.",
+      "category": "Sites & Docs",
+      "tags": ["docusaurus", "github-pages", "mermaid", "scaffold"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "github-sponsors": {
+      "title": "GitHub Sponsors Button",
+      "summary": "Add a GitHub Sponsors funding button to any static site — Hugo, Jekyll, Docusaurus or plain HTML — including the FUNDING.yml wiring.",
+      "category": "Sites & Docs",
+      "tags": ["github", "sponsors", "static-site"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "hextra-kb-builder": {
+      "title": "Hextra KB Builder",
+      "summary": "Initialize a technical knowledge base on Hugo's Hextra theme with Mermaid, LaTeX and search, wired for GitHub Pages deployment.",
+      "category": "Sites & Docs",
+      "tags": ["hugo", "hextra", "knowledge-base", "github-pages"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "hextra-roadmap-kb": {
+      "title": "Hextra Roadmap KB",
+      "summary": "Scaffold a topic learning-roadmap site on Hugo + Hextra — hero home, numbered roadmap docs by category, Labs, Tools, a Blog with RSS and a termbase-backed glossary.",
+      "category": "Sites & Docs",
+      "tags": ["hugo", "hextra", "roadmap", "glossary"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "hugo-blog-builder": {
+      "title": "Hugo Blog Builder",
+      "summary": "Build a Hugo blog or docs site with GitHub Actions deployment — PaperMod or Hextra — with every known pitfall (TOML ordering, submodules, go.mod conflicts) handled up front.",
+      "category": "Sites & Docs",
+      "tags": ["hugo", "papermod", "hextra", "github-actions"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "imagegen-frontend-mobile": {
+      "title": "Mobile UI Image Direction",
+      "summary": "Generate premium app-native mobile screen concepts and flows — clean hierarchy, multi-screen consistency, controlled palettes, framed in a subtle phone mockup. Images only, no code.",
+      "category": "Design & UI",
+      "tags": ["mobile", "ios", "android", "image-generation"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "imagegen-frontend-web": {
+      "title": "Web UI Image Direction",
+      "summary": "Generate premium landing-page design references — one horizontal image per section, enforced composition variety, a narrative concept spine and one consistent palette throughout.",
+      "category": "Design & UI",
+      "tags": ["landing-page", "web", "image-generation"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "internal-comms": {
+      "title": "Internal Comms",
+      "summary": "Write internal communications in house formats — status reports, leadership updates, newsletters, FAQs, incident reports and project updates.",
+      "category": "Content & Writing",
+      "tags": ["writing", "corporate", "reports"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "it-professional-content": {
+      "title": "IT Professional Engineer Content",
+      "summary": "Write framework and methodology content in the Korean 기술사 exam format — a 3-section structure with block diagrams, Mermaid visualizations and comparison tables.",
+      "category": "Content & Writing",
+      "tags": ["architecture", "framework", "mermaid", "exam"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "mcp-builder": {
+      "title": "MCP Builder",
+      "summary": "Build high-quality MCP servers that expose external APIs to LLMs through well-designed tools — in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "category": "Dev Tooling",
+      "tags": ["mcp", "python", "typescript", "api"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "minimalist-skill": {
+      "title": "Minimalist UI",
+      "summary": "Clean editorial interfaces — warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+      "category": "Design & UI",
+      "tags": ["minimalism", "editorial", "ui"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "output-skill": {
+      "title": "Full Output Enforcement",
+      "summary": "Override default truncation behavior — enforce complete code generation, ban placeholder patterns, and handle token-limit splits cleanly.",
+      "category": "Dev Tooling",
+      "tags": ["prompting", "codegen", "reliability"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "redesign-skill": {
+      "title": "Redesign Existing Projects",
+      "summary": "Upgrade an existing site or app to premium quality — audit the current design, name the generic AI patterns, and raise the bar without breaking functionality.",
+      "category": "Design & UI",
+      "tags": ["redesign", "audit", "css"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "research-agent-team": {
+      "title": "Research Agent Team",
+      "summary": "Run an 8-agent research pipeline — Orchestrator, 3 Researchers, 2 Fact-Checkers, Writer, Gatekeeper — applying MECE and the Pyramid Principle to produce a sourced consulting-style report.",
+      "category": "Research",
+      "tags": ["research", "fact-checking", "multi-agent", "report"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "skill-creator": {
+      "title": "Skill Creator",
+      "summary": "Create and update Claude skills — the guide for packaging specialized knowledge, workflows and tool integrations into a skill.",
+      "category": "Dev Tooling",
+      "tags": ["meta", "authoring", "skills"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "slack-gif-creator": {
+      "title": "Slack GIF Creator",
+      "summary": "Build animated GIFs sized for Slack — composable animation primitives plus validators for Slack's size constraints.",
+      "category": "Media & Video",
+      "tags": ["gif", "slack", "animation"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "soft-skill": {
+      "title": "High-End Visual Design",
+      "summary": "Design like a high-end agency — the exact fonts, spacing, shadows, card structures and animations that make a site feel expensive, with the cheap-looking defaults blocked.",
+      "category": "Design & UI",
+      "tags": ["visual-design", "css", "animation"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "stitch-skill": {
+      "title": "Stitch Design Taste",
+      "summary": "Generate agent-friendly DESIGN.md files for Google Stitch — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion and GPU-friendly performance rules.",
+      "category": "Design & UI",
+      "tags": ["stitch", "design-system", "google"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "sync-shopshorts-higgs": {
+      "title": "Shopping Shorts Workflow",
+      "summary": "Turn a product URL into a Korean-market shopping short — crawl the product, profile the target persona, recommend script × preset, approve the scene map, then generate via Higgsfield.",
+      "category": "Media & Video",
+      "tags": ["shorts", "marketing", "higgsfield", "ecommerce"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "taste-skill": {
+      "title": "Design Taste Frontend",
+      "summary": "Anti-slop frontend for landing pages, portfolios and redesigns — read the brief, infer the right direction, and ship interfaces that don't look templated.",
+      "category": "Design & UI",
+      "tags": ["frontend", "landing-page", "portfolio"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
+    "term-comparison-pipeline": {
+      "title": "Term Comparison Pipeline",
+      "summary": "On-demand comparison posts — add one line like \"REST vs GraphQL\" to a file, and the push triggers Claude to generate an SVG diagram plus comparison table and deploy it. No cron, no fallback content.",
+      "category": "Automation Pipelines",
+      "tags": ["hugo", "svg", "github-actions", "on-demand"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "theme-factory": {
+      "title": "Theme Factory",
+      "summary": "Style any artifact — slides, docs, reports, landing pages — with one of 10 preset color/font themes, or generate a new theme on the fly.",
+      "category": "Design & UI",
+      "tags": ["theming", "color", "slides"],
+      "origin": "anthropic",
+      "output_language": "en"
+    },
+    "transcript-study-pipeline": {
+      "title": "Transcript Study Pipeline",
+      "summary": "Turn pasted class transcripts into structured English-study posts — idioms with examples, vocabulary, spoken-mistake corrections, fill-in-the-blank quizzes and a mini diary — published on push.",
+      "category": "Automation Pipelines",
+      "tags": ["hugo", "english-learning", "github-actions"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "us-work-english-content": {
+      "title": "US Work English Content",
+      "summary": "Add expression-practice pages to a Docusaurus English-learning site — thematic collapsible groups, bold expressions with key/source/similar bullets, tip admonitions and sidebar wiring.",
+      "category": "Content & Writing",
+      "tags": ["english", "docusaurus", "business-english"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "us-work-english-idiom-section": {
+      "title": "Business Idiom Section",
+      "summary": "Write a business-idiom section as collapsible blocks — one bold English line and a single key bullet per expression, nothing else.",
+      "category": "Content & Writing",
+      "tags": ["english", "idioms", "docusaurus"],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
+    "webapp-testing": {
+      "title": "Web App Testing",
+      "summary": "Drive and test local web apps with Playwright — verify frontend behavior, debug the UI, capture screenshots and read browser logs.",
+      "category": "Dev Tooling",
+      "tags": ["playwright", "testing", "browser"],
+      "origin": "anthropic",
+      "output_language": "en"
+    }
+  }
+}

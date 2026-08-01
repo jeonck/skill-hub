@@ -1,0 +1,99 @@
+baseURL = '{{BASE_URL}}'
+title = '{{SITE_TITLE}}'
+theme = 'hextra'
+locale = 'ko-KR'
+defaultContentLanguage = 'ko'
+hasCJKLanguage = true
+
+enableGitInfo = true
+enableRobotsTXT = true
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)'], ['$', '$']]
+
+enableInlineShortcodes = true
+
+[[menu.main]]
+  name = "{{ROADMAP_MENU_LABEL}}"
+  pageRef = "/docs"
+  weight = 1
+
+[[menu.main]]
+  name = "실습"
+  pageRef = "/labs"
+  weight = 2
+
+[[menu.main]]
+  name = "도구"
+  pageRef = "/tools"
+  weight = 3
+
+[[menu.main]]
+  name = "블로그"
+  pageRef = "/blog"
+  weight = 4
+
+[[menu.main]]
+  name = "용어집"
+  pageRef = "/glossary"
+  weight = 5
+
+[[menu.main]]
+  identifier = "github"
+  weight = 6
+  url = "{{GITHUB_URL}}"
+  [menu.main.params]
+    icon = "github"
+
+[[menu.main]]
+  name = "검색"
+  weight = 7
+  [menu.main.params]
+    type = "search"
+
+[params]
+  description = "{{SITE_DESCRIPTION}}"
+
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+    width = "wide"
+
+  [params.theme]
+    default = "system"
+    displayToggle = true
+
+  [params.footer]
+    enable = true
+    displayCopyright = true
+    displayPoweredBy = true
+
+  displayUpdatedDate = true
+  dateFormat = "2006년 01월 02일"
+
+  [params.search]
+    enable = true
+    type = "flexsearch"
+    [params.search.flexsearch]
+      index = "content"
+      tokenize = "forward"
+
+  [params.toc]
+    displayTags = true
+
+  [params.highlight]
+    [params.highlight.copy]
+      enable = true
+      display = "hover"
+
+  [params.page]
+    width = "wide"

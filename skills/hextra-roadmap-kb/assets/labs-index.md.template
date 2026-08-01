@@ -1,0 +1,38 @@
+---
+title: "실습 (Hands-on Labs)"
+cascade:
+  type: docs
+sidebar:
+  open: true
+---
+
+## 이 섹션은 무엇이 다른가
+
+[{{ROADMAP_SHORT_LABEL}}](/docs)은 {{TOPIC}}의 개념과 이론을 체계적으로 설명합니다.
+반면 이 **실습(Labs)** 섹션은 **그대로 따라 하면 재현되는, 단계별로 실행 가능한 실습 가이드**만 담습니다. 각 실습은 다음과 같은 동일한 구조를 따릅니다.
+
+1. **목표** — 이 실습을 통해 무엇을 확인/측정하는가
+2. **사전 준비** — 필요한 패키지, 환경, 데이터
+3. **단계별 실행** — 복사해서 실행할 수 있는 코드와 명령어
+4. **결과 확인** — 출력을 어떻게 해석하고 무엇을 기록해야 하는가
+5. **체크리스트** — 실습을 완료했는지 자가 점검
+
+{{</* callout type="info" */>}}
+{{ENVIRONMENT_PREREQ_NOTE}}
+
+```bash
+{{ENV_SETUP_COMMANDS}}
+```
+{{</* /callout */>}}
+
+## 실습 목록
+
+{{</* cards */>}}
+  {{</* card link="lab1-{{LAB_1_SLUG}}" title="Lab 1: {{LAB_1_TITLE}}" subtitle="{{LAB_1_SUBTITLE}}" */>}}
+  {{</* card link="lab2-{{LAB_2_SLUG}}" title="Lab 2: {{LAB_2_TITLE}}" subtitle="{{LAB_2_SUBTITLE}}" */>}}
+  {{/* ... one card per lab */}}
+{{</* /cards */>}}
+
+{{</* callout type="warning" */>}}
+이 섹션의 모든 실습은 **본인이 소유하거나 명시적으로 권한을 부여받은 시스템**에서만 수행하세요. 타인의 서비스, 공개 API, 프로덕션 시스템에 대한 무단 테스트는 서비스 약관 위반 및 법적 책임을 수반할 수 있습니다.
+{{</* /callout */>}}

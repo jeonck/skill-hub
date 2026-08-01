@@ -1,0 +1,105 @@
+name: {{WORKFLOW_NAME}}
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "input/**"
+      - "content/**"
+      - "hugo.toml"
+      - "archetypes/**"
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: comparison-pipeline
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Generate comparison post(s)
+        id: generate
+        continue-on-error: true
+        env:
+          # claude-code backend when CLAUDE_CODE_OAUTH_TOKEN is registered (subscription auth),
+          # otherwise falls back to the api backend (ANTHROPIC_API_KEY, billed)
+          JUDGE_BACKEND: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' && 'claude-code' || 'api' }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python pipeline/generate.py
+
+      - name: Commit new post(s)
+        id: commit
+        run: |
+          git config user.name "comparison-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/posts pipeline/state.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "no new post — skipping commit"
+          else
+            git commit -m "chore: new comparison post $(date -u +%F)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Surface generation failure
+        if: steps.generate.outcome == 'failure'
+        run: |
+          echo "::error::generation step failed (check CLAUDE_CODE_OAUTH_TOKEN/credits)"
+          exit 1
+
+  deploy:
+    needs: generate
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          ref: main
+          fetch-depth: 0
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "{{HUGO_VERSION}}"
+          extended: true
+
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Build site
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

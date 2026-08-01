@@ -1,0 +1,40 @@
+---
+title: "Lab {{LAB_NUMBER}}: {{LAB_TITLE}}"
+weight: {{LAB_NUMBER}}
+---
+
+## 목표
+
+{{LAB_GOAL}}
+
+## 사전 준비
+
+- {{PREREQ_1}}
+- {{PREREQ_2}}
+
+```bash
+{{INSTALL_COMMANDS}}
+```
+
+## 단계별 실행
+
+### 1. {{STEP_1_TITLE}}
+
+```python
+{{STEP_1_CODE}}
+```
+
+### 2. {{STEP_2_TITLE}}
+
+```python
+{{STEP_2_CODE}}
+```
+
+## 결과 확인
+
+{{RESULT_INTERPRETATION}}
+
+## 체크리스트
+
+- [ ] {{CHECKLIST_ITEM_1}}
+- [ ] {{CHECKLIST_ITEM_2}}

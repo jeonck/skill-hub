@@ -1,0 +1,39 @@
+Claude Skill Hub
+Copyright (c) 2026 jeonck
+
+The MIT License in LICENSE applies to the skills authored by jeonck, to the
+site generator in tools/, and to the site assets in site/.
+
+--------------------------------------------------------------------------
+Third-party skills redistributed under the Apache License, Version 2.0
+--------------------------------------------------------------------------
+
+The following directories under skills/ are copied from
+https://github.com/anthropics/skills (Copyright Anthropic, PBC) and are
+licensed under the Apache License, Version 2.0. Each keeps its original
+LICENSE.txt:
+
+  skills/algorithmic-art
+  skills/artifacts-builder
+  skills/brand-guidelines
+  skills/canvas-design
+  skills/internal-comms
+  skills/mcp-builder
+  skills/skill-creator
+  skills/slack-gif-creator
+  skills/theme-factory
+  skills/webapp-testing
+
+A copy of the Apache License 2.0 is available at
+http://www.apache.org/licenses/LICENSE-2.0
+
+skills/canvas-design/canvas-fonts contains typefaces distributed under the
+SIL Open Font License; each font ships its own OFL.txt.
+
+--------------------------------------------------------------------------
+Not included
+--------------------------------------------------------------------------
+
+Anthropic's document skills (docx, pdf, pptx, xlsx) are proprietary and their
+license prohibits redistribution. They are deliberately absent from this
+repository.

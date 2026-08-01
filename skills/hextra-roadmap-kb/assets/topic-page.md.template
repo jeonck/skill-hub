@@ -1,0 +1,18 @@
+---
+title: "{{TOPIC_TITLE}}"
+weight: {{TOPIC_WEIGHT}}
+---
+
+{{TOPIC_INTRO_PARAGRAPH}}
+
+## {{SECTION_1_HEADING}}
+
+{{SECTION_1_BODY}}
+
+{{</* callout type="info" */>}}
+{{KEY_TAKEAWAY_OR_CROSS_LINK}}
+{{</* /callout */>}}
+
+## {{SECTION_2_HEADING}}
+
+{{SECTION_2_BODY}}

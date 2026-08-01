@@ -1,0 +1,16 @@
+---
+title: "{{TOOLSET_TITLE}}"
+weight: {{TOOLSET_WEIGHT}}
+---
+
+## {{TOOL_1_NAME}}
+
+- **링크**: {{TOOL_1_URL}}
+- **설명**: {{TOOL_1_DESC}}
+- **설치**: `{{TOOL_1_INSTALL}}`
+
+## {{TOOL_2_NAME}}
+
+- **링크**: {{TOOL_2_URL}}
+- **설명**: {{TOOL_2_DESC}}
+- **설치**: `{{TOOL_2_INSTALL}}`

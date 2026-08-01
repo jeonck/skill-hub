@@ -1,0 +1,11 @@
+# {{TOPIC}} 용어집
+#
+# 사용법: {{</* term "용어" */>}}
+
+- term: {{TERM_1}}
+  abbr: {{TERM_1_ABBR}}
+  definition: "{{TERM_1_DEFINITION}}"
+- term: {{TERM_2}}
+  abbr: {{TERM_2_ABBR}}
+  definition: "{{TERM_2_DEFINITION}}"
+{{/* ... add one entry per term, sorted in the order topics first introduce them */}}

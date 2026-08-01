@@ -1,0 +1,69 @@
+/* Mini design system for comparison diagrams: two accent colors (one per
+   compared item) plus soft tint variants for fills, layered on top of
+   PaperMod's own theme-vars.css (--theme/--entry/--content/--secondary/
+   --border). Diagrams reference these via var() so they always sit legibly
+   on the current light/dark background instead of shipping their own
+   hardcoded palette. */
+:root {
+  --compare-a: rgb(37, 99, 235);
+  --compare-a-soft: rgba(37, 99, 235, 0.1);
+  --compare-b: rgb(217, 119, 6);
+  --compare-b-soft: rgba(217, 119, 6, 0.12);
+}
+
+:root[data-theme="dark"] {
+  --compare-a: rgb(96, 165, 250);
+  --compare-a-soft: rgba(96, 165, 250, 0.16);
+  --compare-b: rgb(251, 191, 36);
+  --compare-b-soft: rgba(251, 191, 36, 0.16);
+}
+
+/* Comparison diagrams: inline SVG generated per-post, wrapped in a card that
+   matches the site's own post-entry cards (background/border/radius).
+   Scale to the column width instead of the SVG's intrinsic pixel size, and
+   never overflow it (the surrounding page must never gain horizontal
+   scroll). */
+.compare-diagram {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.post-content svg {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Comparison tables: wrap cell text so the table fits the content width
+   without horizontal scrolling. table-layout:fixed forces the "Aspect"
+   column to stay narrow and splits the remaining width evenly between the
+   two compared items, instead of letting the longest cell dictate width.
+   BUG THIS FIXES: white-space:nowrap on th/td (an earlier version of this
+   file had it) forces every long sentence onto one line, inflating row
+   width past the viewport and forcing full-page horizontal scroll even on
+   desktop — do not reintroduce it. */
+.post-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.post-content table th:first-child,
+.post-content table td:first-child {
+  width: 22%;
+}
+
+.post-content table th,
+.post-content table td {
+  white-space: normal;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}

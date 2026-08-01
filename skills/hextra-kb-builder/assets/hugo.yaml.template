@@ -1,0 +1,52 @@
+baseURL: https://{{ .username }}.github.io/{{ .repo_name }}/
+title: {{ .title }}
+theme: hextra
+
+locale: ko
+languageCode: ko-kr
+defaultContentLanguage: ko
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)'], ['$', '$']]
+        enable: true
+  highlight:
+    noClasses: false
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+params:
+  description: {{ .description }}
+  navbar:
+    displayLogo: true
+    title: {{ .title }}
+    width: wide
+  footer:
+    displayCopyright: true
+    displayPoweredBy: true
+    width: wide
+  search:
+    enable: true
+    type: flexsearch
+  math:
+    enable: true
+  mermaid:
+    enable: true
+
+menu:
+  main:
+    - name: Docs
+      url: /docs/
+      weight: 10
+    - name: Search
+      weight: 20
+      params:
+        type: search

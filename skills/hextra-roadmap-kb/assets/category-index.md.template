@@ -1,0 +1,26 @@
+---
+title: "{{NUMBER_GLYPH}} {{CATEGORY_TITLE}}"
+weight: {{CATEGORY_WEIGHT}}
+---
+
+{{CATEGORY_INTRO_PARAGRAPH}}
+
+{{</* callout type="warning" */>}}
+{{CATEGORY_WHY_IT_MATTERS}}
+{{</* /callout */>}}
+
+## 이 섹션에서 다루는 내용
+
+1. **{{TOPIC_1_TITLE}}** — {{TOPIC_1_DESC}}
+2. **{{TOPIC_2_TITLE}}** — {{TOPIC_2_DESC}}
+{{/* ... one numbered line per topic page in this category */}}
+
+{{</* cards */>}}
+  {{</* card link="{{TOPIC_1_SLUG}}" title="{{TOPIC_1_TITLE}}" subtitle="{{TOPIC_1_DESC}}" */>}}
+  {{</* card link="{{TOPIC_2_SLUG}}" title="{{TOPIC_2_TITLE}}" subtitle="{{TOPIC_2_DESC}}" */>}}
+  {{/* ... one card per topic page */}}
+{{</* /cards */>}}
+
+{{</* callout type="info" */>}}
+{{CATEGORY_CLOSING_NOTE_LINKING_TO_NEXT_CATEGORY}}
+{{</* /callout */>}}
