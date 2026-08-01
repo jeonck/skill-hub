@@ -207,8 +207,46 @@ main { padding: 56px 0 72px; }
 .card:hover { border-color: var(--line-2); transform: translateY(-2px); }
 .card[hidden] { display: none; }
 
+/* Icon tiles — one glyph per skill, tinted by category. */
+
+.tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--tint-bg);
+  color: var(--tint-fg);
+  border: 1px solid var(--tint-line);
+}
+.tile.sm { width: 30px; height: 30px; border-radius: 9px; }
+.tile.lg { width: 60px; height: 60px; border-radius: 16px; }
+.tile .icon { display: block; }
+
+.c-design    { --tint-fg: #7c3aed; --tint-bg: #f3eeff; --tint-line: #e4d9ff; }
+.c-content   { --tint-fg: #b45309; --tint-bg: #fdf2e2; --tint-line: #f6e2c2; }
+.c-docs      { --tint-fg: #1d4ed8; --tint-bg: #e9efff; --tint-line: #d5e0ff; }
+.c-pipeline  { --tint-fg: #0f766e; --tint-bg: #e3f5f2; --tint-line: #c9e9e3; }
+.c-media     { --tint-fg: #be123c; --tint-bg: #fdeaef; --tint-line: #f8d5de; }
+.c-dev       { --tint-fg: #4338ca; --tint-bg: #ecebfe; --tint-line: #dbd8fb; }
+.c-research  { --tint-fg: #15803d; --tint-bg: #e8f5ec; --tint-line: #d0ead9; }
+
+@media (prefers-color-scheme: dark) {
+  .c-design   { --tint-fg: #c4a8ff; --tint-bg: #241c38; --tint-line: #372a52; }
+  .c-content  { --tint-fg: #f0b366; --tint-bg: #322313; --tint-line: #4a3520; }
+  .c-docs     { --tint-fg: #9ab4ff; --tint-bg: #1a2140; --tint-line: #2a3560; }
+  .c-pipeline { --tint-fg: #6fd3c4; --tint-bg: #132b29; --tint-line: #1e423e; }
+  .c-media    { --tint-fg: #f5899f; --tint-bg: #33161f; --tint-line: #4c2230; }
+  .c-dev      { --tint-fg: #a9a2ff; --tint-bg: #1e1d3a; --tint-line: #2f2c56; }
+  .c-research { --tint-fg: #7cc894; --tint-bg: #16291d; --tint-line: #223e2c; }
+}
+
 .card-link { display: block; padding: 20px 20px 14px; color: inherit; flex: 1; }
 .card-link:hover { text-decoration: none; }
+.card-top { display: flex; align-items: flex-start; gap: 13px; }
+.card-top > div { min-width: 0; }
 .card-link h3 {
   margin: 0 0 4px;
   font-size: 1.05rem;
@@ -280,6 +318,8 @@ main { padding: 56px 0 72px; }
 .crumb { padding-top: 28px; font-size: 0.88rem; }
 
 .detail-head { padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
+.head-row { display: flex; align-items: flex-start; gap: 18px; }
+.head-row > div { min-width: 0; }
 .detail-head .cat {
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -370,8 +410,9 @@ section.wrap { padding-top: 34px; }
   color: inherit;
 }
 .rel:hover { text-decoration: none; border-color: var(--line-2); }
+.rel .tile { margin-bottom: 10px; }
 .rel b { display: block; font-size: 0.92rem; margin-bottom: 4px; }
-.rel span { font-size: 0.82rem; color: var(--ink-3); }
+.rel .rel-sum { display: block; font-size: 0.82rem; color: var(--ink-3); }
 
 footer {
   margin-top: 64px;

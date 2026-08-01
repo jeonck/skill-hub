@@ -23,6 +23,17 @@ import shutil
 import zipfile
 from pathlib import Path
 
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from icons import (  # noqa: E402
+    CATEGORY_SLUGS,
+    FALLBACK_ICON,
+    SKILL_ICONS,
+    icon_data_uri,
+    icon_svg,
+)
+
 ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 OUT = ROOT / "_site"
@@ -268,8 +279,13 @@ def collect(meta: dict) -> list[dict]:
                 "folders": extras,
                 "body_html": rewrite_relative_links(markdown_to_html(body), d.name),
                 "zip": f"dist/{d.name}.zip",
+                "icon": SKILL_ICONS.get(d.name, FALLBACK_ICON),
+                "cat_slug": CATEGORY_SLUGS.get(m.get("category", ""), "dev"),
             }
         )
+    missing_icons = [s for s in SKILLS_DIR.iterdir() if s.is_dir() and s.name not in SKILL_ICONS]
+    if missing_icons:
+        print("  ! no icon mapped (using fallback): " + ", ".join(p.name for p in missing_icons))
     if broken:
         raise SystemExit(
             "error: these skill directories have no SKILL.md (exact case):\n  "
@@ -282,8 +298,12 @@ def collect(meta: dict) -> list[dict]:
 # render
 # --------------------------------------------------------------------------
 
-def page(title: str, body: str, depth: int = 0, desc: str = "") -> str:
+def page(title: str, body: str, depth: int = 0, desc: str = "", favicon: str = "") -> str:
     root = "../" * depth
+    icon_href = favicon or (
+        "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
+        "<text y='.9em' font-size='90'>&#129526;</text></svg>"
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -294,7 +314,7 @@ def page(title: str, body: str, depth: int = 0, desc: str = "") -> str:
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc or SITE['tagline'])}">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129526;</text></svg>">
+<link rel="icon" href="{icon_href}">
 <link rel="stylesheet" href="{root}assets/style.css">
 </head>
 <body>
@@ -341,8 +361,13 @@ def render_index(skills: list[dict], meta: dict) -> str:
         cards.append(
             f"""<article class="card" data-cat="{html.escape(s['category'])}" data-search="{haystack}">
   <a class="card-link" href="s/{s['slug']}/">
-    <h3>{html.escape(s['title'])}</h3>
-    <code class="slug">{html.escape(s['slug'])}</code>
+    <div class="card-top">
+      <span class="tile c-{s['cat_slug']}">{icon_svg(s['icon'], 22)}</span>
+      <div>
+        <h3>{html.escape(s['title'])}</h3>
+        <code class="slug">{html.escape(s['slug'])}</code>
+      </div>
+    </div>
     <p>{html.escape(s['summary'])}</p>
   </a>
   <div class="card-foot">
@@ -417,8 +442,10 @@ def render_detail(s: dict, skills: list[dict]) -> str:
         r for r in skills if r["category"] == s["category"] and r["slug"] != s["slug"]
     ][:4]
     rel_html = "".join(
-        f'<a class="rel" href="../{r["slug"]}/"><b>{html.escape(r["title"])}</b>'
-        f'<span>{html.escape(r["summary"][:90])}…</span></a>'
+        f'<a class="rel" href="../{r["slug"]}/">'
+        f'<span class="tile sm c-{r["cat_slug"]}">{icon_svg(r["icon"], 18)}</span>'
+        f'<b>{html.escape(r["title"])}</b>'
+        f'<span class="rel-sum">{html.escape(r["summary"][:90])}…</span></a>'
         for r in related
     )
     tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in s["tags"])
@@ -438,9 +465,14 @@ def render_detail(s: dict, skills: list[dict]) -> str:
 
     body = f"""<nav class="crumb wrap"><a href="../../">← All skills</a></nav>
 <header class="wrap detail-head">
-  <div class="cat">{html.escape(s['category'])}</div>
-  <h1>{html.escape(s['title'])}</h1>
-  <code class="slug big">{html.escape(s['slug'])}</code>
+  <div class="head-row">
+    <span class="tile lg c-{s['cat_slug']}">{icon_svg(s['icon'], 34)}</span>
+    <div>
+      <div class="cat">{html.escape(s['category'])}</div>
+      <h1>{html.escape(s['title'])}</h1>
+      <code class="slug big">{html.escape(s['slug'])}</code>
+    </div>
+  </div>
   <p class="lede">{html.escape(s['summary'])}</p>
   <div class="tags">{tags}</div>
 </header>
@@ -474,7 +506,13 @@ def render_detail(s: dict, skills: list[dict]) -> str:
 
 <footer class="wrap"><p><a href="../../">← Back to the catalog</a> · <a href="https://github.com/{SITE['repo']}">source</a></p></footer>
 <script src="../../assets/app.js"></script>"""
-    return page(f"{s['title']} — {SITE['title']}", body, depth=2, desc=s["summary"])
+    return page(
+        f"{s['title']} — {SITE['title']}",
+        body,
+        depth=2,
+        desc=s["summary"],
+        favicon=icon_data_uri(s["icon"]),
+    )
 
 
 # --------------------------------------------------------------------------
