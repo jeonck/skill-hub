@@ -41,6 +41,25 @@ git clone https://github.com/jeonck/skill-hub.git
 cp -r skill-hub/skills/* ~/.claude/skills/
 ```
 
+## Use them straight from this repo
+
+Clone it and every skill is already live — `.claude/skills/` holds one symlink per
+skill, so any Claude Code session started inside the clone picks all 38 up as project
+skills. Nothing to copy or install:
+
+```bash
+git clone https://github.com/jeonck/skill-hub.git && cd skill-hub && claude
+```
+
+The symlinks are named after each skill's frontmatter `name`, which for a few skills
+differs from its catalog slug (`brutalist-skill` → `industrial-brutalist-ui`,
+`taste-skill` → `design-taste-frontend`, and similar). After adding or renaming a
+skill, regenerate them:
+
+```bash
+python3 tools/link_skills.py
+```
+
 ## The skills
 
 <!-- icons:start -->
