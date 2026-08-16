@@ -16,6 +16,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: daily-insights
@@ -147,3 +148,16 @@ jobs:
 
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # GitHub Pages 배포 큐가 기본 10분 타임아웃을 넘겨 멈추는 경우가 있음
+          # (일시적 백엔드 지연, 우리 코드 문제 아님) — 여유를 더 준다
+          timeout: 1200000
+
+      - name: Open deploy failure issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" \
+            --title "Deploy failure — $(date -u +%F)" \
+            --body "deploy job 실패 — [run log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) 확인. 콘텐츠는 이미 main에 커밋됨(데이터가 아니라 사이트 반영만 실패). 대개 GitHub Pages 백엔드 일시 지연 — https://www.githubstatus.com/ 확인 후 **새 실행**을 트리거: \`gh workflow run daily.yml\`. 같은 run에서 \`gh run rerun --job\`으로 deploy만 재실행하지 말 것 — Pages 아티팩트가 중복 업로드되어 'Multiple artifacts named github-pages' 에러가 남."

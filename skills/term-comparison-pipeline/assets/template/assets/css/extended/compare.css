@@ -67,3 +67,10 @@
   overflow-wrap: break-word;
   vertical-align: top;
 }
+
+/* The one keyword per table cell / key-differences bullet that most
+   sharply makes the distinction — bold is already implied by <strong>,
+   this just adds the accent color. */
+.post-content strong.kw {
+  color: var(--compare-a);
+}

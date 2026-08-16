@@ -66,7 +66,9 @@ pipeline/generate.py — Claude가 분석해 섹션 구성:
 4. `pipeline/generate.py`는 **기본적으로 수정하지 않는다** — 프롬프트(빈칸 퀴즈 규칙,
    단일 사건 일기 규칙 포함)와 엔진 모두 실전 검증본이다. 스키마를 바꿔야 한다면
    GENERATE_PROMPT의 JSON 스키마 + `parse_result()` + `write_post()` 셋을 반드시 함께
-   수정한다(하나만 바꾸면 파싱 실패).
+   수정한다(하나만 바꾸면 파싱 실패). **"Privacy rules" 문단은 예외 없이 그대로
+   유지한다** — 실제 사람의 실명·나이·병력 등이 섞인 스크립트를 공개 사이트에
+   게시하는 구조이므로 이 규칙이 없으면 개인정보 노출로 직결된다.
 5. `hugo.toml`의 goldmark `unsafe = true`는 퀴즈 `<details>` 토글용이므로 제거 금지.
    `assets/css/extended/`의 cards.css(카드 그리드 + `align-content: start` 여백 수정),
    quiz.css(토글 스타일)도 그대로 둔다.
@@ -81,7 +83,10 @@ hugo --minify && hugo server -D          # 카드 그리드/여백/퀴즈 토글
 
 dry-run 검증 포인트: 퀴즈가 전부 빈칸(`____`) 문장이고 **선택지가 그 수업의
 idioms/vocabulary 항목에서만** 나오는지, 일기가 낱개 문장 나열이 아니라 **하나의
-사건을 다룬 이야기**인지. 어긋나면 프롬프트를 보강해 재실행한다.
+사건을 다룬 이야기**인지. 어긋나면 프롬프트를 보강해 재실행한다. **실명·나이·병력 등이
+포함된 실제(또는 유사) 스크립트로도 한 번 dry-run해서, summary/corrections/quiz/diary
+어디에도 그 정보가 그대로 나오지 않는지** 반드시 확인한다 — 익명화는 결과물로
+검증해야 신뢰할 수 있다.
 
 ## 4단계 — 배포
 
@@ -102,4 +107,6 @@ idioms/vocabulary 항목에서만** 나오는지, 일기가 낱개 문장 나열
 - input/script.md 커밋만으로(수동 실행 없이) 포스트가 게시되는 후킹 동작 확인
 - 홈 카드 그리드에서 인트로↔첫 카드 간격이 그리드 gap(24px)과 일치
 - 퀴즈: 빈칸 문장 + 학습 단어 선택지 + Show answer 토글 동작
+- 익명화: 실명 포함 샘플로 dry-run해 게시물에 개인정보가 없는지 확인됨,
+  README/input 안내문에 "붙여넣기 전 실명 제거 권장" 문구 포함
 - README에 운영 루틴과 `claude setup-token` 안내 반영

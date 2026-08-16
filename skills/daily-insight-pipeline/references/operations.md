@@ -53,6 +53,19 @@
   실제 rebase 충돌(같은 파일 동시 수정)만 치명 오류로 표면화되고, 단순히 "원격이
   앞서나간" 흔한 경우는 자동 복구된다.
 
+- **`actions/deploy-pages@v4`가 `deployment_queued` 상태에서 멈춰 기본 10분 타임아웃으로
+  중단되는 경우 — 이미 코드에 반영됨.** GitHub Pages 백엔드 자체의 일시적 지연으로,
+  collect/커밋은 성공하고 deploy만 실패해 **사이트가 조용히 낡은 채로 남는다**
+  (데이터는 이미 main에 있지만 반영이 안 됨). jeonck/curasec에서 실제 발생.
+  대응: ① `deploy-pages` 스텝에 `timeout: 1200000`(20분)으로 여유를 더 줌.
+  ② `if: failure()`로 deploy 실패 시에도 이슈를 자동 생성(기존엔 judge 실패만 이슈화됐고
+  deploy 실패는 무알림이었음). ③ **복구 시 주의**: `gh run rerun --job <deploy-job-id>`로
+  같은 run 안에서 deploy만 재실행하면 `upload-pages-artifact` 스텝이 다시 돌아
+  "github-pages" 아티팩트가 2개가 되고 `deploy-pages`가 "Multiple artifacts named
+  github-pages" 에러로 실패한다. 반드시 `gh workflow run daily.yml`로 **완전히 새 run**을
+  띄워 복구할 것 (콘텐츠는 이미 커밋돼 있으므로 collect가 새로 할 일이 없어도
+  `workflow_dispatch`는 항상 배포하도록 설계돼 있어 안전하다).
+
 ## verdict 라벨 변경 절차 (선택)
 
 기본 라벨(즉시조치/백로그/학습/무관)은 행동 중심이라 대부분 도메인에 그대로 적용 가능.

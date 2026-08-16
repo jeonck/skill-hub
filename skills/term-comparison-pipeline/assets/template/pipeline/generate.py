@@ -58,7 +58,12 @@ KST = timezone(timedelta(hours=9))
 SYSTEM_PROMPT = """You are a technical writer who creates precise, concise \
 side-by-side comparisons of IT and software engineering terms/concepts for a \
 developer audience. You avoid oversimplification and hand-wavy analogies \
-where precision matters. You also design clean, minimal, self-contained SVG \
+where precision matters. You structure the comparison's aspects as a MECE \
+set (mutually exclusive, collectively exhaustive — no overlap, no gaps) and \
+order them to follow the subject's own natural flow (e.g. the sequence a \
+request or data actually moves through, or a lifecycle from creation to \
+teardown) rather than an arbitrary or importance-ranked list. You also \
+design clean, minimal, self-contained SVG \
 diagrams that visually clarify the structural or conceptual difference being \
 compared (e.g. memory layout, architecture boxes, request flow, arrows \
 between components). Diagrams use only basic shapes (rect, circle, line, \
@@ -98,13 +103,13 @@ Respond with ONLY valid JSON (no markdown code fences, no commentary before \
 or after) matching exactly this schema:
 
 {{"title": "Concise comparison title, e.g. 'X vs Y: <short descriptor>'",
- "summary": "2-3 sentence plain-English overview of what is being compared and why the distinction matters",
+ "summary": "2-3 sentence plain-English overview of what is being compared and why the distinction matters. Wrap the single most important keyword or term for EACH of the two compared items (exactly one per item, so two total in the summary) in '<strong class=\\"kw\\">...</strong>' — 1-3 words each, never a full clause.",
  "diagram_svg": "A complete, valid, self-contained '<svg>...</svg>' string (viewBox=\\"0 0 640 360\\") that visually illustrates the core structural or conceptual difference, using ONLY the var(--compare-a)/var(--compare-b)/var(--primary)/var(--content)/var(--secondary)/var(--border) design-system colors described above via style attributes (no hardcoded hex/rgb colors). Label both sides clearly with <text> elements. Escape all double quotes and newlines so the value is valid inside this JSON string.",
  "table_headers": ["Aspect", "<Left item name>", "<Right item name>"],
- "table_rows": [["<aspect 1>", "<left value>", "<right value>"], ["<aspect 2>", "<left value>", "<right value>"], "5 to 8 rows total, covering the most decision-relevant aspects"],
- "key_differences": ["3 to 5 short, specific bullet points on the most important distinctions — no filler"],
- "when_to_use_left": "1-2 sentences on when to prefer the left item",
- "when_to_use_right": "1-2 sentences on when to prefer the right item",
+ "table_rows": [["<aspect 1>", "<left value>", "<right value>"], ["<aspect 2>", "<left value>", "<right value>"], "5 to 8 rows total. The aspects (rows) MUST be MECE — mutually exclusive (no two rows overlap or restate each other from a different angle) and collectively exhaustive (together they cover the full decision space for this comparison, no major dimension left out). Order the rows to follow the natural flow of the thing being compared — e.g. the sequence a request/data/process actually moves through (entry → processing → completion → failure/edge cases), or a lifecycle (creation → use → teardown) — not an arbitrary or importance-ranked shuffle. Pick whichever flow is intrinsic to this specific topic. Plain text only in each cell — no bold/highlight markup."],
+ "key_differences": ["3 to 5 short, specific bullet points on the most important distinctions — no filler. In each bullet, wrap ONLY a single short keyword or technical term (1-3 words — a name, mechanism, number, or O-notation) in '<strong class=\\"kw\\">...</strong>' — never a full clause."],
+ "when_to_use_left": [{{"label": "Short 2-5 word scenario name, e.g. 'Shortest Path Finding'", "detail": "One sentence on why the left item fits this scenario specifically"}}, "2 to 4 such items total — distinct concrete scenarios, not restatements of the same point"],
+ "when_to_use_right": [{{"label": "Short 2-5 word scenario name", "detail": "One sentence on why the right item fits this scenario specifically"}}, "2 to 4 such items total, same rule as the left item"],
  "tags": ["2 to 4 kebab-case tags"]}}
 
 Topic: {term}"""
@@ -181,6 +186,14 @@ def parse_result(text: str) -> dict | None:
     svg = data["diagram_svg"].strip()
     if "<svg" not in svg or "</svg>" not in svg:
         return None
+    # Blank lines inside a raw-HTML block make CommonMark/goldmark stop
+    # treating it as HTML mid-block, so the model's occasional pretty-printed
+    # (multi-line, blank-line-separated) SVG gets torn apart by an injected
+    # <p> around whatever line follows the blank line, orphaning </svg>
+    # inside it and breaking rendering. Strip blank lines unconditionally —
+    # harmless for the already-compact single-line SVGs, required for the
+    # pretty-printed ones.
+    svg = "\n".join(line for line in svg.split("\n") if line.strip() != "")
     data["diagram_svg"] = svg
 
     headers = data.get("table_headers")
@@ -198,8 +211,23 @@ def parse_result(text: str) -> dict | None:
     diffs = data.get("key_differences") or []
     data["key_differences"] = [str(d) for d in diffs if str(d).strip()] if isinstance(diffs, list) else []
 
-    data["when_to_use_left"] = str(data.get("when_to_use_left", "")).strip()
-    data["when_to_use_right"] = str(data.get("when_to_use_right", "")).strip()
+    def clean_bullets(items) -> list:
+        if not isinstance(items, list):
+            return []
+        out = []
+        for it in items:
+            if not isinstance(it, dict):
+                continue
+            label = str(it.get("label", "")).strip()
+            detail = str(it.get("detail", "")).strip()
+            if label and detail:
+                out.append({"label": label, "detail": detail})
+        return out
+
+    data["when_to_use_left"] = clean_bullets(data.get("when_to_use_left"))
+    data["when_to_use_right"] = clean_bullets(data.get("when_to_use_right"))
+    if not data["when_to_use_left"] or not data["when_to_use_right"]:
+        return None
 
     tags = data.get("tags") or []
     data["tags"] = [slugify(str(t)) for t in tags[:4] if str(t).strip()] or ["comparison"]
@@ -302,6 +330,9 @@ def write_post(term: str, result: dict, date: datetime) -> Path:
         items = "\n".join(f"- {d}" for d in result["key_differences"])
         diff_section = f"\n## {HEADING_DIFFERENCES}\n\n{items}\n"
 
+    def render_usage_bullets(items: list) -> str:
+        return "\n".join(f"- **{it['label']}**: {it['detail']}" for it in items)
+
     usage_section = ""
     if result["when_to_use_left"] or result["when_to_use_right"]:
         left_name = result["table_headers"][1] if len(result["table_headers"]) > 1 else "the first option"
@@ -309,9 +340,13 @@ def write_post(term: str, result: dict, date: datetime) -> Path:
         usage_section = f"""
 ## {HEADING_USAGE}
 
-**{left_name}** — {result['when_to_use_left']}
+**{left_name}**
 
-**{right_name}** — {result['when_to_use_right']}
+{render_usage_bullets(result['when_to_use_left'])}
+
+**{right_name}**
+
+{render_usage_bullets(result['when_to_use_right'])}
 """
 
     # diagram_svg is wrapped in .compare-diagram (assets/css/extended/compare.css) —

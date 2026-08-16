@@ -7,6 +7,8 @@ description: Produce a cinematic, chaptered explainer/tutorial VIDEO for a code,
 
 ## Overview
 
+Tech stack: a Remotion-based (React) programmatic video production skill.
+
 This skill builds a polished, chaptered explainer video for any code/CLI/dev-tool
 topic and renders it to MP4. The aesthetic is a dark IaC console ("Terminal
 Noir"): deep indigo, violet accent, monospace code that writes itself, terminal

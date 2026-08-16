@@ -44,6 +44,66 @@ exit 0으로 끝난다. 크론을 그대로 두고 풀만 비우면 매일 빈 �
 둘 다 제거한다. 인터뷰 단계에서 "입력 없는 날 자동 게시(크론+폴백)를 원하는지"를
 미리 물어보는 편이 좋다.
 
+## 개인정보 익명화 — 삭제 금지, 스키마 바꿔도 반드시 유지
+
+`SYSTEM_PROMPT`와 `GENERATE_PROMPT`의 "Privacy rules" 문단은 옵션이 아니라 이 스킬의
+전제 조건이다. 이 파이프라인은 **실제 사람의 실명·나이·병력·이민 신분·직장·연락처가
+섞인 실제 대화 스크립트**를 공개 웹사이트에 게시하는 구조이므로, 프롬프트가 이걸 막지
+않으면 결과는 우연에 맡겨진다(실제로 talktime에서 검증 전에는 우연히 안전했을 뿐,
+규칙이 없었다). GENERATE_PROMPT 스키마를 고치거나 필드를 추가/삭제할 때도 이 문단은
+그대로 옮겨야 한다 — "summary/corrections/quiz/diary 등 모든 필드에 적용", "실명 대신
+a participant로 일반화", "나이·병력·비자·직장·주소·연락처는 문맥상 자연스러워도 제외"
+세 가지 축은 절대 빠뜨리지 않는다.
+
+**원본 커밋 자체는 프롬프트로 못 막는다.** 사용자가 GitHub 웹 UI에서 원문을 붙여넣고
+Commit하는 순간, 파이프라인이 손대기도 전에 그 원문이 이미 공개 저장소 히스토리에
+들어간다. 나중에 입력란을 자동으로 비워도 그 이전 커밋은 남는다. 이건 별도의 노출
+경로이므로: ① `input/script.md` 안내문과 README에 "붙여넣기 전 실명을 placeholder로
+바꿀 것"을 권장 문구로 넣어둔다(템플릿에 반영됨). ② 이미 실명이 든 원본이 히스토리에
+커밋된 걸 발견하면(예: 스캐폴딩용 샘플 스크립트, 또는 사용자의 실사용 커밋), 삭제/정리
+여부와 git 히스토리 재작성 여부는 반드시 사용자에게 물어본다 — force-push가 필요한
+되돌리기 어려운 작업이다.
+
+### git 히스토리에서 개인정보 제거 절차 (`git filter-repo`)
+
+이미 커밋된 실명을 히스토리에서 지워야 한다면:
+
+1. `git log --all --format='%H' -- input/script.md | while read c; do git rev-parse "$c:input/script.md"; done | sort -u` 로
+   그 파일이 가져본 모든 blob을 나열하고, 각 blob을 `git cat-file -p <sha>`로 실명/나이/
+   병력 등 패턴이 있는지 전수 스캔한다. 커밋 단위가 아니라 **blob 단위**로 스캔해야
+   중복 콘텐츠를 가진 여러 커밋을 한 번에 파악할 수 있다.
+2. `brew install git-filter-repo` (또는 `pip install git-filter-repo`)로 설치한다 —
+   `filter-branch`보다 빠르고 안전하다.
+3. 콜백 스크립트를 작성한다. **치명적 함정**: `--blob-callback`에 넘기는 코드는
+   filter-repo가 이미 `def blob_callback(blob, metadata):` 로 감싸서 실행한다.
+   스크립트 안에서 또 `def blob_callback(...):` 를 정의하면 이중 중첩되어 **절대
+   호출되지 않는다** — 에러도 없이 조용히 아무 것도 안 바뀐 채 "완료"로 표시되므로
+   반드시 실행 후 재스캔으로 검증해야 발견된다. 함수 정의 없이 `blob`/`metadata`
+   변수를 바로 쓰는 **본문만** 작성한다:
+   ```python
+   # 올바른 예 — 함수 정의 없이 본문만
+   MARKERS = [b"my name is Ronaldo", b"62 years old"]  # 스캔에서 찾은 실제 패턴
+   REPLACEMENT = b"<!-- redacted for privacy -->\n```\n```\n"
+   if any(m in blob.data for m in MARKERS):
+       blob.data = REPLACEMENT
+   ```
+   blob ID로 매칭하는 방식(`blob.original_id in {...}`)도 시도했으나 이번 세션에서는
+   매칭되지 않았다 — 원인 미확인이므로 **내용 기반 매칭(위 방식)을 기본으로 쓴다.**
+4. `git filter-repo --force --blob-callback "$(cat redact.py)"` 실행 후, **반드시**
+   `HEAD`의 커밋 SHA가 실행 전후로 달라졌는지 확인한다(안 바뀌었으면 콜백이 아무것도
+   못 찾은 것 — 위 함정 재확인). 그다음 `git log --all -p -- input/script.md | grep -i
+   <제거하려던 패턴>` 으로 히스토리 전체 재스캔, 커밋 메시지도 별도로 스캔
+   (`git log --all --format='%s'`), `content/posts/` 등 다른 경로의 과거 리비전에도
+   같은 내용이 새어나가지 않았는지 확인한다.
+5. filter-repo는 안전장치로 `origin` remote를 자동 제거한다 — `git remote add origin
+   <url>` 로 다시 연결한 뒤 `git fetch origin && git push --force-with-lease origin
+   main` 으로 반영한다. `--force`(lease 없이)가 아니라 `--force-with-lease`를 쓰고,
+   그 직전에 `git fetch`로 원격 상태를 갱신해둬야 lease 비교가 정상 동작한다.
+6. 마지막으로 GitHub에서 **새로 mirror clone**해 독립적으로 재스캔한다(로컬 저장소
+   캐시를 믿지 않는다) — `git clone --mirror <url> /tmp/verify && cd /tmp/verify &&
+   git log --all -p | grep -i <패턴>`. 그리고 force-push가 Pages 배포 워크플로를
+   정상적으로 재발화하는지, 사이트가 여전히 200을 반환하는지 확인한다.
+
 ## 프롬프트 산출물 규칙 (품질 이슈를 겪고 보강된 것들)
 
 - **퀴즈**: 빈칸(`____`) 문장 + 선택지는 그 수업의 idioms/vocabulary 항목에서만.
