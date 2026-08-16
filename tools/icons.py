@@ -182,6 +182,56 @@ def icon_svg(key: str, size: int = 22, extra: str = "") -> str:
     )
 
 
+# The site mark: a hub node wired to three satellites — the catalog in one shape.
+# Deliberately heavier than the skill glyphs (solid tile, filled nodes) so it reads
+# as a logo rather than as a 39th icon, and survives being shrunk to a 16px favicon.
+LOGO_NODES = [(16.0, 7.4), (23.4, 20.3), (8.6, 20.3)]
+
+
+def _logo_inner(tile: str, ink: str | None) -> str:
+    """`ink=None` leaves the foreground unpainted so the stylesheet can drive it —
+    var() is not honoured inside SVG presentation attributes, so the themed build
+    styles `.logo .ink` in CSS instead of writing a colour here. currentColor *is*
+    honoured, so the tile itself can still inherit."""
+    paint_g = f' stroke="{ink}"' if ink else ""
+    paint_c = f' fill="{ink}"' if ink else ""
+    spokes = "".join(f'<path d="M16 16L{x} {y}"/>' for x, y in LOGO_NODES)
+    dots = "".join(
+        f'<circle class="ink" cx="{x}" cy="{y}" r="2.6"{paint_c} stroke="none"/>'
+        for x, y in LOGO_NODES
+    )
+    # Nudged in from the tile edge: at full size the nodes crowded the corners.
+    inset = 'transform="translate(16 16) scale(0.9) translate(-16 -16)"'
+    return (
+        f'<rect width="32" height="32" rx="8.5" fill="{tile}"/>'
+        f'<g {inset}>'
+        f'<g class="ink-s"{paint_g} stroke-width="2.1" stroke-linecap="round" '
+        f'fill="none">{spokes}</g>'
+        f'<circle class="ink" cx="16" cy="16" r="3.4"{paint_c} stroke="none"/>{dots}'
+        f"</g>"
+    )
+
+
+def logo_svg(size: int = 30) -> str:
+    """Header lockup mark. The tile inherits currentColor; `.ink`/`.ink-s` are
+    painted by the stylesheet so the mark flips with the light/dark theme."""
+    return (
+        f'<svg class="logo" width="{size}" height="{size}" viewBox="0 0 32 32" '
+        f'aria-hidden="true">{_logo_inner("currentColor", None)}</svg>'
+    )
+
+
+def logo_favicon() -> str:
+    """Standalone copy for the favicon — no stylesheet reaches it, so it is
+    painted outright."""
+    svg = (
+        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>"
+        + _logo_inner("%23c2410c", "%23ffffff").replace('"', "'")
+        + "</svg>"
+    )
+    return "data:image/svg+xml," + svg.replace("<", "%3C").replace(">", "%3E")
+
+
 def icon_file_svg(key: str, color: str) -> str:
     """A self-contained .svg file for the README. `currentColor` has nothing to
     inherit from inside an <img>, so the stroke colour is written in."""

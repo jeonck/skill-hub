@@ -34,6 +34,8 @@ from icons import (  # noqa: E402
     icon_data_uri,
     icon_file_svg,
     icon_svg,
+    logo_favicon,
+    logo_svg,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -302,10 +304,7 @@ def collect(meta: dict) -> list[dict]:
 
 def page(title: str, body: str, depth: int = 0, desc: str = "", favicon: str = "") -> str:
     root = "../" * depth
-    icon_href = favicon or (
-        "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>"
-        "<text y='.9em' font-size='90'>&#129526;</text></svg>"
-    )
+    icon_href = favicon or logo_favicon()
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -324,6 +323,20 @@ def page(title: str, body: str, depth: int = 0, desc: str = "", favicon: str = "
 </body>
 </html>
 """
+
+
+def site_header(depth: int) -> str:
+    """Brand bar shared by the catalog and every detail page."""
+    home = "../" * depth or "./"
+    return f"""<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{home}">{logo_svg(30)}<span>Claude Skill Hub</span></a>
+    <nav class="bar-links">
+      <a href="{home}#catalog">Catalog</a>
+      <a href="https://github.com/{SITE['repo']}">GitHub</a>
+    </nav>
+  </div>
+</header>"""
 
 
 def install_block(slug: str, depth: int) -> str:
@@ -379,9 +392,9 @@ def render_index(skills: list[dict], meta: dict) -> str:
 </article>"""
         )
 
-    body = f"""<header class="hero">
+    body = f"""{site_header(0)}
+<header class="hero">
   <div class="wrap">
-    <div class="eyebrow">github.com/{SITE['repo']}</div>
     <h1>Claude Skill Hub</h1>
     <p class="lede">{len(skills)} installable skills for Claude Code and Claude.ai — site builders,
     content pipelines, design systems, video production and dev tooling. Copy one command, drop it in
@@ -465,7 +478,8 @@ def render_detail(s: dict, skills: list[dict]) -> str:
         else ""
     )
 
-    body = f"""<nav class="crumb wrap"><a href="../../">← All skills</a></nav>
+    body = f"""{site_header(2)}
+<nav class="crumb wrap"><a href="../../">← All skills</a></nav>
 <header class="wrap detail-head">
   <div class="head-row">
     <span class="tile lg c-{s['cat_slug']}">{icon_svg(s['icon'], 34)}</span>
