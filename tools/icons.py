@@ -221,6 +221,21 @@ def logo_svg(size: int = 30) -> str:
     )
 
 
+# Standalone logo files for the README, one per GitHub theme. Same pair of colours
+# the stylesheet uses, since a committed SVG cannot read the viewer's theme itself.
+LOGO_FILES = {
+    "logo.svg": ("#c2410c", "#fbfaf9"),
+    "logo-dark.svg": ("#f97b4f", "#12110f"),
+}
+
+
+def logo_file_svg(tile: str, ink: str) -> str:
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" '
+        f'viewBox="0 0 32 32">{_logo_inner(tile, ink)}</svg>\n'
+    )
+
+
 def logo_favicon() -> str:
     """Standalone copy for the favicon — no stylesheet reaches it, so it is
     painted outright."""

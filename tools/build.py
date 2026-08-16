@@ -35,7 +35,9 @@ from icons import (  # noqa: E402
     icon_file_svg,
     icon_svg,
     logo_favicon,
+    logo_file_svg,
     logo_svg,
+    LOGO_FILES,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -557,8 +559,12 @@ README_END = "<!-- icons:end -->"
 def write_repo_icons(skills: list[dict]) -> None:
     """Emit assets/icons/<slug>.svg (committed, referenced by the README) and
     regenerate the README's icon table between its marker comments."""
-    icon_dir = ROOT / "assets" / "icons"
+    assets = ROOT / "assets"
+    icon_dir = assets / "icons"
     icon_dir.mkdir(parents=True, exist_ok=True)
+
+    for name, (tile, ink) in LOGO_FILES.items():
+        (assets / name).write_text(logo_file_svg(tile, ink), encoding="utf-8")
 
     keep = set()
     for s in skills:

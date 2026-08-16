@@ -1,13 +1,26 @@
-# Claude Skill Hub
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo.svg" width="76" height="76" alt="">
+  </picture>
+</p>
 
-[![Browse the catalog](https://img.shields.io/badge/Browse_the_catalog-skill.metacog.co.kr-c2410c?style=for-the-badge)](https://skill.metacog.co.kr)
+<h1 align="center">Claude Skill Hub</h1>
 
-[![Skills](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fskill.metacog.co.kr%2Fcatalog.json&query=%24.count&label=skills&color=1b1917)](https://skill.metacog.co.kr)
-[![Deploy](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml)
-[![License](https://img.shields.io/badge/license-MIT-1b1917)](LICENSE)
+<p align="center">
+  A public catalog of installable <a href="https://claude.com/claude-code">Claude</a> skills —<br>
+  site builders, content pipelines, design systems, video production and dev tooling.
+</p>
 
-A public catalog of installable [Claude](https://claude.com/claude-code) skills — site
-builders, content pipelines, design systems, video production and dev tooling.
+<p align="center">
+  <a href="https://skill.metacog.co.kr"><img src="https://img.shields.io/badge/Browse_the_catalog-skill.metacog.co.kr-c2410c?style=for-the-badge" alt="Browse the catalog"></a>
+</p>
+
+<p align="center">
+  <a href="https://skill.metacog.co.kr"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fskill.metacog.co.kr%2Fcatalog.json&query=%24.count&label=skills&color=1b1917" alt="Skills"></a>
+  <a href="https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml"><img src="https://github.com/jeonck/skill-hub/actions/workflows/deploy.yml/badge.svg" alt="Deploy"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-1b1917" alt="License"></a>
+</p>
 
 Every skill on the site has a copy-paste install command. Nothing to sign up for, no
 package manager.
