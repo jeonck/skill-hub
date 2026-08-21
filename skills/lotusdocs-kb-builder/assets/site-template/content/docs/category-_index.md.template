@@ -1,0 +1,14 @@
+---
+weight: {{CATEGORY_WEIGHT}}
+title: "{{CATEGORY_TITLE}}"
+description: "{{CATEGORY_ONE_LINE_DESCRIPTION}}"
+icon: "{{MATERIAL_SYMBOL_ICON}}"
+date: "{{DATE}}"
+lastmod: "{{DATE}}"
+draft: false
+---
+
+{{CATEGORY_INTRO_PARAGRAPH}}
+
+<!-- Do NOT hand-list child pages here — layouts/docs/list.html auto-lists them
+     as cards using each child's title/description/icon front matter. -->

@@ -1,0 +1,19 @@
+---
+weight: 1
+title: "Overview"
+description: "{{SITE_DESCRIPTION}}"
+icon: "home"
+date: "{{DATE}}"
+lastmod: "{{DATE}}"
+draft: false
+---
+
+## What this is
+
+{{OVERVIEW_INTRO}}
+
+1. [{{CATEGORY_1_TITLE}}](/docs/{{category-1-slug}}/) — {{CATEGORY_1_ONE_LINER}}
+2. [{{CATEGORY_2_TITLE}}](/docs/{{category-2-slug}}/) — {{CATEGORY_2_ONE_LINER}}
+
+<!-- One line per top-level category. Keep this list in sync with data/landing.yaml's
+     featureGrid.items and with each category folder's _index.md front matter. -->

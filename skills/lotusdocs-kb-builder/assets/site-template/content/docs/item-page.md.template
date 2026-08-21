@@ -1,0 +1,20 @@
+---
+weight: {{ITEM_WEIGHT}}
+title: "{{PAGE_TITLE}}"
+description: "{{ONE_SENTENCE_DESCRIPTION}}"
+icon: "{{MATERIAL_SYMBOL_ICON}}"
+date: "{{DATE}}"
+lastmod: "{{DATE}}"
+draft: false
+---
+
+{{PAGE_BODY}}
+
+<!--
+  weight rule (see references/pitfalls.md, "Global Prev/Next ordering"):
+  do NOT reuse 10/20/30... in every category. Compute this page's weight as
+  1000 * <this category's 1-based position among all categories> + 10 * <this
+  page's 1-based position within its category>. Example: 3rd category, 2nd
+  page in it -> weight: 3020. This keeps Lotus Docs' site-wide Prev/Next nav
+  walking categories in order instead of jumping between them.
+-->

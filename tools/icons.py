@@ -56,6 +56,9 @@ ICONS: dict[str, str] = {
     # ---- docs / writing
     "book": '<path d="M3.5 5.5A2 2 0 015.5 3.5H11v17H5.5a2 2 0 01-2-2v-13z"/>'
             '<path d="M20.5 5.5a2 2 0 00-2-2H13v17h5.5a2 2 0 002-2v-13z"/>',
+    "lotus": '<path d="M12 20.5c-4.5 0-8-2.8-8-6.2 1.9-.6 3.6-.3 5 .7"/>'
+             '<path d="M12 20.5c4.5 0 8-2.8 8-6.2-1.9-.6-3.6-.3-5 .7"/>'
+             '<path d="M12 20.5c-2.3-1.6-3.6-4-3.6-6.6S9.7 8.9 12 6.5c2.3 2.4 3.6 4.8 3.6 7.4s-1.3 5-3.6 6.6z"/>',
     "library": '<path d="M4 20V6M8 20V6M12.5 20V6"/><path d="M2.5 20h12"/>'
                '<path d="M16.5 7.5l3.8 12.1"/><path d="M15 20h6.5"/>',
     "feather": '<path d="M4 20l7-7"/><path d="M20.5 3.5c-6 0-11 3.6-11 9v3h3c5.4 0 8-5 8-12z"/>'
@@ -127,6 +130,7 @@ SKILL_ICONS: dict[str, str] = {
     "imagegen-frontend-web": "browser",
     "internal-comms": "megaphone",
     "it-professional-content": "sitemap",
+    "lotusdocs-kb-builder": "lotus",
     "mcp-builder": "server-plug",
     "minimalist-skill": "square-min",
     "output-skill": "list-check",

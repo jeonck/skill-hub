@@ -1,0 +1,57 @@
+# Note: Template blocks require a 'weight' parameter so they're correctly ordered on the landing page
+
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  badge:
+    text: "{{HERO_BADGE_TEXT}}"
+    color: primary
+    pill: true
+    soft: true
+
+  title: "{{SITE_TITLE}}"
+  subtitle: "{{HERO_SUBTITLE}}"
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Browse the Docs"
+    url: "/docs/"
+  cta2Button:
+    icon: hub
+    btnText: "View on GitHub"
+    url: "https://github.com/{{GITHUB_OWNER}}/{{GITHUB_REPO}}"
+
+  info: "Built with **Hugo** and **Lotus Docs**."
+
+# Feature Grid — one card per top-level docs category.
+# icon: must be a Google Material Symbols (Outlined) ligature name, e.g. lock, hub,
+# cloud, code, policy, report_problem, build_circle, restore, fingerprint, radar,
+# auto_awesome. Browse names at https://fonts.google.com/icons
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: "{{FEATURE_GRID_TITLE}}"
+  subtitle: "{{FEATURE_GRID_SUBTITLE}}"
+
+  items:
+    - title: "{{CATEGORY_1_TITLE}}"
+      icon: "{{CATEGORY_1_ICON}}"
+      description: "{{CATEGORY_1_DESCRIPTION}}"
+      ctaLink:
+        text: browse
+        url: /docs/{{category-1-slug}}/
+
+    - title: "{{CATEGORY_2_TITLE}}"
+      icon: "{{CATEGORY_2_ICON}}"
+      description: "{{CATEGORY_2_DESCRIPTION}}"
+      ctaLink:
+        text: browse
+        url: /docs/{{category-2-slug}}/
+
+# Add one item per category. Delete featureGrid entirely (or set enable: false)
+# for a small site where the auto-generated docs sidebar is navigation enough.
