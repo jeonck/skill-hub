@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-39 skills, one glyph each. Click any name for its install command.
+40 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -65,6 +65,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/cisa-content-writer.svg" width="22" alt=""> | [**CISA Content Writer**](https://skill.metacog.co.kr/s/cisa-content-writer/)<br>`cisa-content-writer` | Author CISA (IS audit) best-practice guides across the six ISACA domains — a standard 10-section layout with Mermaid diagrams and HTML audit checklists. |
 | <img src="assets/icons/internal-comms.svg" width="22" alt=""> | [**Internal Comms**](https://skill.metacog.co.kr/s/internal-comms/)<br>`internal-comms` | Write internal communications in house formats — status reports, leadership updates, newsletters, FAQs, incident reports and project updates. |
 | <img src="assets/icons/it-professional-content.svg" width="22" alt=""> | [**IT Professional Engineer Content**](https://skill.metacog.co.kr/s/it-professional-content/)<br>`it-professional-content` | Write framework and methodology content in the Korean 기술사 exam format — a 3-section structure with block diagrams, Mermaid visualizations and comparison tables. |
+| <img src="assets/icons/problem-note.svg" width="22" alt=""> | [**Problem Note Writer**](https://skill.metacog.co.kr/s/problem-note/)<br>`problem-note` | Write up an ICT incident, error log or troubleshooting session as a structured problem note for a Quartz v5 second brain — plus concept notes, MOC pages and a masking check before anything goes public. |
 | <img src="assets/icons/us-work-english-content.svg" width="22" alt=""> | [**US Work English Content**](https://skill.metacog.co.kr/s/us-work-english-content/)<br>`us-work-english-content` | Add expression-practice pages to a Docusaurus English-learning site — thematic collapsible groups, bold expressions with key/source/similar bullets, tip admonitions and sidebar wiring. |
 
 ### Design & UI

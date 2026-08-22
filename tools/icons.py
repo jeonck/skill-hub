@@ -65,6 +65,9 @@ ICONS: dict[str, str] = {
                '<path d="M9 15c2.5-2.5 5-4 8-5"/>',
     "notebook": '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v18"/>'
                 '<path d="M12.5 8h3.5M12.5 12h3.5"/>',
+    "incident": '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/>'
+                '<path d="M12 11v3.5"/>'
+                '<circle cx="12" cy="17.6" r=".9" fill="currentColor" stroke="none"/>',
     "quote": '<path d="M9 6.5c-2.8 0-4.5 2-4.5 4.4 0 1.9 1.3 3.1 3 3.1 1.5 0 2.6-1 2.6-2.4 '
              '0-1.3-.9-2.2-2.1-2.2-.3 0-.6 0-.8.1.2-.9 1-1.6 1.8-1.9V6.5z"/>'
              '<path d="M18.5 6.5c-2.8 0-4.5 2-4.5 4.4 0 1.9 1.3 3.1 3 3.1 1.5 0 2.6-1 2.6-2.4 '
@@ -134,6 +137,7 @@ SKILL_ICONS: dict[str, str] = {
     "mcp-builder": "server-plug",
     "minimalist-skill": "square-min",
     "output-skill": "list-check",
+    "problem-note": "incident",
     "redesign-skill": "wand",
     "research-agent-team": "users",
     "skill-creator": "puzzle",

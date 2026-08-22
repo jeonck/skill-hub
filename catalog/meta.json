@@ -328,6 +328,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "problem-note": {
+      "title": "Problem Note Writer",
+      "summary": "Write up an ICT incident, error log or troubleshooting session as a structured problem note for a Quartz v5 second brain — plus concept notes, MOC pages and a masking check before anything goes public.",
+      "category": "Content & Writing",
+      "tags": [
+        "quartz",
+        "obsidian",
+        "incident",
+        "knowledge-base"
+      ],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
     "redesign-skill": {
       "title": "Redesign Existing Projects",
       "summary": "Upgrade an existing site or app to premium quality — audit the current design, name the generic AI patterns, and raise the bar without breaking functionality.",
