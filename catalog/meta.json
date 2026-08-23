@@ -48,6 +48,18 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "brainstorming": {
+      "title": "Brainstorming",
+      "summary": "Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess.",
+      "category": "Dev Tooling",
+      "tags": [
+        "planning",
+        "requirements",
+        "design"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
     "brand-guidelines": {
       "title": "Brand Guidelines",
       "summary": "Apply Anthropic's official brand colors and typography to any artifact that benefits from a consistent house look-and-feel.",
@@ -164,6 +176,18 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "dispatching-parallel-agents": {
+      "title": "Dispatching Parallel Agents",
+      "summary": "Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence.",
+      "category": "Dev Tooling",
+      "tags": [
+        "subagents",
+        "parallel",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
     "docusaurus-english-site": {
       "title": "Docusaurus Site Scaffold",
       "summary": "Stand up a Docusaurus documentation site with GitHub Pages deployment, grouped navigation, per-topic sidebars, Korean locale and Mermaid support.",
@@ -175,6 +199,30 @@
         "scaffold"
       ],
       "origin": "jeonck",
+      "output_language": "en"
+    },
+    "executing-plans": {
+      "title": "Executing Plans",
+      "summary": "Work through a written implementation plan in a separate session, with review checkpoints between steps.",
+      "category": "Dev Tooling",
+      "tags": [
+        "planning",
+        "workflow",
+        "review"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
+    "finishing-a-development-branch": {
+      "title": "Finishing a Development Branch",
+      "summary": "Decide how to integrate finished work once implementation is complete and the tests pass.",
+      "category": "Dev Tooling",
+      "tags": [
+        "git",
+        "merge",
+        "workflow"
+      ],
+      "origin": "obra",
       "output_language": "en"
     },
     "github-sponsors": {
@@ -341,6 +389,17 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "receiving-code-review": {
+      "title": "Receiving Code Review",
+      "summary": "Handle review feedback with technical rigor — verify each suggestion instead of agreeing performatively or implementing blindly.",
+      "category": "Dev Tooling",
+      "tags": [
+        "code-review",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
     "redesign-skill": {
       "title": "Redesign Existing Projects",
       "summary": "Upgrade an existing site or app to premium quality — audit the current design, name the generic AI patterns, and raise the bar without breaking functionality.",
@@ -351,6 +410,17 @@
         "css"
       ],
       "origin": "jeonck",
+      "output_language": "en"
+    },
+    "requesting-code-review": {
+      "title": "Requesting Code Review",
+      "summary": "Ask for review at task completion, major features and pre-merge, so work is checked against its requirements.",
+      "category": "Dev Tooling",
+      "tags": [
+        "code-review",
+        "workflow"
+      ],
+      "origin": "obra",
       "output_language": "en"
     },
     "research-agent-team": {
@@ -414,6 +484,18 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "subagent-driven-development": {
+      "title": "Subagent-Driven Development",
+      "summary": "Execute a plan's independent tasks through subagents in the current session, with task briefs and a review package.",
+      "category": "Dev Tooling",
+      "tags": [
+        "subagents",
+        "workflow",
+        "parallel"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
     "sync-shopshorts-higgs": {
       "title": "Shopping Shorts Workflow",
       "summary": "Turn a product URL into a Korean-market shopping short — crawl the product, profile the target persona, recommend script × preset, approve the scene map, then generate via Higgsfield.",
@@ -426,6 +508,18 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "systematic-debugging": {
+      "title": "Systematic Debugging",
+      "summary": "Work a bug, test failure or surprise back to its root cause before proposing any fix.",
+      "category": "Dev Tooling",
+      "tags": [
+        "debugging",
+        "root-cause",
+        "testing"
+      ],
+      "origin": "obra",
+      "output_language": "en"
     },
     "taste-skill": {
       "title": "Design Taste Frontend",
@@ -451,6 +545,18 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "test-driven-development": {
+      "title": "Test-Driven Development",
+      "summary": "Write the failing test before the implementation, for every feature and bugfix.",
+      "category": "Dev Tooling",
+      "tags": [
+        "testing",
+        "tdd",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
     },
     "theme-factory": {
       "title": "Theme Factory",
@@ -500,6 +606,42 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "using-git-worktrees": {
+      "title": "Using Git Worktrees",
+      "summary": "Get an isolated workspace before feature work or plan execution, via native tooling or a git worktree fallback.",
+      "category": "Dev Tooling",
+      "tags": [
+        "git",
+        "worktree",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
+    "using-superpowers": {
+      "title": "Using Superpowers",
+      "summary": "Entry point for the Superpowers framework — how to find and invoke the right skill before answering, including clarifying questions.",
+      "category": "Dev Tooling",
+      "tags": [
+        "workflow",
+        "meta",
+        "dispatch"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
+    "verification-before-completion": {
+      "title": "Verification Before Completion",
+      "summary": "Run the verification commands and read the output before claiming anything is done, fixed or passing — evidence before assertions.",
+      "category": "Dev Tooling",
+      "tags": [
+        "verification",
+        "testing",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
     "webapp-testing": {
       "title": "Web App Testing",
       "summary": "Drive and test local web apps with Playwright — verify frontend behavior, debug the UI, capture screenshots and read browser logs.",
@@ -510,6 +652,30 @@
         "browser"
       ],
       "origin": "anthropic",
+      "output_language": "en"
+    },
+    "writing-plans": {
+      "title": "Writing Plans",
+      "summary": "Turn a spec or set of requirements into a written multi-step implementation plan before touching code.",
+      "category": "Dev Tooling",
+      "tags": [
+        "planning",
+        "spec",
+        "workflow"
+      ],
+      "origin": "obra",
+      "output_language": "en"
+    },
+    "writing-skills": {
+      "title": "Writing Skills",
+      "summary": "Create, edit and verify Claude skills before deploying them.",
+      "category": "Dev Tooling",
+      "tags": [
+        "meta",
+        "authoring",
+        "skills"
+      ],
+      "origin": "obra",
       "output_language": "en"
     }
   }

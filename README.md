@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-40 skills, one glyph each. Click any name for its install command.
+54 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -91,10 +91,24 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/artifacts-builder.svg" width="22" alt=""> | [**Artifacts Builder**](https://skill.metacog.co.kr/s/artifacts-builder/)<br>`artifacts-builder` | Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library. |
+| <img src="assets/icons/brainstorming.svg" width="22" alt=""> | [**Brainstorming**](https://skill.metacog.co.kr/s/brainstorming/)<br>`brainstorming` | Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess. |
+| <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
+| <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |
+| <img src="assets/icons/finishing-a-development-branch.svg" width="22" alt=""> | [**Finishing a Development Branch**](https://skill.metacog.co.kr/s/finishing-a-development-branch/)<br>`finishing-a-development-branch` | Decide how to integrate finished work once implementation is complete and the tests pass. |
 | <img src="assets/icons/output-skill.svg" width="22" alt=""> | [**Full Output Enforcement**](https://skill.metacog.co.kr/s/output-skill/)<br>`output-skill` | Override default truncation behavior — enforce complete code generation, ban placeholder patterns, and handle token-limit splits cleanly. |
 | <img src="assets/icons/mcp-builder.svg" width="22" alt=""> | [**MCP Builder**](https://skill.metacog.co.kr/s/mcp-builder/)<br>`mcp-builder` | Build high-quality MCP servers that expose external APIs to LLMs through well-designed tools — in Python (FastMCP) or Node/TypeScript (MCP SDK). |
+| <img src="assets/icons/receiving-code-review.svg" width="22" alt=""> | [**Receiving Code Review**](https://skill.metacog.co.kr/s/receiving-code-review/)<br>`receiving-code-review` | Handle review feedback with technical rigor — verify each suggestion instead of agreeing performatively or implementing blindly. |
+| <img src="assets/icons/requesting-code-review.svg" width="22" alt=""> | [**Requesting Code Review**](https://skill.metacog.co.kr/s/requesting-code-review/)<br>`requesting-code-review` | Ask for review at task completion, major features and pre-merge, so work is checked against its requirements. |
 | <img src="assets/icons/skill-creator.svg" width="22" alt=""> | [**Skill Creator**](https://skill.metacog.co.kr/s/skill-creator/)<br>`skill-creator` | Create and update Claude skills — the guide for packaging specialized knowledge, workflows and tool integrations into a skill. |
+| <img src="assets/icons/subagent-driven-development.svg" width="22" alt=""> | [**Subagent-Driven Development**](https://skill.metacog.co.kr/s/subagent-driven-development/)<br>`subagent-driven-development` | Execute a plan's independent tasks through subagents in the current session, with task briefs and a review package. |
+| <img src="assets/icons/systematic-debugging.svg" width="22" alt=""> | [**Systematic Debugging**](https://skill.metacog.co.kr/s/systematic-debugging/)<br>`systematic-debugging` | Work a bug, test failure or surprise back to its root cause before proposing any fix. |
+| <img src="assets/icons/test-driven-development.svg" width="22" alt=""> | [**Test-Driven Development**](https://skill.metacog.co.kr/s/test-driven-development/)<br>`test-driven-development` | Write the failing test before the implementation, for every feature and bugfix. |
+| <img src="assets/icons/using-git-worktrees.svg" width="22" alt=""> | [**Using Git Worktrees**](https://skill.metacog.co.kr/s/using-git-worktrees/)<br>`using-git-worktrees` | Get an isolated workspace before feature work or plan execution, via native tooling or a git worktree fallback. |
+| <img src="assets/icons/using-superpowers.svg" width="22" alt=""> | [**Using Superpowers**](https://skill.metacog.co.kr/s/using-superpowers/)<br>`using-superpowers` | Entry point for the Superpowers framework — how to find and invoke the right skill before answering, including clarifying questions. |
+| <img src="assets/icons/verification-before-completion.svg" width="22" alt=""> | [**Verification Before Completion**](https://skill.metacog.co.kr/s/verification-before-completion/)<br>`verification-before-completion` | Run the verification commands and read the output before claiming anything is done, fixed or passing — evidence before assertions. |
 | <img src="assets/icons/webapp-testing.svg" width="22" alt=""> | [**Web App Testing**](https://skill.metacog.co.kr/s/webapp-testing/)<br>`webapp-testing` | Drive and test local web apps with Playwright — verify frontend behavior, debug the UI, capture screenshots and read browser logs. |
+| <img src="assets/icons/writing-plans.svg" width="22" alt=""> | [**Writing Plans**](https://skill.metacog.co.kr/s/writing-plans/)<br>`writing-plans` | Turn a spec or set of requirements into a written multi-step implementation plan before touching code. |
+| <img src="assets/icons/writing-skills.svg" width="22" alt=""> | [**Writing Skills**](https://skill.metacog.co.kr/s/writing-skills/)<br>`writing-skills` | Create, edit and verify Claude skills before deploying them. |
 
 ### Media & Video
 

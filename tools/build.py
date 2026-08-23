@@ -366,11 +366,8 @@ def render_index(skills: list[dict], meta: dict) -> str:
     cards = []
     for s in skills:
         tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in s["tags"][:4])
-        origin = (
-            '<span class="badge anthropic">Anthropic</span>'
-            if s["origin"] == "anthropic"
-            else ""
-        )
+        src = ORIGINS.get(s["origin"])
+        origin = f'<span class="badge ext">{src[0]}</span>' if src else ""
         ko = '<span class="badge ko">KO output</span>' if s["output_language"] == "ko" else ""
         haystack = html.escape(
             " ".join([s["slug"], s["title"], s["summary"], s["category"], *s["tags"]]).lower()
@@ -444,9 +441,10 @@ cp -r skill-hub/skills/* ~/.claude/skills/</code></pre>
 
 <footer class="wrap">
   <p>Skills authored by <a href="https://github.com/{SITE['owner']}">{SITE['owner']}</a> are MIT licensed.
-  Skills marked <span class="badge anthropic">Anthropic</span> are redistributed from
-  <a href="https://github.com/anthropics/skills">anthropics/skills</a> under Apache-2.0, with their
-  original <code>LICENSE.txt</code> intact.</p>
+  Skills badged <span class="badge ext">Anthropic</span> or <span class="badge ext">Superpowers</span>
+  are redistributed from <a href="https://github.com/anthropics/skills">anthropics/skills</a> (Apache-2.0)
+  and <a href="https://github.com/obra/superpowers">obra/superpowers</a> (MIT), each keeping its
+  original licence file.</p>
   <p><a href="catalog.json">catalog.json</a> · <a href="https://github.com/{SITE['repo']}">source</a></p>
 </footer>
 
@@ -469,9 +467,10 @@ def render_detail(s: dict, skills: list[dict]) -> str:
     folders = (
         "".join(f"<code>{html.escape(f)}/</code> " for f in s["folders"]) or "<em>none</em>"
     )
+    src = ORIGINS.get(s["origin"])
     origin_line = (
-        f'Redistributed from <a href="https://github.com/anthropics/skills">anthropics/skills</a> (Apache-2.0)'
-        if s["origin"] == "anthropic"
+        f'Redistributed from <a href="{src[1]}">{src[1].split("github.com/")[-1]}</a> ({src[2]})'
+        if src
         else f'Authored by <a href="https://github.com/{SITE["owner"]}">{SITE["owner"]}</a> (MIT)'
     )
     lang_note = (
@@ -551,6 +550,13 @@ def build_zip(slug: str, dest: Path) -> None:
 
 
 # --------------------------------------------------------------------------
+
+# Upstream sources for redistributed skills. Anything not listed here is the
+# repo owner's own work.
+ORIGINS = {
+    "anthropic": ("Anthropic", "https://github.com/anthropics/skills", "Apache-2.0"),
+    "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
+}
 
 README_START = "<!-- icons:start -->"
 README_END = "<!-- icons:end -->"

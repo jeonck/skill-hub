@@ -329,7 +329,7 @@ main { padding: 56px 0 72px; }
   border-radius: 5px;
   letter-spacing: 0.02em;
 }
-.badge.anthropic { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+.badge.ext, .badge.anthropic { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
 .badge.ko { background: var(--bg-soft); color: var(--ink-3); border: 1px solid var(--line-2); }
 
 .copy {

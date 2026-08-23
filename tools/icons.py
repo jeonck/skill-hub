@@ -84,6 +84,40 @@ ICONS: dict[str, str] = {
                '<path d="M12 3.5v17"/>',
     "list-check": '<path d="M4 6.5l1.6 1.6L8.8 5"/><path d="M4 12.5l1.6 1.6L8.8 11"/>'
                   '<path d="M4 18.5l1.6 1.6L8.8 17"/><path d="M11.5 7h8.5M11.5 13h8.5M11.5 19h6"/>',
+    # ---- dev workflow (superpowers)
+    "bulb": '<path d="M9.2 17h5.6"/><path d="M10 20.5h4"/>'
+            '<path d="M12 3.5a5.8 5.8 0 00-3.4 10.5c.5.4.8 1 .8 1.6h5.2c0-.6.3-1.2.8-1.6A5.8 5.8 0 0012 3.5z"/>',
+    "fanout": '<circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="5.5" r="2.2"/>'
+              '<circle cx="19" cy="12" r="2.2"/><circle cx="19" cy="18.5" r="2.2"/>'
+              '<path d="M7.2 12h9.6M7.2 11.2l9.6-4.6M7.2 12.8l9.6 4.6"/>',
+    "play-list": '<path d="M4 6.5h9M4 12h9M4 17.5h5"/>'
+                 '<path d="M15.5 14l5 2.8-5 2.8V14z"/>',
+    "merge": '<circle cx="6.5" cy="5.5" r="2.2"/><circle cx="6.5" cy="18.5" r="2.2"/>'
+             '<circle cx="17.5" cy="12" r="2.2"/><path d="M6.5 7.7v8.6"/>'
+             '<path d="M8.7 5.9c.4 3.4 2.9 5.6 6.6 6"/>',
+    "inbox-check": '<path d="M3.5 13.5h4l1.5 2.5h6l1.5-2.5h4"/>'
+                   '<path d="M5.5 4.5h13l2 9v5a1.5 1.5 0 01-1.5 1.5h-14A1.5 1.5 0 013.5 18.5v-5z"/>'
+                   '<path d="M9.5 8.5l2 2 3.5-3.5"/>',
+    "send-check": '<path d="M20.5 3.5L10.5 13.5"/><path d="M20.5 3.5l-6.5 17-3.5-7-7-3.5 17-6.5z"/>',
+    "agents": '<rect x="3" y="4" width="7" height="7" rx="1.6"/>'
+              '<rect x="14" y="4" width="7" height="7" rx="1.6"/>'
+              '<rect x="8.5" y="14" width="7" height="6.5" rx="1.6"/>'
+              '<path d="M6.5 11v1.5h11V11"/><path d="M12 12.5V14"/>',
+    "bug": '<rect x="8" y="7.5" width="8" height="11" rx="4"/>'
+           '<path d="M9.5 6.5a2.5 2.5 0 015 0"/>'
+           '<path d="M8 10.5H4.5M8 14h-4M8 17.5l-3 2M16 10.5h3.5M16 14h4M16 17.5l3 2"/>',
+    "flask": '<path d="M9.5 3.5v6L4.6 18a1.6 1.6 0 001.4 2.5h12a1.6 1.6 0 001.4-2.5l-4.9-8.5v-6"/>'
+             '<path d="M8 3.5h8"/><path d="M7.2 14.5h9.6"/>',
+    "branch": '<circle cx="7" cy="5.5" r="2.2"/><circle cx="7" cy="18.5" r="2.2"/>'
+              '<circle cx="17" cy="5.5" r="2.2"/><path d="M7 7.7v8.6"/>'
+              '<path d="M17 7.7c0 4-3.4 5.5-7 6"/>',
+    "bolt": '<path d="M13.5 2.5L5 13.5h6L10.5 21.5 19 10.5h-6l.5-8z"/>',
+    "double-check": '<path d="M2.5 12.5l3.5 3.5 6-6.5"/><path d="M10.5 15.5l1.5 1.5 8-9"/>',
+    "clipboard": '<rect x="5" y="4.5" width="14" height="16" rx="2"/>'
+                 '<rect x="9" y="2.8" width="6" height="3.4" rx="1.2"/>'
+                 '<path d="M8.5 11h7M8.5 15h4.5"/>',
+    "hammer": '<path d="M12.5 8.5L4 17a2.1 2.1 0 003 3l8.5-8.5"/>'
+              '<path d="M11 7l4-4 6 6-4 4-6-6z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -112,6 +146,20 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "brainstorming": "bulb",
+    "dispatching-parallel-agents": "fanout",
+    "executing-plans": "play-list",
+    "finishing-a-development-branch": "merge",
+    "receiving-code-review": "inbox-check",
+    "requesting-code-review": "send-check",
+    "subagent-driven-development": "agents",
+    "systematic-debugging": "bug",
+    "test-driven-development": "flask",
+    "using-git-worktrees": "branch",
+    "using-superpowers": "bolt",
+    "verification-before-completion": "double-check",
+    "writing-plans": "clipboard",
+    "writing-skills": "hammer",
     "algolia-docusaurus": "search",
     "algorithmic-art": "orbit",
     "artifacts-builder": "layers",

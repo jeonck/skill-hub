@@ -31,6 +31,33 @@ skills/canvas-design/canvas-fonts contains typefaces distributed under the
 SIL Open Font License; each font ships its own OFL.txt.
 
 --------------------------------------------------------------------------
+Third-party skills redistributed under the MIT License
+--------------------------------------------------------------------------
+
+The following directories under skills/ are copied from
+https://github.com/obra/superpowers (Copyright (c) 2025 Jesse Vincent) and
+are licensed under the MIT License. Each keeps its original LICENSE file:
+
+  skills/brainstorming
+  skills/dispatching-parallel-agents
+  skills/executing-plans
+  skills/finishing-a-development-branch
+  skills/receiving-code-review
+  skills/requesting-code-review
+  skills/subagent-driven-development
+  skills/systematic-debugging
+  skills/test-driven-development
+  skills/using-git-worktrees
+  skills/using-superpowers
+  skills/verification-before-completion
+  skills/writing-plans
+  skills/writing-skills
+
+Only the skills/ directory is redistributed here; the upstream hooks, scripts
+and plugin manifests are not. For the full framework install the plugin from
+https://github.com/obra/superpowers
+
+--------------------------------------------------------------------------
 Not included
 --------------------------------------------------------------------------
 
