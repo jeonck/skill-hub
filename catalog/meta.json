@@ -35,6 +35,20 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "andrej-karpathy-skills": {
+      "title": "Andrej Karpathy Guidelines",
+      "summary": "Behavioural guidelines that head off the coding mistakes Karpathy flags in LLM output — overcomplication, sprawling edits, unstated assumptions, and success criteria nobody can verify.",
+      "category": "Dev Tooling",
+      "tags": [
+        "code-quality",
+        "guidelines",
+        "review"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "external_note": "Upstream publishes no licence, so the files are not mirrored here."
+    },
     "artifacts-builder": {
       "title": "Artifacts Builder",
       "summary": "Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library.",

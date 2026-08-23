@@ -330,6 +330,7 @@ main { padding: 56px 0 72px; }
   letter-spacing: 0.02em;
 }
 .badge.ext, .badge.anthropic { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+.badge.link { background: var(--bg-soft); color: var(--ink-2); border: 1px dashed var(--line-2); }
 .badge.ko { background: var(--bg-soft); color: var(--ink-3); border: 1px solid var(--line-2); }
 
 .copy {
@@ -346,6 +347,7 @@ main { padding: 56px 0 72px; }
 .copy:hover { border-color: var(--ink-3); color: var(--ink); }
 .copy.done { background: var(--accent); border-color: var(--accent); color: #fff; }
 
+.ext-note { font-size: 0.78rem; color: var(--ink-3); white-space: nowrap; }
 .empty { text-align: center; color: var(--ink-3); padding: 48px 0; }
 
 /* -------------------------------------------------------------- detail */

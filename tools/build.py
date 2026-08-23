@@ -289,6 +289,30 @@ def collect(meta: dict) -> list[dict]:
                 "cat_slug": CATEGORY_SLUGS.get(m.get("category", ""), "dev"),
             }
         )
+    # Link-only entries: listed in meta with an external_url and no directory
+    # here, because their upstream grants no redistribution rights.
+    for slug, m in meta["skills"].items():
+        if not m.get("external_url"):
+            continue
+        skills.append(
+            {
+                "slug": slug,
+                "name": slug,
+                "title": m["title"],
+                "summary": m["summary"],
+                "description": m["summary"],
+                "category": m.get("category", "Uncategorized"),
+                "tags": m.get("tags", []),
+                "origin": "external",
+                "output_language": m.get("output_language", "en"),
+                "license": "see upstream",
+                "external_url": m["external_url"],
+                "external_note": m.get("external_note", ""),
+                "icon": SKILL_ICONS.get(slug, FALLBACK_ICON),
+                "cat_slug": CATEGORY_SLUGS.get(m.get("category", ""), "dev"),
+            }
+        )
+
     missing_icons = [s for s in SKILLS_DIR.iterdir() if s.is_dir() and s.name not in SKILL_ICONS]
     if missing_icons:
         print("  ! no icon mapped (using fallback): " + ", ".join(p.name for p in missing_icons))
@@ -355,7 +379,8 @@ def install_block(slug: str, depth: int) -> str:
 
 def render_index(skills: list[dict], meta: dict) -> str:
     cats = [c for c in meta["categories"] if any(s["category"] == c for s in skills)]
-    total_size = human_size(sum(s["size"] for s in skills))
+    installable = sum(1 for s in skills if not s.get("external_url"))
+    total_size = human_size(sum(s.get("size", 0) for s in skills))
 
     chips = "".join(
         f'<button class="chip" data-cat="{html.escape(c)}">{html.escape(c)} '
@@ -367,14 +392,27 @@ def render_index(skills: list[dict], meta: dict) -> str:
     for s in skills:
         tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in s["tags"][:4])
         src = ORIGINS.get(s["origin"])
-        origin = f'<span class="badge ext">{src[0]}</span>' if src else ""
+        origin = (
+            '<span class="badge link">Link only</span>'
+            if s["origin"] == "external"
+            else (f'<span class="badge ext">{src[0]}</span>' if src else "")
+        )
         ko = '<span class="badge ko">KO output</span>' if s["output_language"] == "ko" else ""
         haystack = html.escape(
             " ".join([s["slug"], s["title"], s["summary"], s["category"], *s["tags"]]).lower()
         )
+        ext = s.get("external_url")
+        if ext:
+            install_btn = '<span class="ext-note">on GitHub ↗</span>'
+        else:
+            cmd = (
+                f'curl -fsSL {SITE["base_url"]}/dist/{s["slug"]}.zip '
+                f'-o /tmp/{s["slug"]}.zip && unzip -oq /tmp/{s["slug"]}.zip -d ~/.claude/skills'
+            )
+            install_btn = f'<button class="copy mini" data-copy="{html.escape(cmd)}">Copy install</button>'
         cards.append(
             f"""<article class="card" data-cat="{html.escape(s['category'])}" data-search="{haystack}">
-  <a class="card-link" href="s/{s['slug']}/">
+  <a class="card-link" href="{ext or f"s/{s['slug']}/"}"{' target="_blank" rel="noopener"' if ext else ''}>
     <div class="card-top">
       <span class="tile c-{s['cat_slug']}">{icon_svg(s['icon'], 22)}</span>
       <div>
@@ -386,7 +424,7 @@ def render_index(skills: list[dict], meta: dict) -> str:
   </a>
   <div class="card-foot">
     <div class="tags">{tags}{origin}{ko}</div>
-    <button class="copy mini" data-copy="{html.escape(f'curl -fsSL {SITE["base_url"]}/dist/{s["slug"]}.zip -o /tmp/{s["slug"]}.zip && unzip -oq /tmp/{s["slug"]}.zip -d ~/.claude/skills')}">Copy install</button>
+    {install_btn}
   </div>
 </article>"""
         )
@@ -395,7 +433,7 @@ def render_index(skills: list[dict], meta: dict) -> str:
 <header class="hero">
   <div class="wrap">
     <h1>Claude Skill Hub</h1>
-    <p class="lede">{len(skills)} installable skills for Claude Code and Claude.ai — site builders,
+    <p class="lede">{installable} installable skills for Claude Code and Claude.ai — site builders,
     content pipelines, design systems, video production and dev tooling. Copy one command, drop it in
     <code>~/.claude/skills</code>, done.</p>
     <div class="stats">
@@ -454,7 +492,11 @@ cp -r skill-hub/skills/* ~/.claude/skills/</code></pre>
 
 def render_detail(s: dict, skills: list[dict]) -> str:
     related = [
-        r for r in skills if r["category"] == s["category"] and r["slug"] != s["slug"]
+        r
+        for r in skills
+        if r["category"] == s["category"]
+        and r["slug"] != s["slug"]
+        and not r.get("external_url")
     ][:4]
     rel_html = "".join(
         f'<a class="rel" href="../{r["slug"]}/">'
@@ -600,7 +642,9 @@ def write_repo_icons(skills: list[dict]) -> None:
         rows += [f"### {cat}", "", "| | Skill | What it does |", "| :-: | --- | --- |"]
         for s in sorted(group, key=lambda x: x["title"].lower()):
             img = f'<img src="assets/icons/{s["slug"]}.svg" width="22" alt="">'
-            link = f'[**{s["title"]}**]({SITE["base_url"]}/s/{s["slug"]}/)<br>`{s["slug"]}`'
+            href = s.get("external_url") or f'{SITE["base_url"]}/s/{s["slug"]}/'
+            note = " — link only, not mirrored" if s.get("external_url") else ""
+            link = f'[**{s["title"]}**]({href})<br>`{s["slug"]}`{note}'
             rows.append(f"| {img} | {link} | {s['summary']} |")
         rows.append("")
 
@@ -631,6 +675,8 @@ def main() -> None:
 
     (OUT / "index.html").write_text(render_index(skills, meta), encoding="utf-8")
     for s in skills:
+        if s.get("external_url"):
+            continue
         d = OUT / "s" / s["slug"]
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(render_detail(s, skills), encoding="utf-8")

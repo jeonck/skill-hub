@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-61 skills, one glyph each. Click any name for its install command.
+62 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -97,6 +97,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 | | Skill | What it does |
 | :-: | --- | --- |
+| <img src="assets/icons/andrej-karpathy-skills.svg" width="22" alt=""> | [**Andrej Karpathy Guidelines**](https://github.com/multica-ai/andrej-karpathy-skills)<br>`andrej-karpathy-skills` — link only, not mirrored | Behavioural guidelines that head off the coding mistakes Karpathy flags in LLM output — overcomplication, sprawling edits, unstated assumptions, and success criteria nobody can verify. |
 | <img src="assets/icons/artifacts-builder.svg" width="22" alt=""> | [**Artifacts Builder**](https://skill.metacog.co.kr/s/artifacts-builder/)<br>`artifacts-builder` | Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library. |
 | <img src="assets/icons/brainstorming.svg" width="22" alt=""> | [**Brainstorming**](https://skill.metacog.co.kr/s/brainstorming/)<br>`brainstorming` | Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
@@ -183,11 +184,14 @@ No dependencies beyond Python 3.9+.
    exactly — with `name` and `description` frontmatter.
 2. Add an entry to `catalog/meta.json` with an English `title`, `summary`, `category` and
    `tags`. Without it the site falls back to the raw frontmatter description.
-3. Map a glyph in `tools/icons.py` (`SKILL_ICONS`), reusing one of the existing shapes or
+3. To list a skill you cannot redistribute, skip step 1 and give its meta entry an
+   `external_url` instead — it renders as a link-only card with no zip and no detail
+   page.
+4. Map a glyph in `tools/icons.py` (`SKILL_ICONS`), reusing one of the existing shapes or
    adding a new 24×24 stroke path. Skipping this only costs you a fallback glyph.
-4. Run `python3 tools/build.py`, which rewrites `assets/icons/` and the table above, then
+5. Run `python3 tools/build.py`, which rewrites `assets/icons/` and the table above, then
    commit those changes alongside the skill.
-5. Push to `main`. The workflow rebuilds the catalog and the zip.
+6. Push to `main`. The workflow rebuilds the catalog and the zip.
 
 Everything between the `<!-- icons:start -->` and `<!-- icons:end -->` markers in this
 file is generated — edit `catalog/meta.json` or `tools/icons.py` instead, and rerun the

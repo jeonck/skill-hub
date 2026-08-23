@@ -136,6 +136,8 @@ ICONS: dict[str, str] = {
               '<rect x="13" y="3" width="8" height="8" rx="4"/>'
               '<rect x="3" y="13" width="8" height="8" rx="4"/>'
               '<rect x="13" y="13" width="8" height="8" rx="1.6"/>',
+    "guardrail": '<path d="M12 3l7.5 3v5.5c0 4.4-3 7.9-7.5 9.5-4.5-1.6-7.5-5.1-7.5-9.5V6L12 3z"/>'
+                 '<path d="M9.2 12.5h5.6"/><path d="M12 9.7v5.6"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -164,6 +166,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "andrej-karpathy-skills": "guardrail",
     "banner-design": "banner",
     "brand": "tag",
     "design": "pen-nib",
