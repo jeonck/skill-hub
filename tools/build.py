@@ -556,6 +556,11 @@ def build_zip(slug: str, dest: Path) -> None:
 ORIGINS = {
     "anthropic": ("Anthropic", "https://github.com/anthropics/skills", "Apache-2.0"),
     "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
+    "nextlevelbuilder": (
+        "UI/UX Pro Max",
+        "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "MIT",
+    ),
 }
 
 README_START = "<!-- icons:start -->"

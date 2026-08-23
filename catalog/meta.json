@@ -48,6 +48,19 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "banner-design": {
+      "title": "Banner Design",
+      "summary": "Banners for social, ads, website heroes and print — multiple art directions per brief across Facebook, X, LinkedIn, YouTube, Instagram and Google Display sizes.",
+      "category": "Design & UI",
+      "tags": [
+        "banner",
+        "social",
+        "ads",
+        "marketing"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
+    },
     "brainstorming": {
       "title": "Brainstorming",
       "summary": "Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess.",
@@ -58,6 +71,19 @@
         "design"
       ],
       "origin": "obra",
+      "output_language": "en"
+    },
+    "brand": {
+      "title": "Brand Voice & Identity",
+      "summary": "Brand voice, visual identity, messaging frameworks and asset management, with compliance checks for branded content.",
+      "category": "Design & UI",
+      "tags": [
+        "branding",
+        "voice",
+        "identity",
+        "messaging"
+      ],
+      "origin": "nextlevelbuilder",
       "output_language": "en"
     },
     "brand-guidelines": {
@@ -175,6 +201,30 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "design": {
+      "title": "Design Direction",
+      "summary": "Art direction and visual design decisions for product work, backed by the Pro Max reference data.",
+      "category": "Design & UI",
+      "tags": [
+        "design",
+        "art-direction",
+        "ui"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
+    },
+    "design-system": {
+      "title": "Design System Tokens",
+      "summary": "Three-layer token architecture (primitive → semantic → component), CSS variables, spacing and type scales, and component specs.",
+      "category": "Design & UI",
+      "tags": [
+        "design-tokens",
+        "css",
+        "components"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
     },
     "dispatching-parallel-agents": {
       "title": "Dispatching Parallel Agents",
@@ -460,6 +510,18 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "slides": {
+      "title": "Strategic Slides",
+      "summary": "Build HTML presentations with Chart.js, design tokens, responsive layouts and copywriting formulas chosen per slide's job.",
+      "category": "Design & UI",
+      "tags": [
+        "slides",
+        "presentation",
+        "chartjs"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
+    },
     "soft-skill": {
       "title": "High-End Visual Design",
       "summary": "Design like a high-end agency — the exact fonts, spacing, shadows, card structures and animations that make a site feel expensive, with the cheap-looking defaults blocked.",
@@ -581,6 +643,32 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "ui-styling": {
+      "title": "UI Styling",
+      "summary": "Build accessible interfaces with shadcn/ui on Radix + Tailwind — themes, dark mode, responsive layout and consistent styling patterns.",
+      "category": "Design & UI",
+      "tags": [
+        "shadcn",
+        "tailwind",
+        "radix",
+        "accessibility"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
+    },
+    "ui-ux-pro-max": {
+      "title": "UI/UX Pro Max",
+      "summary": "Design intelligence for web, mobile and desktop interfaces — a searchable local corpus of 79 styles, 192 palettes, 74 font pairings, 119 UX guidelines, GSAP presets and per-stack implementation notes.",
+      "category": "Design & UI",
+      "tags": [
+        "ui",
+        "ux",
+        "design-system",
+        "accessibility"
+      ],
+      "origin": "nextlevelbuilder",
+      "output_language": "en"
     },
     "us-work-english-content": {
       "title": "US Work English Content",

@@ -57,6 +57,18 @@ Only the skills/ directory is redistributed here; the upstream hooks, scripts
 and plugin manifests are not. For the full framework install the plugin from
 https://github.com/obra/superpowers
 
+The following directories under skills/ are copied from
+https://github.com/nextlevelbuilder/ui-ux-pro-max-skill and are licensed under
+the MIT License. Each keeps its original LICENSE file:
+
+  skills/banner-design
+  skills/brand
+  skills/design
+  skills/design-system
+  skills/slides
+  skills/ui-styling
+  skills/ui-ux-pro-max
+
 --------------------------------------------------------------------------
 Not included
 --------------------------------------------------------------------------
@@ -64,3 +76,7 @@ Not included
 Anthropic's document skills (docx, pdf, pptx, xlsx) are proprietary and their
 license prohibits redistribution. They are deliberately absent from this
 repository.
+
+multica-ai/andrej-karpathy-skills publishes no licence at all, so it grants no
+redistribution rights and is likewise absent. Install it from upstream:
+https://github.com/multica-ai/andrej-karpathy-skills

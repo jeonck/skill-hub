@@ -118,6 +118,24 @@ ICONS: dict[str, str] = {
                  '<path d="M8.5 11h7M8.5 15h4.5"/>',
     "hammer": '<path d="M12.5 8.5L4 17a2.1 2.1 0 003 3l8.5-8.5"/>'
               '<path d="M11 7l4-4 6 6-4 4-6-6z"/>',
+    # ---- ui/ux
+    "wireframe": '<rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19"/>'
+                 '<path d="M9 8.5v11.5"/><path d="M12 12h6M12 15.5h4"/>',
+    "pen-nib": '<path d="M4 20l3.2-8.6L15.5 3l5.5 5.5-8.4 8.3L4 20z"/>'
+               '<path d="M7.2 11.4l5.4 5.4"/><circle cx="10" cy="14" r="1.4"/>',
+    "banner": '<path d="M3.5 4.5h17v10h-17z"/><path d="M3.5 14.5l4 5 4-5"/>'
+              '<path d="M7 9h10"/>',
+    "brush": '<path d="M14 6.5l3.5 3.5"/>'
+             '<path d="M17.5 3.5l3 3-9.5 9.5-3-3L17.5 3.5z"/>'
+             '<path d="M8 13c-2 0-3.5 1.6-3.5 3.6 0 1-.5 1.9-1.5 2.4 1 .9 2.4 1.5 3.8 1.5 2.3 0 4.2-1.9 4.2-4.2"/>',
+    "tag": '<path d="M11.5 3.5H20v8.5l-9 9L2.5 12.5l9-9z"/>'
+           '<circle cx="16" cy="8" r="1.5"/>',
+    "presentation": '<path d="M3 4h18"/><rect x="4.5" y="4" width="15" height="10.5" rx="1.5"/>'
+                    '<path d="M12 14.5v2.5"/><path d="M8.5 20.5L12 17l3.5 3.5"/>',
+    "tokens": '<rect x="3" y="3" width="8" height="8" rx="1.6"/>'
+              '<rect x="13" y="3" width="8" height="8" rx="4"/>'
+              '<rect x="3" y="13" width="8" height="8" rx="4"/>'
+              '<rect x="13" y="13" width="8" height="8" rx="1.6"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -146,6 +164,13 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "banner-design": "banner",
+    "brand": "tag",
+    "design": "pen-nib",
+    "design-system": "tokens",
+    "slides": "presentation",
+    "ui-styling": "brush",
+    "ui-ux-pro-max": "wireframe",
     "brainstorming": "bulb",
     "dispatching-parallel-agents": "fanout",
     "executing-plans": "play-list",

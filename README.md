@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-54 skills, one glyph each. Click any name for its install command.
+61 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -73,9 +73,13 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/algorithmic-art.svg" width="22" alt=""> | [**Algorithmic Art**](https://skill.metacog.co.kr/s/algorithmic-art/)<br>`algorithmic-art` | Generative art with p5.js — seeded randomness, flow fields, particle systems, and an interactive parameter-exploration loop. |
+| <img src="assets/icons/banner-design.svg" width="22" alt=""> | [**Banner Design**](https://skill.metacog.co.kr/s/banner-design/)<br>`banner-design` | Banners for social, ads, website heroes and print — multiple art directions per brief across Facebook, X, LinkedIn, YouTube, Instagram and Google Display sizes. |
 | <img src="assets/icons/brand-guidelines.svg" width="22" alt=""> | [**Brand Guidelines**](https://skill.metacog.co.kr/s/brand-guidelines/)<br>`brand-guidelines` | Apply Anthropic's official brand colors and typography to any artifact that benefits from a consistent house look-and-feel. |
 | <img src="assets/icons/brandkit.svg" width="22" alt=""> | [**Brand Kit Generator**](https://skill.metacog.co.kr/s/brandkit/)<br>`brandkit` | Premium brand-guideline boards, logo systems and identity decks — minimalist, cinematic, editorial, dark-tech and luxury systems with art-directed mockups. |
+| <img src="assets/icons/brand.svg" width="22" alt=""> | [**Brand Voice & Identity**](https://skill.metacog.co.kr/s/brand/)<br>`brand` | Brand voice, visual identity, messaging frameworks and asset management, with compliance checks for branded content. |
 | <img src="assets/icons/canvas-design.svg" width="22" alt=""> | [**Canvas Design**](https://skill.metacog.co.kr/s/canvas-design/)<br>`canvas-design` | Design posters, art and static pieces as .png or .pdf using a real design philosophy rather than default template output. |
+| <img src="assets/icons/design.svg" width="22" alt=""> | [**Design Direction**](https://skill.metacog.co.kr/s/design/)<br>`design` | Art direction and visual design decisions for product work, backed by the Pro Max reference data. |
+| <img src="assets/icons/design-system.svg" width="22" alt=""> | [**Design System Tokens**](https://skill.metacog.co.kr/s/design-system/)<br>`design-system` | Three-layer token architecture (primitive → semantic → component), CSS variables, spacing and type scales, and component specs. |
 | <img src="assets/icons/taste-skill.svg" width="22" alt=""> | [**Design Taste Frontend**](https://skill.metacog.co.kr/s/taste-skill/)<br>`taste-skill` | Anti-slop frontend for landing pages, portfolios and redesigns — read the brief, infer the right direction, and ship interfaces that don't look templated. |
 | <img src="assets/icons/soft-skill.svg" width="22" alt=""> | [**High-End Visual Design**](https://skill.metacog.co.kr/s/soft-skill/)<br>`soft-skill` | Design like a high-end agency — the exact fonts, spacing, shadows, card structures and animations that make a site feel expensive, with the cheap-looking defaults blocked. |
 | <img src="assets/icons/brutalist-skill.svg" width="22" alt=""> | [**Industrial Brutalist UI**](https://skill.metacog.co.kr/s/brutalist-skill/)<br>`brutalist-skill` | Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics — rigid grids, extreme type contrast, analog degradation. |
@@ -83,7 +87,10 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/imagegen-frontend-mobile.svg" width="22" alt=""> | [**Mobile UI Image Direction**](https://skill.metacog.co.kr/s/imagegen-frontend-mobile/)<br>`imagegen-frontend-mobile` | Generate premium app-native mobile screen concepts and flows — clean hierarchy, multi-screen consistency, controlled palettes, framed in a subtle phone mockup. Images only, no code. |
 | <img src="assets/icons/redesign-skill.svg" width="22" alt=""> | [**Redesign Existing Projects**](https://skill.metacog.co.kr/s/redesign-skill/)<br>`redesign-skill` | Upgrade an existing site or app to premium quality — audit the current design, name the generic AI patterns, and raise the bar without breaking functionality. |
 | <img src="assets/icons/stitch-skill.svg" width="22" alt=""> | [**Stitch Design Taste**](https://skill.metacog.co.kr/s/stitch-skill/)<br>`stitch-skill` | Generate agent-friendly DESIGN.md files for Google Stitch — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion and GPU-friendly performance rules. |
+| <img src="assets/icons/slides.svg" width="22" alt=""> | [**Strategic Slides**](https://skill.metacog.co.kr/s/slides/)<br>`slides` | Build HTML presentations with Chart.js, design tokens, responsive layouts and copywriting formulas chosen per slide's job. |
 | <img src="assets/icons/theme-factory.svg" width="22" alt=""> | [**Theme Factory**](https://skill.metacog.co.kr/s/theme-factory/)<br>`theme-factory` | Style any artifact — slides, docs, reports, landing pages — with one of 10 preset color/font themes, or generate a new theme on the fly. |
+| <img src="assets/icons/ui-styling.svg" width="22" alt=""> | [**UI Styling**](https://skill.metacog.co.kr/s/ui-styling/)<br>`ui-styling` | Build accessible interfaces with shadcn/ui on Radix + Tailwind — themes, dark mode, responsive layout and consistent styling patterns. |
+| <img src="assets/icons/ui-ux-pro-max.svg" width="22" alt=""> | [**UI/UX Pro Max**](https://skill.metacog.co.kr/s/ui-ux-pro-max/)<br>`ui-ux-pro-max` | Design intelligence for web, mobile and desktop interfaces — a searchable local corpus of 79 styles, 192 palettes, 74 font pairings, 119 UX guidelines, GSAP presets and per-stack implementation notes. |
 | <img src="assets/icons/imagegen-frontend-web.svg" width="22" alt=""> | [**Web UI Image Direction**](https://skill.metacog.co.kr/s/imagegen-frontend-web/)<br>`imagegen-frontend-web` | Generate premium landing-page design references — one horizontal image per section, enforced composition variety, a narrative concept spine and one consistent palette throughout. |
 
 ### Dev Tooling
