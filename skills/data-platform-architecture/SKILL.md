@@ -11,9 +11,13 @@ description: "데이터 플랫폼의 최신 아키텍처 스타일(Lakehouse, Me
 
 ## 먼저 읽을 것
 
-`references/styles.md` — 9개 스타일의 정의·구성요소·적합 조건·한계, 그리고 선택
+[`references/styles.md`](references/styles.md) — 9개 스타일의 정의·구성요소·적합 조건·한계, 그리고 선택
 기준표. 문서를 쓰기 전에 반드시 읽고, 거기 적힌 사실만 사용한다. 카탈로그에 없는
 스타일을 다루게 되면 같은 형식으로 항목을 먼저 추가한다.
+
+[`examples/ecommerce-modernization.md`](examples/ecommerce-modernization.md) — 완성 예시 하나. 중앙 데이터팀 1개인 이커머스가
+Redshift 배치에서 CDC 기반 Streaming Lakehouse로 가는 판단 과정을 3단락 구조로 담았다.
+분량·표 밀도·완료 판정의 구체성 기준으로 삼는다.
 
 ## 작성 전 확인 (모르면 추정하지 말고 묻는다)
 
