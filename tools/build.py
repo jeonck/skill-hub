@@ -278,7 +278,11 @@ def collect(meta: dict) -> list[dict]:
                 "tags": m.get("tags", []),
                 "origin": m.get("origin", "jeonck"),
                 "output_language": m.get("output_language", "en"),
-                "license": "Apache-2.0" if (d / "LICENSE.txt").exists() else "MIT",
+                # Take the licence from the upstream table, not from which
+                # filename the licence happens to use: obra ships LICENSE (MIT)
+                # and Vincentwei1021 ships LICENSE (Apache-2.0), so a filename
+                # heuristic mislabels one of them.
+                "license": ORIGINS.get(m.get("origin"), (None, None, "MIT"))[2],
                 "files": files,
                 "size": size,
                 "size_human": human_size(size),
@@ -598,6 +602,11 @@ def build_zip(slug: str, dest: Path) -> None:
 ORIGINS = {
     "anthropic": ("Anthropic", "https://github.com/anthropics/skills", "Apache-2.0"),
     "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
+    "vincentwei": (
+        "Video Shotcraft",
+        "https://github.com/Vincentwei1021/video-shotcraft",
+        "Apache-2.0",
+    ),
     "nextlevelbuilder": (
         "UI/UX Pro Max",
         "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",

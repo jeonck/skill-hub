@@ -53,6 +53,9 @@ ICONS: dict[str, str] = {
 
     "terminal-play": '<rect x="2.5" y="4" width="19" height="16" rx="2"/>'
                      '<path d="M6.5 9l2.6 2.6-2.6 2.6"/><path d="M12 15h5"/>',
+    "clapper": '<path d="M3 9.5h18v9.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19z"/>'
+               '<path d="M3.4 9.5L2.6 6l17.6-2.4.8 3.5-17.6 2.4z"/>'
+               '<path d="M8.4 4.9l1 3.4M13.6 4.2l1 3.4"/>',
     # ---- docs / writing
     "book": '<path d="M3.5 5.5A2 2 0 015.5 3.5H11v17H5.5a2 2 0 01-2-2v-13z"/>'
             '<path d="M20.5 5.5a2 2 0 00-2-2H13v17h5.5a2 2 0 002-2v-13z"/>',
@@ -169,6 +172,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "video-shotcraft": "clapper",
     "hugo-stack-blog": "stack-posts",
     "andrej-karpathy-skills": "guardrail",
     "banner-design": "banner",

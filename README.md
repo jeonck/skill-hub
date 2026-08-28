@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-63 skills, one glyph each. Click any name for its install command.
+64 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -125,6 +125,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/code-explainer-video.svg" width="22" alt=""> | [**Code Explainer Video**](https://skill.metacog.co.kr/s/code-explainer-video/)<br>`code-explainer-video` | Render a cinematic chaptered explainer video for any CLI or dev tool — Remotion "Terminal Noir": code that types itself, streaming terminal output, growing dependency graphs, continuous BGM. |
 | <img src="assets/icons/sync-shopshorts-higgs.svg" width="22" alt=""> | [**Shopping Shorts Workflow**](https://skill.metacog.co.kr/s/sync-shopshorts-higgs/)<br>`sync-shopshorts-higgs` | Turn a product URL into a Korean-market shopping short — crawl the product, profile the target persona, recommend script × preset, approve the scene map, then generate via Higgsfield. |
 | <img src="assets/icons/slack-gif-creator.svg" width="22" alt=""> | [**Slack GIF Creator**](https://skill.metacog.co.kr/s/slack-gif-creator/)<br>`slack-gif-creator` | Build animated GIFs sized for Slack — composable animation primitives plus validators for Slack's size constraints. |
+| <img src="assets/icons/video-shotcraft.svg" width="22" alt=""> | [**Video Shotcraft**](https://skill.metacog.co.kr/s/video-shotcraft/)<br>`video-shotcraft` | Turn a frontend project or webpage into a cinematic product video — Remotion with real page screenshots, 2.5D camera moves, beat-synced cuts and sound design, driven by shot recipe cards against a validated template. |
 
 ### Research
 

@@ -757,6 +757,19 @@
       "origin": "obra",
       "output_language": "en"
     },
+    "video-shotcraft": {
+      "title": "Video Shotcraft",
+      "summary": "Turn a frontend project or webpage into a cinematic product video — Remotion with real page screenshots, 2.5D camera moves, beat-synced cuts and sound design, driven by shot recipe cards against a validated template.",
+      "category": "Media & Video",
+      "tags": [
+        "remotion",
+        "video",
+        "product",
+        "motion"
+      ],
+      "origin": "vincentwei",
+      "output_language": "en"
+    },
     "webapp-testing": {
       "title": "Web App Testing",
       "summary": "Drive and test local web apps with Playwright — verify frontend behavior, debug the UI, capture screenshots and read browser logs.",

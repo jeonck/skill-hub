@@ -24,6 +24,11 @@ LICENSE.txt:
   skills/theme-factory
   skills/webapp-testing
 
+skills/video-shotcraft is copied from
+https://github.com/Vincentwei1021/video-shotcraft and is likewise licensed
+under the Apache License, Version 2.0, keeping its original LICENSE file. It
+bundles ~30 MB of audio and texture assets shipped by that project.
+
 A copy of the Apache License 2.0 is available at
 http://www.apache.org/licenses/LICENSE-2.0
 
