@@ -229,6 +229,19 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "data-platform-architecture": {
+      "title": "Data Platform Architecture",
+      "summary": "Compare and choose between modern data platform architecture styles — Lakehouse, Medallion, Data Mesh, Data Fabric, Lambda/Kappa, Streaming Lakehouse, Modern Data Stack and Zero-ETL — then write the decision up with the constraints that drove it.",
+      "category": "Content & Writing",
+      "tags": [
+        "data-platform",
+        "lakehouse",
+        "data-mesh",
+        "architecture"
+      ],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
     "design": {
       "title": "Design Direction",
       "summary": "Art direction and visual design decisions for product work, backed by the Pro Max reference data.",
