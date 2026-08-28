@@ -61,11 +61,16 @@ def check(content_dir, base_url):
                 url = m.group(1)
                 if url.startswith(("http://", "https://", "#", "mailto:")):
                     continue
-                if url.startswith(base_url.rstrip("/") + "/"):
-                    rel = url[len(base_url.rstrip("/")) :].strip("/")
+                # A #fragment / ?query is not part of the path — strip it
+                # before resolving, or every deep link reads as broken.
+                link = url.split("#", 1)[0].split("?", 1)[0]
+                if not link:
+                    continue
+                if link.startswith(base_url.rstrip("/") + "/"):
+                    rel = link[len(base_url.rstrip("/")) :].strip("/")
                     target = os.path.normpath(os.path.join(content_dir, rel))
-                elif url.startswith(("../", "./")):
-                    target = os.path.normpath(os.path.join(page_base, url))
+                elif link.startswith(("../", "./")):
+                    target = os.path.normpath(os.path.join(page_base, link))
                 else:
                     continue
                 if target not in valid:

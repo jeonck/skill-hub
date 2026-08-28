@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-62 skills, one glyph each. Click any name for its install command.
+63 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -142,6 +142,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/hextra-kb-builder.svg" width="22" alt=""> | [**Hextra KB Builder**](https://skill.metacog.co.kr/s/hextra-kb-builder/)<br>`hextra-kb-builder` | Initialize a technical knowledge base on Hugo's Hextra theme with Mermaid, LaTeX and search, wired for GitHub Pages deployment. |
 | <img src="assets/icons/hextra-roadmap-kb.svg" width="22" alt=""> | [**Hextra Roadmap KB**](https://skill.metacog.co.kr/s/hextra-roadmap-kb/)<br>`hextra-roadmap-kb` | Scaffold a topic learning-roadmap site on Hugo + Hextra — hero home, numbered roadmap docs by category, Labs, Tools, a Blog with RSS and a termbase-backed glossary. |
 | <img src="assets/icons/hugo-blog-builder.svg" width="22" alt=""> | [**Hugo Blog Builder**](https://skill.metacog.co.kr/s/hugo-blog-builder/)<br>`hugo-blog-builder` | Build a Hugo blog or docs site with GitHub Actions deployment — PaperMod or Hextra — with every known pitfall (TOML ordering, submodules, go.mod conflicts) handled up front. |
+| <img src="assets/icons/hugo-stack-blog.svg" width="22" alt=""> | [**Hugo Stack Blog**](https://skill.metacog.co.kr/s/hugo-stack-blog/)<br>`hugo-stack-blog` | Stand up a Hugo blog on the Stack theme (v4) via Hugo Modules on 0.157+, wired end to end for GitHub Actions deployment to GitHub Pages. |
 | <img src="assets/icons/lotusdocs-kb-builder.svg" width="22" alt=""> | [**Lotus Docs KB Builder**](https://skill.metacog.co.kr/s/lotusdocs-kb-builder/)<br>`lotusdocs-kb-builder` | Build a documentation or knowledge-base site on Hugo's Lotus Docs theme (installed as a Hugo Module) and deploy it to GitHub Pages, custom domain included. Topic-agnostic. |
 
 <!-- icons:end -->

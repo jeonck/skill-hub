@@ -340,6 +340,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "hugo-stack-blog": {
+      "title": "Hugo Stack Blog",
+      "summary": "Stand up a Hugo blog on the Stack theme (v4) via Hugo Modules on 0.157+, wired end to end for GitHub Actions deployment to GitHub Pages.",
+      "category": "Sites & Docs",
+      "tags": [
+        "hugo",
+        "stack-theme",
+        "github-pages",
+        "github-actions"
+      ],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
     "imagegen-frontend-mobile": {
       "title": "Mobile UI Image Direction",
       "summary": "Generate premium app-native mobile screen concepts and flows — clean hierarchy, multi-screen consistency, controlled palettes, framed in a subtle phone mockup. Images only, no code.",
