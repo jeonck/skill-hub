@@ -5,6 +5,8 @@ description: "This skill should be used when writing a 비즈니스 관용 표�
 
 # us-work-english 비즈니스 관용 표현 섹션 스킬
 
+[`examples/meetings-idioms.md`](examples/meetings-idioms.md) — 완성 예시: 회의 관용 표현 섹션. 그룹 4개, 표현당 핵심 한 줄만, 마무리 tip 포함.
+
 ## Overview
 
 Write the "비즈니스 관용 표현 및 실전 화법" section that appears inside existing Docusaurus pages on the us-work-english site. The canonical example is in `docs/workplace/meetings.md`.

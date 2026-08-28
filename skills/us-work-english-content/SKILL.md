@@ -5,6 +5,8 @@ description: "This skill should be used when writing or adding expression-practi
 
 # us-work-english Content Skill
 
+[`examples/standup-expressions.md`](examples/standup-expressions.md) — 완성 예시: 데일리 스탠드업 표현 페이지. 그룹 3개, 표현당 핵심/원문/유사 표현 3줄 기준.
+
 ## Overview
 
 Write expression-practice sub-pages for the us-work-english Docusaurus site, following

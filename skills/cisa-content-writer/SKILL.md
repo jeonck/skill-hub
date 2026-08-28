@@ -20,6 +20,9 @@ description: |
 도메인 전체 구조와 URL 매핑은 `references/domain-structure.md`를 참고하라.
 완전한 빈 문서 템플릿은 `references/document-template.md`를 참고하라.
 
+
+[`examples/change-management.md`](examples/change-management.md) — 완성 예시: 4.3 변경관리 통제. 10섹션 순서, 메타데이터 표, 감사 체크리스트 5행의 서술 밀도 기준.
+
 ---
 
 ## 문서 작성 표준 형식

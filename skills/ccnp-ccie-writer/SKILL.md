@@ -11,6 +11,9 @@ CCNP/CCIE 지식베이스(jeonck/ccnp-ccie)의 Docusaurus 문서를 일관된 �
 
 상세 Mermaid 규칙과 섹션별 작성 지침은 `references/content-guide.md`를 참조한다.
 
+
+[`examples/stp.md`](examples/stp.md) — 완성 예시: STP 문서. 섹션 취사선택, `**(키워드)**` 형식, 설정·검증 블록의 분량 기준으로 삼는다.
+
 ---
 
 ## 문서 섹션 구조

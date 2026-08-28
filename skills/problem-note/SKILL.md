@@ -7,6 +7,8 @@ description: ICT 장애·문제 기록을 ict-brain(Quartz v5 세컨드브레인
 
 대상 저장소는 Quartz v5 기반 `ict-brain` 구조다. 저장소가 있으면 `content/meta/` 네 문서(capture-workflow, tag-taxonomy, note-linking-rules, publishing-checklist)가 원본 규칙이니 먼저 읽는다. 아래는 그 요약이다.
 
+[`examples/pgbouncer-prepared-statement-error.md`](examples/pgbouncer-prepared-statement-error.md) — 완성 예시: PgBouncer prepared statement 충돌. front matter, 3축 태그, 조사 경로의 서술 방식 기준.
+
 ## 승격 판단
 
 던져진 메모를 전부 문서로 만들지 않는다. 기준 하나: **6개월 뒤에 또는 다른 사람이 이 문제를 다시 만날 가능성이 있는가.** 없으면 만들지 말고 그 이유를 한 줄로 말한다. 애매하면 inbox에 두라고 하고 끝낸다.

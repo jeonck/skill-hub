@@ -17,6 +17,9 @@ description: "Use this skill whenever writing technical framework/methodology co
 ## 3. [프레임워크명] 도입의 기대효과 및 활용 방안   ← 4행 표
 ```
 
+
+[`examples/circuit-breaker.md`](examples/circuit-breaker.md) — 완성 예시: Circuit Breaker. 3단락 구조와 2단락 가/나 분할, 3단락 4행 표의 기준.
+
 ---
 
 ## 1단락: 개요 작성 규칙
