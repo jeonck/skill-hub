@@ -49,6 +49,19 @@
       "external_url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "external_note": "Upstream publishes no licence, so the files are not mirrored here."
     },
+    "archify": {
+      "title": "Archify Diagrams",
+      "summary": "Architecture, sequence, data-flow and state diagrams as explorable standalone HTML with inline SVG — light/dark themes, optional trace motion, and PNG/SVG/WebM export. Takes plain language or pasted Mermaid, and can read the repo when the diagram must match real code.",
+      "category": "Dev Tooling",
+      "tags": [
+        "diagrams",
+        "architecture",
+        "mermaid",
+        "svg"
+      ],
+      "origin": "tt-a1i",
+      "output_language": "en"
+    },
     "artifacts-builder": {
       "title": "Artifacts Builder",
       "summary": "Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library.",

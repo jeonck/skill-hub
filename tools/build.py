@@ -602,6 +602,7 @@ def build_zip(slug: str, dest: Path) -> None:
 ORIGINS = {
     "anthropic": ("Anthropic", "https://github.com/anthropics/skills", "Apache-2.0"),
     "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
+    "tt-a1i": ("Archify", "https://github.com/tt-a1i/archify", "MIT"),
     "vincentwei": (
         "Video Shotcraft",
         "https://github.com/Vincentwei1021/video-shotcraft",

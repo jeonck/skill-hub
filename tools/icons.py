@@ -144,6 +144,10 @@ ICONS: dict[str, str] = {
     "stack-posts": '<rect x="3.5" y="3.5" width="17" height="6" rx="1.5"/>'
                    '<rect x="3.5" y="12" width="17" height="8.5" rx="1.5"/>'
                    '<path d="M7 15.5h7M7 18h4"/>',
+    "blueprint": '<rect x="2.5" y="4.5" width="19" height="15" rx="2"/>'
+                 '<rect x="6" y="8" width="5" height="4" rx="1"/>'
+                 '<rect x="14" y="12" width="4.5" height="4" rx="1"/>'
+                 '<path d="M11 10h3.2a1 1 0 011 1v1"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -172,6 +176,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "archify": "blueprint",
     "video-shotcraft": "clapper",
     "hugo-stack-blog": "stack-posts",
     "andrej-karpathy-skills": "guardrail",

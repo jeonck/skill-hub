@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-64 skills, one glyph each. Click any name for its install command.
+65 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -98,6 +98,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/andrej-karpathy-skills.svg" width="22" alt=""> | [**Andrej Karpathy Guidelines**](https://github.com/multica-ai/andrej-karpathy-skills)<br>`andrej-karpathy-skills` — link only, not mirrored | Behavioural guidelines that head off the coding mistakes Karpathy flags in LLM output — overcomplication, sprawling edits, unstated assumptions, and success criteria nobody can verify. |
+| <img src="assets/icons/archify.svg" width="22" alt=""> | [**Archify Diagrams**](https://skill.metacog.co.kr/s/archify/)<br>`archify` | Architecture, sequence, data-flow and state diagrams as explorable standalone HTML with inline SVG — light/dark themes, optional trace motion, and PNG/SVG/WebM export. Takes plain language or pasted Mermaid, and can read the repo when the diagram must match real code. |
 | <img src="assets/icons/artifacts-builder.svg" width="22" alt=""> | [**Artifacts Builder**](https://skill.metacog.co.kr/s/artifacts-builder/)<br>`artifacts-builder` | Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library. |
 | <img src="assets/icons/brainstorming.svg" width="22" alt=""> | [**Brainstorming**](https://skill.metacog.co.kr/s/brainstorming/)<br>`brainstorming` | Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
