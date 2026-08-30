@@ -455,6 +455,14 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "moneyprinter-turbo": {
+      "title": "MoneyPrinter Turbo",
+      "summary": "Drive MoneyPrinterTurbo headlessly — turn a topic into a finished short with an LLM script, stock footage, TTS voiceover and burnt-in subtitles, through its CLI and batch manifest instead of the Streamlit WebUI.",
+      "category": "Media & Video",
+      "tags": ["video", "shorts", "tts", "ffmpeg", "cli"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
     "minimalist-skill": {
       "title": "Minimalist UI",
       "summary": "Clean editorial interfaces — warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",

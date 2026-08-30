@@ -44,8 +44,8 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 ## Use them straight from this repo
 
 Clone it and every skill is already live — `.claude/skills/` holds one symlink per
-skill, so any Claude Code session started inside the clone picks all 38 up as project
-skills. Nothing to copy or install:
+skill, so any Claude Code session started inside the clone picks every one of them up
+as a project skill. Nothing to copy or install:
 
 ```bash
 git clone https://github.com/jeonck/skill-hub.git && cd skill-hub && claude
@@ -64,7 +64,7 @@ python3 tools/link_skills.py
 
 <!-- icons:start -->
 
-66 skills, one glyph each. Click any name for its install command.
+67 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -144,6 +144,7 @@ python3 tools/link_skills.py
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/code-explainer-video.svg" width="22" alt=""> | [**Code Explainer Video**](https://skill.metacog.co.kr/s/code-explainer-video/)<br>`code-explainer-video` | Render a cinematic chaptered explainer video for any CLI or dev tool — Remotion "Terminal Noir": code that types itself, streaming terminal output, growing dependency graphs, continuous BGM. |
+| <img src="assets/icons/moneyprinter-turbo.svg" width="22" alt=""> | [**MoneyPrinter Turbo**](https://skill.metacog.co.kr/s/moneyprinter-turbo/)<br>`moneyprinter-turbo` | Drive MoneyPrinterTurbo headlessly — turn a topic into a finished short with an LLM script, stock footage, TTS voiceover and burnt-in subtitles, through its CLI and batch manifest instead of the Streamlit WebUI. |
 | <img src="assets/icons/sync-shopshorts-higgs.svg" width="22" alt=""> | [**Shopping Shorts Workflow**](https://skill.metacog.co.kr/s/sync-shopshorts-higgs/)<br>`sync-shopshorts-higgs` | Turn a product URL into a Korean-market shopping short — crawl the product, profile the target persona, recommend script × preset, approve the scene map, then generate via Higgsfield. |
 | <img src="assets/icons/slack-gif-creator.svg" width="22" alt=""> | [**Slack GIF Creator**](https://skill.metacog.co.kr/s/slack-gif-creator/)<br>`slack-gif-creator` | Build animated GIFs sized for Slack — composable animation primitives plus validators for Slack's size constraints. |
 | <img src="assets/icons/video-shotcraft.svg" width="22" alt=""> | [**Video Shotcraft**](https://skill.metacog.co.kr/s/video-shotcraft/)<br>`video-shotcraft` | Turn a frontend project or webpage into a cinematic product video — Remotion with real page screenshots, 2.5D camera moves, beat-synced cuts and sound design, driven by shot recipe cards against a validated template. |

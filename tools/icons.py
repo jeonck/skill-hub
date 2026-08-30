@@ -173,6 +173,9 @@ ICONS: dict[str, str] = {
                     'c0 5.4-7.5 10.1-7.5 10.1z"/>',
     "bag-play": '<path d="M5 7.5h14l-1 13H6l-1-13z"/><path d="M9 7.5V6a3 3 0 016 0v1.5"/>'
                 '<path d="M10.8 12.2l3.4 2-3.4 2v-4z"/>',
+    "reel": '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="1.8"/>'
+            '<circle cx="12" cy="7" r="1.7"/><circle cx="16.3" cy="14.5" r="1.7"/>'
+            '<circle cx="7.7" cy="14.5" r="1.7"/>',
     "users": '<circle cx="9" cy="8" r="3"/><path d="M3.5 19.5a5.5 5.5 0 0111 0"/>'
              '<path d="M16 5.6a3 3 0 010 4.8"/><path d="M17.5 14.4a5.5 5.5 0 013 5.1"/>',
 }
@@ -229,6 +232,7 @@ SKILL_ICONS: dict[str, str] = {
     "lotusdocs-kb-builder": "lotus",
     "mcp-builder": "server-plug",
     "minimalist-skill": "square-min",
+    "moneyprinter-turbo": "reel",
     "output-skill": "list-check",
     "problem-note": "incident",
     "redesign-skill": "wand",
