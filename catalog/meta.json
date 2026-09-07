@@ -88,6 +88,14 @@
       "origin": "nextlevelbuilder",
       "output_language": "en"
     },
+    "book-to-skill": {
+      "title": "Book to Skill",
+      "summary": "Turn a book, document or folder of sources into a skill of its own — frameworks, principles, techniques and anti-patterns extracted into SKILL.md plus on-demand chapter files, instead of pasting the whole book into context.",
+      "category": "Dev Tooling",
+      "tags": ["skills", "pdf", "epub", "knowledge", "extraction"],
+      "origin": "virgiliojr94",
+      "output_language": "en"
+    },
     "brainstorming": {
       "title": "Brainstorming",
       "summary": "Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess.",

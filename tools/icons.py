@@ -59,6 +59,9 @@ ICONS: dict[str, str] = {
     # ---- docs / writing
     "book": '<path d="M3.5 5.5A2 2 0 015.5 3.5H11v17H5.5a2 2 0 01-2-2v-13z"/>'
             '<path d="M20.5 5.5a2 2 0 00-2-2H13v17h5.5a2 2 0 002-2v-13z"/>',
+    "book-arrow": '<path d="M3.5 5A2 2 0 015.5 3H11v18H5.5a2 2 0 01-2-2V5z"/>'
+                  '<path d="M3.5 17.5H11"/>'
+                  '<path d="M14 12h6.5"/><path d="M18 9.5l2.5 2.5-2.5 2.5"/>',
     "lotus": '<path d="M12 20.5c-4.5 0-8-2.8-8-6.2 1.9-.6 3.6-.3 5 .7"/>'
              '<path d="M12 20.5c4.5 0 8-2.8 8-6.2-1.9-.6-3.6-.3-5 .7"/>'
              '<path d="M12 20.5c-2.3-1.6-3.6-4-3.6-6.6S9.7 8.9 12 6.5c2.3 2.4 3.6 4.8 3.6 7.4s-1.3 5-3.6 6.6z"/>',
@@ -194,6 +197,7 @@ SKILL_ICONS: dict[str, str] = {
     "slides": "presentation",
     "ui-styling": "brush",
     "ui-ux-pro-max": "wireframe",
+    "book-to-skill": "book-arrow",
     "brainstorming": "bulb",
     "dispatching-parallel-agents": "fanout",
     "executing-plans": "play-list",

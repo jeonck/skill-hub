@@ -78,6 +78,19 @@ skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.
 
+skills/book-to-skill is copied from
+https://github.com/virgiliojr94/book-to-skill (Copyright (c) 2025 virgiliojr94)
+at commit a6cad12, and is likewise licensed under the MIT License, keeping its
+original LICENSE.md. Only the runtime the skill itself invokes is redistributed
+-- SKILL.md, scripts/extract.py, the book_to_skill package and
+tools/scan_generated_skill.py -- not the upstream docs, tests, evals or
+packaging.
+
+Its SECURITY-NOTICE.md is kept alongside it on purpose. Upstream reports a
+malicious re-upload of this project under a different owner that exfiltrates
+local cryptocurrency-wallet data; the notice names the only official source.
+Take this copy or upstream, and no other.
+
 --------------------------------------------------------------------------
 Not included
 --------------------------------------------------------------------------

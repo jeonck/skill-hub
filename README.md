@@ -64,7 +64,7 @@ python3 tools/link_skills.py
 
 <!-- icons:start -->
 
-67 skills, one glyph each. Click any name for its install command.
+68 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -120,6 +120,7 @@ python3 tools/link_skills.py
 | <img src="assets/icons/andrej-karpathy-skills.svg" width="22" alt=""> | [**Andrej Karpathy Guidelines**](https://github.com/multica-ai/andrej-karpathy-skills)<br>`andrej-karpathy-skills` — link only, not mirrored | Behavioural guidelines that head off the coding mistakes Karpathy flags in LLM output — overcomplication, sprawling edits, unstated assumptions, and success criteria nobody can verify. |
 | <img src="assets/icons/archify.svg" width="22" alt=""> | [**Archify Diagrams**](https://skill.metacog.co.kr/s/archify/)<br>`archify` | Architecture, sequence, data-flow and state diagrams as explorable standalone HTML with inline SVG — light/dark themes, optional trace motion, and PNG/SVG/WebM export. Takes plain language or pasted Mermaid, and can read the repo when the diagram must match real code. |
 | <img src="assets/icons/artifacts-builder.svg" width="22" alt=""> | [**Artifacts Builder**](https://skill.metacog.co.kr/s/artifacts-builder/)<br>`artifacts-builder` | Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library. |
+| <img src="assets/icons/book-to-skill.svg" width="22" alt=""> | [**Book to Skill**](https://skill.metacog.co.kr/s/book-to-skill/)<br>`book-to-skill` | Turn a book, document or folder of sources into a skill of its own — frameworks, principles, techniques and anti-patterns extracted into SKILL.md plus on-demand chapter files, instead of pasting the whole book into context. |
 | <img src="assets/icons/brainstorming.svg" width="22" alt=""> | [**Brainstorming**](https://skill.metacog.co.kr/s/brainstorming/)<br>`brainstorming` | Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
 | <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |
