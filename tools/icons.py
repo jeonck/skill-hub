@@ -51,6 +51,8 @@ ICONS: dict[str, str] = {
               '<path d="M10.2 9.4l4.3 2.6-4.3 2.6V9.4z"/>'
               '<path d="M5.5 12h1.7M17.3 12h1.4"/>',
 
+    "waveform": '<path d="M3 12h1.8"/><path d="M7 8.5v7"/><path d="M10.3 5v14"/>'
+                '<path d="M13.7 7.5v9"/><path d="M17 10v4"/><path d="M20.2 12H21"/>',
     "terminal-play": '<rect x="2.5" y="4" width="19" height="16" rx="2"/>'
                      '<path d="M6.5 9l2.6 2.6-2.6 2.6"/><path d="M12 15h5"/>',
     "clapper": '<path d="M3 9.5h18v9.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19z"/>'
@@ -237,6 +239,7 @@ SKILL_ICONS: dict[str, str] = {
     "mcp-builder": "server-plug",
     "minimalist-skill": "square-min",
     "moneyprinter-turbo": "reel",
+    "omnivoice": "waveform",
     "output-skill": "list-check",
     "problem-note": "incident",
     "redesign-skill": "wand",

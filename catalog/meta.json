@@ -483,6 +483,14 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "omnivoice": {
+      "title": "OmniVoice TTS",
+      "summary": "Synthesise speech in 600+ languages with OmniVoice — clone a voice from a reference clip, design one from a written description, or let the model pick — driven through its CLI, JSONL batch runner or Python API.",
+      "category": "Media & Video",
+      "tags": ["tts", "voice-cloning", "audio", "pytorch", "cli"],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
     "output-skill": {
       "title": "Full Output Enforcement",
       "summary": "Override default truncation behavior — enforce complete code generation, ban placeholder patterns, and handle token-limit splits cleanly.",
