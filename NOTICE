@@ -74,6 +74,11 @@ the MIT License. Each keeps its original LICENSE file:
   skills/ui-styling
   skills/ui-ux-pro-max
 
+skills/diagram-maker is copied from https://github.com/openclaw/openclaw
+(Copyright (c) 2026 OpenClaw Foundation) and is licensed under the MIT License,
+keeping its original LICENSE file. Only skills/diagram-maker is mirrored; the
+rest of that repository is not.
+
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.

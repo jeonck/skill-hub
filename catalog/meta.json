@@ -282,6 +282,19 @@
       "origin": "nextlevelbuilder",
       "output_language": "en"
     },
+    "diagram-maker": {
+      "title": "Diagram Maker",
+      "summary": "Draw concepts, architecture, flows and whiteboards in three output modes — clean SVG for explanatory and process diagrams, architecture SVG for software and cloud infrastructure, and Excalidraw for a file someone can keep editing.",
+      "category": "Dev Tooling",
+      "tags": [
+        "diagrams",
+        "svg",
+        "excalidraw",
+        "architecture"
+      ],
+      "origin": "openclaw",
+      "output_language": "en"
+    },
     "dispatching-parallel-agents": {
       "title": "Dispatching Parallel Agents",
       "summary": "Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence.",

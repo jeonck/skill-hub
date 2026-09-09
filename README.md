@@ -41,30 +41,11 @@ git clone https://github.com/jeonck/skill-hub.git
 cp -r skill-hub/skills/* ~/.claude/skills/
 ```
 
-## Use them straight from this repo
-
-Clone it and every skill is already live — `.claude/skills/` holds one symlink per
-skill, so any Claude Code session started inside the clone picks every one of them up
-as a project skill. Nothing to copy or install:
-
-```bash
-git clone https://github.com/jeonck/skill-hub.git && cd skill-hub && claude
-```
-
-The symlinks are named after each skill's frontmatter `name`, which for a few skills
-differs from its catalog slug (`brutalist-skill` → `industrial-brutalist-ui`,
-`taste-skill` → `design-taste-frontend`, and similar). After adding or renaming a
-skill, regenerate them:
-
-```bash
-python3 tools/link_skills.py
-```
-
 ## The skills
 
 <!-- icons:start -->
 
-70 skills, one glyph each. Click any name for its install command.
+71 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -123,6 +104,7 @@ python3 tools/link_skills.py
 | <img src="assets/icons/artifacts-builder.svg" width="22" alt=""> | [**Artifacts Builder**](https://skill.metacog.co.kr/s/artifacts-builder/)<br>`artifacts-builder` | Build elaborate multi-component claude.ai HTML artifacts with React, Tailwind and shadcn/ui — for artifacts that need state, routing or a component library. |
 | <img src="assets/icons/book-to-skill.svg" width="22" alt=""> | [**Book to Skill**](https://skill.metacog.co.kr/s/book-to-skill/)<br>`book-to-skill` | Turn a book, document or folder of sources into a skill of its own — frameworks, principles, techniques and anti-patterns extracted into SKILL.md plus on-demand chapter files, instead of pasting the whole book into context. |
 | <img src="assets/icons/brainstorming.svg" width="22" alt=""> | [**Brainstorming**](https://skill.metacog.co.kr/s/brainstorming/)<br>`brainstorming` | Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess. |
+| <img src="assets/icons/diagram-maker.svg" width="22" alt=""> | [**Diagram Maker**](https://skill.metacog.co.kr/s/diagram-maker/)<br>`diagram-maker` | Draw concepts, architecture, flows and whiteboards in three output modes — clean SVG for explanatory and process diagrams, architecture SVG for software and cloud infrastructure, and Excalidraw for a file someone can keep editing. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
 | <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |
 | <img src="assets/icons/finishing-a-development-branch.svg" width="22" alt=""> | [**Finishing a Development Branch**](https://skill.metacog.co.kr/s/finishing-a-development-branch/)<br>`finishing-a-development-branch` | Decide how to integrate finished work once implementation is complete and the tests pass. |

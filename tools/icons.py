@@ -159,6 +159,10 @@ ICONS: dict[str, str] = {
     "lakehouse": '<ellipse cx="12" cy="5.5" rx="7.5" ry="2.6"/>'
                  '<path d="M4.5 5.5v5.4c0 1.4 3.4 2.6 7.5 2.6s7.5-1.2 7.5-2.6V5.5"/>'
                  '<path d="M4.5 12.5v5.4c0 1.4 3.4 2.6 7.5 2.6s7.5-1.2 7.5-2.6v-5.4"/>',
+    "pen-shapes": '<rect x="3" y="4" width="7.5" height="6" rx="1.2"/>'
+                  '<circle cx="17.5" cy="7" r="3.2"/>'
+                  '<path d="M6.75 10v3.5h10.75V10.2"/>'
+                  '<path d="M8.5 20.5l1-3.2 6.2-6.2 2.2 2.2-6.2 6.2-3.2 1z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -190,6 +194,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "diagram-maker": "pen-shapes",
     "data-platform-architecture": "lakehouse",
     "archify": "blueprint",
     "video-shotcraft": "clapper",
