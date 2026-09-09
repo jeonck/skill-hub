@@ -42,6 +42,9 @@ ICONS: dict[str, str] = {
     # ---- devices / screens
     "phone": '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 5.5h3"/>'
              '<path d="M10 18.5h4"/>',
+    "phone-sparkle": '<rect x="3.5" y="2.5" width="11" height="19" rx="2.5"/>'
+                     '<path d="M6.8 5.5h4.4"/><path d="M7 18.5h4"/>'
+                     '<path d="M19 8.4l.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9.9-2.4z"/>',
     "browser": '<rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19"/>'
                '<circle cx="5.8" cy="6.2" r=".7" fill="currentColor" stroke="none"/>'
                '<circle cx="8.1" cy="6.2" r=".7" fill="currentColor" stroke="none"/>',
@@ -195,6 +198,7 @@ SKILL_ICONS: dict[str, str] = {
     "banner-design": "banner",
     "brand": "tag",
     "design": "pen-nib",
+    "design-mobile-apps": "phone-sparkle",
     "design-system": "tokens",
     "slides": "presentation",
     "ui-styling": "brush",

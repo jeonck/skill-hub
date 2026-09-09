@@ -262,6 +262,14 @@
       "origin": "nextlevelbuilder",
       "output_language": "en"
     },
+    "design-mobile-apps": {
+      "title": "Design Mobile Apps with Sleek",
+      "summary": "Design mobile app screens through the hosted sleek.design API — create a project, send the intent as one message with an authored style direction, then poll the run and pull screenshots or HTML. Needs a SLEEK_API_KEY; sustained use is a paid plan.",
+      "category": "Design & UI",
+      "tags": ["mobile", "ui", "api", "saas", "screens"],
+      "origin": "sleekdotdesign",
+      "output_language": "en"
+    },
     "design-system": {
       "title": "Design System Tokens",
       "summary": "Three-layer token architecture (primitive → semantic → component), CSS variables, spacing and type scales, and component specs.",

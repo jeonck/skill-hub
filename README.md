@@ -64,7 +64,7 @@ python3 tools/link_skills.py
 
 <!-- icons:start -->
 
-69 skills, one glyph each. Click any name for its install command.
+70 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -99,6 +99,7 @@ python3 tools/link_skills.py
 | <img src="assets/icons/brand.svg" width="22" alt=""> | [**Brand Voice & Identity**](https://skill.metacog.co.kr/s/brand/)<br>`brand` | Brand voice, visual identity, messaging frameworks and asset management, with compliance checks for branded content. |
 | <img src="assets/icons/canvas-design.svg" width="22" alt=""> | [**Canvas Design**](https://skill.metacog.co.kr/s/canvas-design/)<br>`canvas-design` | Design posters, art and static pieces as .png or .pdf using a real design philosophy rather than default template output. |
 | <img src="assets/icons/design.svg" width="22" alt=""> | [**Design Direction**](https://skill.metacog.co.kr/s/design/)<br>`design` | Art direction and visual design decisions for product work, backed by the Pro Max reference data. |
+| <img src="assets/icons/design-mobile-apps.svg" width="22" alt=""> | [**Design Mobile Apps with Sleek**](https://skill.metacog.co.kr/s/design-mobile-apps/)<br>`design-mobile-apps` | Design mobile app screens through the hosted sleek.design API — create a project, send the intent as one message with an authored style direction, then poll the run and pull screenshots or HTML. Needs a SLEEK_API_KEY; sustained use is a paid plan. |
 | <img src="assets/icons/design-system.svg" width="22" alt=""> | [**Design System Tokens**](https://skill.metacog.co.kr/s/design-system/)<br>`design-system` | Three-layer token architecture (primitive → semantic → component), CSS variables, spacing and type scales, and component specs. |
 | <img src="assets/icons/taste-skill.svg" width="22" alt=""> | [**Design Taste Frontend**](https://skill.metacog.co.kr/s/taste-skill/)<br>`taste-skill` | Anti-slop frontend for landing pages, portfolios and redesigns — read the brief, infer the right direction, and ship interfaces that don't look templated. |
 | <img src="assets/icons/soft-skill.svg" width="22" alt=""> | [**High-End Visual Design**](https://skill.metacog.co.kr/s/soft-skill/)<br>`soft-skill` | Design like a high-end agency — the exact fonts, spacing, shadows, card structures and animations that make a site feel expensive, with the cheap-looking defaults blocked. |

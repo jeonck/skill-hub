@@ -78,6 +78,12 @@ skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.
 
+skills/design-mobile-apps is copied from
+https://github.com/sleekdotdesign/agent-skills (Copyright (c) 2026 Sleek) at
+commit aa88b4d, and is likewise licensed under the MIT License, keeping its
+original LICENSE. It drives the hosted sleek.design API and needs a
+SLEEK_API_KEY; sustained use is a paid plan.
+
 skills/book-to-skill is copied from
 https://github.com/virgiliojr94/book-to-skill (Copyright (c) 2025 virgiliojr94)
 at commit a6cad12, and is likewise licensed under the MIT License, keeping its
