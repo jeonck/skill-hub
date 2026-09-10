@@ -92,7 +92,13 @@
       "title": "Book to Skill",
       "summary": "Turn a book, document or folder of sources into a skill of its own — frameworks, principles, techniques and anti-patterns extracted into SKILL.md plus on-demand chapter files, instead of pasting the whole book into context.",
       "category": "Dev Tooling",
-      "tags": ["skills", "pdf", "epub", "knowledge", "extraction"],
+      "tags": [
+        "skills",
+        "pdf",
+        "epub",
+        "knowledge",
+        "extraction"
+      ],
       "origin": "virgiliojr94",
       "output_language": "en"
     },
@@ -266,7 +272,13 @@
       "title": "Design Mobile Apps with Sleek",
       "summary": "Design mobile app screens through the hosted sleek.design API — create a project, send the intent as one message with an authored style direction, then poll the run and pull screenshots or HTML. Needs a SLEEK_API_KEY; sustained use is a paid plan.",
       "category": "Design & UI",
-      "tags": ["mobile", "ui", "api", "saas", "screens"],
+      "tags": [
+        "mobile",
+        "ui",
+        "api",
+        "saas",
+        "screens"
+      ],
       "origin": "sleekdotdesign",
       "output_language": "en"
     },
@@ -408,6 +420,19 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "humanize-korean": {
+      "title": "Humanize Korean",
+      "summary": "Rewrite Korean text that reads as AI-written — translationese, over-quoted English, mechanical parallelism, passive overuse, uniform rhythm, emoji and bullet excess — across 10 categories of tells, changing style and rhythm without touching the content. Routes to 1, 2 or 3+ passes by severity.",
+      "category": "Content & Writing",
+      "tags": [
+        "korean",
+        "editing",
+        "translationese",
+        "humanize"
+      ],
+      "origin": "epoko77",
+      "output_language": "ko"
+    },
     "imagegen-frontend-mobile": {
       "title": "Mobile UI Image Direction",
       "summary": "Generate premium app-native mobile screen concepts and flows — clean hierarchy, multi-screen consistency, controlled palettes, framed in a subtle phone mockup. Images only, no code.",
@@ -484,14 +509,6 @@
       "origin": "anthropic",
       "output_language": "en"
     },
-    "moneyprinter-turbo": {
-      "title": "MoneyPrinter Turbo",
-      "summary": "Drive MoneyPrinterTurbo headlessly — turn a topic into a finished short with an LLM script, stock footage, TTS voiceover and burnt-in subtitles, through its CLI and batch manifest instead of the Streamlit WebUI.",
-      "category": "Media & Video",
-      "tags": ["video", "shorts", "tts", "ffmpeg", "cli"],
-      "origin": "jeonck",
-      "output_language": "en"
-    },
     "minimalist-skill": {
       "title": "Minimalist UI",
       "summary": "Clean editorial interfaces — warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
@@ -504,11 +521,31 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "moneyprinter-turbo": {
+      "title": "MoneyPrinter Turbo",
+      "summary": "Drive MoneyPrinterTurbo headlessly — turn a topic into a finished short with an LLM script, stock footage, TTS voiceover and burnt-in subtitles, through its CLI and batch manifest instead of the Streamlit WebUI.",
+      "category": "Media & Video",
+      "tags": [
+        "video",
+        "shorts",
+        "tts",
+        "ffmpeg",
+        "cli"
+      ],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
     "omnivoice": {
       "title": "OmniVoice TTS",
       "summary": "Synthesise speech in 600+ languages with OmniVoice — clone a voice from a reference clip, design one from a written description, or let the model pick — driven through its CLI, JSONL batch runner or Python API.",
       "category": "Media & Video",
-      "tags": ["tts", "voice-cloning", "audio", "pytorch", "cli"],
+      "tags": [
+        "tts",
+        "voice-cloning",
+        "audio",
+        "pytorch",
+        "cli"
+      ],
       "origin": "jeonck",
       "output_language": "en"
     },

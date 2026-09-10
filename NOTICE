@@ -74,6 +74,12 @@ the MIT License. Each keeps its original LICENSE file:
   skills/ui-styling
   skills/ui-ux-pro-max
 
+skills/humanize-korean is copied from https://github.com/epoko77-ai/im-not-ai
+(Copyright (c) 2026 epoko77-ai) and is licensed under the MIT License, keeping
+its original LICENSE file. Only skills/humanize-korean is mirrored; the repo's
+agents, commands and build scripts are not. Its references/ include executable
+Python (metrics.py, metrics_v2.py) from that project.
+
 skills/diagram-maker is copied from https://github.com/openclaw/openclaw
 (Copyright (c) 2026 OpenClaw Foundation) and is licensed under the MIT License,
 keeping its original LICENSE file. Only skills/diagram-maker is mirrored; the

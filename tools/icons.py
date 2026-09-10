@@ -163,6 +163,8 @@ ICONS: dict[str, str] = {
                   '<circle cx="17.5" cy="7" r="3.2"/>'
                   '<path d="M6.75 10v3.5h10.75V10.2"/>'
                   '<path d="M8.5 20.5l1-3.2 6.2-6.2 2.2 2.2-6.2 6.2-3.2 1z"/>',
+    "polish-text": '<path d="M4 6.5h11M4 11h13M4 15.5h6"/>'
+                   '<path d="M17.6 13.4l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1 1-2.4z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -194,6 +196,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "humanize-korean": "polish-text",
     "diagram-maker": "pen-shapes",
     "data-platform-architecture": "lakehouse",
     "archify": "blueprint",

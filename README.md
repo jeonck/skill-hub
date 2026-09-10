@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-71 skills, one glyph each. Click any name for its install command.
+72 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -64,6 +64,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/ccnp-ccie-writer.svg" width="22" alt=""> | [**CCNP / CCIE Knowledge Writer**](https://skill.metacog.co.kr/s/ccnp-ccie-writer/)<br>`ccnp-ccie-writer` | Write Cisco CCNP/CCIE knowledge-base docs in a fixed structure — definition, characteristics, components, packet flow, comparison tables, config and exam points — with Mermaid diagrams. |
 | <img src="assets/icons/cisa-content-writer.svg" width="22" alt=""> | [**CISA Content Writer**](https://skill.metacog.co.kr/s/cisa-content-writer/)<br>`cisa-content-writer` | Author CISA (IS audit) best-practice guides across the six ISACA domains — a standard 10-section layout with Mermaid diagrams and HTML audit checklists. |
 | <img src="assets/icons/data-platform-architecture.svg" width="22" alt=""> | [**Data Platform Architecture**](https://skill.metacog.co.kr/s/data-platform-architecture/)<br>`data-platform-architecture` | Compare and choose between modern data platform architecture styles — Lakehouse, Medallion, Data Mesh, Data Fabric, Lambda/Kappa, Streaming Lakehouse, Modern Data Stack and Zero-ETL — then write the decision up with the constraints that drove it. |
+| <img src="assets/icons/humanize-korean.svg" width="22" alt=""> | [**Humanize Korean**](https://skill.metacog.co.kr/s/humanize-korean/)<br>`humanize-korean` | Rewrite Korean text that reads as AI-written — translationese, over-quoted English, mechanical parallelism, passive overuse, uniform rhythm, emoji and bullet excess — across 10 categories of tells, changing style and rhythm without touching the content. Routes to 1, 2 or 3+ passes by severity. |
 | <img src="assets/icons/internal-comms.svg" width="22" alt=""> | [**Internal Comms**](https://skill.metacog.co.kr/s/internal-comms/)<br>`internal-comms` | Write internal communications in house formats — status reports, leadership updates, newsletters, FAQs, incident reports and project updates. |
 | <img src="assets/icons/it-professional-content.svg" width="22" alt=""> | [**IT Professional Engineer Content**](https://skill.metacog.co.kr/s/it-professional-content/)<br>`it-professional-content` | Write framework and methodology content in the Korean 기술사 exam format — a 3-section structure with block diagrams, Mermaid visualizations and comparison tables. |
 | <img src="assets/icons/problem-note.svg" width="22" alt=""> | [**Problem Note Writer**](https://skill.metacog.co.kr/s/problem-note/)<br>`problem-note` | Write up an ICT incident, error log or troubleshooting session as a structured problem note for a Quartz v5 second brain — plus concept notes, MOC pages and a masking check before anything goes public. |
