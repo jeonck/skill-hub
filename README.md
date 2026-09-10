@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-72 skills, one glyph each. Click any name for its install command.
+73 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -110,6 +110,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |
 | <img src="assets/icons/finishing-a-development-branch.svg" width="22" alt=""> | [**Finishing a Development Branch**](https://skill.metacog.co.kr/s/finishing-a-development-branch/)<br>`finishing-a-development-branch` | Decide how to integrate finished work once implementation is complete and the tests pass. |
 | <img src="assets/icons/output-skill.svg" width="22" alt=""> | [**Full Output Enforcement**](https://skill.metacog.co.kr/s/output-skill/)<br>`output-skill` | Override default truncation behavior — enforce complete code generation, ban placeholder patterns, and handle token-limit splits cleanly. |
+| <img src="assets/icons/markitdown-convert.svg" width="22" alt=""> | [**MarkItDown Convert**](https://skill.metacog.co.kr/s/markitdown-convert/)<br>`markitdown-convert` | Drive microsoft/markitdown to turn PDF, Word, PowerPoint, Excel, images, audio, HTML, CSV/JSON/XML, ZIP, EPUB and YouTube URLs into LLM-ready Markdown — CLI, batch folders, Python API, and the Azure Document Intelligence and Content Understanding paths when local conversion is not enough. |
 | <img src="assets/icons/mcp-builder.svg" width="22" alt=""> | [**MCP Builder**](https://skill.metacog.co.kr/s/mcp-builder/)<br>`mcp-builder` | Build high-quality MCP servers that expose external APIs to LLMs through well-designed tools — in Python (FastMCP) or Node/TypeScript (MCP SDK). |
 | <img src="assets/icons/receiving-code-review.svg" width="22" alt=""> | [**Receiving Code Review**](https://skill.metacog.co.kr/s/receiving-code-review/)<br>`receiving-code-review` | Handle review feedback with technical rigor — verify each suggestion instead of agreeing performatively or implementing blindly. |
 | <img src="assets/icons/requesting-code-review.svg" width="22" alt=""> | [**Requesting Code Review**](https://skill.metacog.co.kr/s/requesting-code-review/)<br>`requesting-code-review` | Ask for review at task completion, major features and pre-merge, so work is checked against its requirements. |

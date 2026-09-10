@@ -496,6 +496,20 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "markitdown-convert": {
+      "title": "MarkItDown Convert",
+      "summary": "Drive microsoft/markitdown to turn PDF, Word, PowerPoint, Excel, images, audio, HTML, CSV/JSON/XML, ZIP, EPUB and YouTube URLs into LLM-ready Markdown — CLI, batch folders, Python API, and the Azure Document Intelligence and Content Understanding paths when local conversion is not enough.",
+      "category": "Dev Tooling",
+      "tags": [
+        "markdown",
+        "pdf",
+        "docx",
+        "conversion",
+        "rag"
+      ],
+      "origin": "jeonck",
+      "output_language": "ko"
+    },
     "mcp-builder": {
       "title": "MCP Builder",
       "summary": "Build high-quality MCP servers that expose external APIs to LLMs through well-designed tools — in Python (FastMCP) or Node/TypeScript (MCP SDK).",

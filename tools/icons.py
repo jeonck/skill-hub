@@ -165,6 +165,10 @@ ICONS: dict[str, str] = {
                   '<path d="M8.5 20.5l1-3.2 6.2-6.2 2.2 2.2-6.2 6.2-3.2 1z"/>',
     "polish-text": '<path d="M4 6.5h11M4 11h13M4 15.5h6"/>'
                    '<path d="M17.6 13.4l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1 1-2.4z"/>',
+    "doc-to-md": '<path d="M6 3h7l4 4v5"/><path d="M13 3v4h4"/><path d="M6 3v9"/>'
+                 '<path d="M4 15.5h16v5.5H4z"/>'
+                 '<path d="M6.5 19.5v-2.5l1.4 1.6 1.4-1.6v2.5"/>'
+                 '<path d="M13.5 17v2.5M12.2 18.4l1.3 1.3 1.3-1.3"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -196,6 +200,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "markitdown-convert": "doc-to-md",
     "humanize-korean": "polish-text",
     "diagram-maker": "pen-shapes",
     "data-platform-architecture": "lakehouse",
