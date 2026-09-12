@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-73 skills, one glyph each. Click any name for its install command.
+74 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -140,6 +140,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 | | Skill | What it does |
 | :-: | --- | --- |
+| <img src="assets/icons/hyperresearch.svg" width="22" alt=""> | [**HyperResearch Pipeline**](https://skill.metacog.co.kr/s/hyperresearch/)<br>`hyperresearch` | A Claude Code research harness: installs a /hyperresearch entry skill plus 16 step skills, then runs decompose → width sweep → depth → synthesis, where 4 parallel adversarial critics only file findings and a patcher applies them as surgical edits instead of regenerating the draft. |
 | <img src="assets/icons/research-agent-team.svg" width="22" alt=""> | [**Research Agent Team**](https://skill.metacog.co.kr/s/research-agent-team/)<br>`research-agent-team` | Run an 8-agent research pipeline — Orchestrator, 3 Researchers, 2 Fact-Checkers, Writer, Gatekeeper — applying MECE and the Pyramid Principle to produce a sourced consulting-style report. |
 
 ### Sites & Docs

@@ -433,6 +433,20 @@
       "origin": "epoko77",
       "output_language": "ko"
     },
+    "hyperresearch": {
+      "title": "HyperResearch Pipeline",
+      "summary": "A Claude Code research harness: installs a /hyperresearch entry skill plus 16 step skills, then runs decompose → width sweep → depth → synthesis, where 4 parallel adversarial critics only file findings and a patcher applies them as surgical edits instead of regenerating the draft.",
+      "category": "Research",
+      "tags": [
+        "research",
+        "pipeline",
+        "adversarial",
+        "cli",
+        "claude-code"
+      ],
+      "origin": "jeonck",
+      "output_language": "en"
+    },
     "imagegen-frontend-mobile": {
       "title": "Mobile UI Image Direction",
       "summary": "Generate premium app-native mobile screen concepts and flows — clean hierarchy, multi-screen consistency, controlled palettes, framed in a subtle phone mockup. Images only, no code.",

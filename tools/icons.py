@@ -93,6 +93,9 @@ ICONS: dict[str, str] = {
                  '<path d="M18 9.5a3.5 3.5 0 010 5"/><path d="M8 15v4.5"/>',
     "compare": '<path d="M4 5.5h6.5v13H4z"/><path d="M13.5 5.5H20v13h-6.5z"/>'
                '<path d="M12 3.5v17"/>',
+    "funnel-check": '<path d="M3.5 4.5h17l-6.6 7.6v5.6l-3.8 2.3v-7.9L3.5 4.5z"/>'
+                    '<circle cx="18.2" cy="17.2" r="3.8"/>'
+                    '<path d="M16.6 17.2l1.1 1.1 2.2-2.3"/>',
     "list-check": '<path d="M4 6.5l1.6 1.6L8.8 5"/><path d="M4 12.5l1.6 1.6L8.8 11"/>'
                   '<path d="M4 18.5l1.6 1.6L8.8 17"/><path d="M11.5 7h8.5M11.5 13h8.5M11.5 19h6"/>',
     # ---- dev workflow (superpowers)
@@ -248,6 +251,7 @@ SKILL_ICONS: dict[str, str] = {
     "hextra-kb-builder": "library",
     "hextra-roadmap-kb": "route",
     "hugo-blog-builder": "feather",
+    "hyperresearch": "funnel-check",
     "imagegen-frontend-mobile": "phone",
     "imagegen-frontend-web": "browser",
     "internal-comms": "megaphone",
