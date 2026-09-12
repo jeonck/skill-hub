@@ -49,6 +49,57 @@
       "external_url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "external_note": "Upstream publishes no licence, so the files are not mirrored here."
     },
+    "animate": {
+      "title": "Animate",
+      "summary": "Build a web animation from scratch by making the decisions in the order that settles whether it feels right — whether to animate at all, which tool, which properties, which curve, how it interrupts and exits — then write the implementation.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "motion",
+        "css",
+        "frontend"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
+    "animate-expo": {
+      "title": "Animate in Expo",
+      "summary": "The same animation decision order for React Native and Expo — which thread it runs on, spring or timing, how the gesture hands off, how it degrades — implemented with Reanimated, Gesture Handler, Expo Router and expo-haptics.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "react-native",
+        "expo",
+        "reanimated"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
+    "animation-vocabulary": {
+      "title": "Animation Vocabulary",
+      "summary": "Reverse-lookup glossary that turns a vague description of a motion effect into its exact term — \"the bouncy thing when a popover opens\" becomes Pop in, \"the iOS rubber-band scroll\" becomes Rubber-banding.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "glossary",
+        "terminology"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
+    "apple-design": {
+      "title": "Apple Design for the Web",
+      "summary": "Apple's approach to interface design and fluid, physical motion translated for the web — gesture-driven UI, spring and interruptible transitions, translucent materials and depth, optical typography, reduced-motion.",
+      "category": "Design & UI",
+      "tags": [
+        "apple",
+        "motion",
+        "gestures",
+        "typography"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
     "archify": {
       "title": "Archify Diagrams",
       "summary": "Architecture, sequence, data-flow and state diagrams as explorable standalone HTML with inline SVG — light/dark themes, optional trace motion, and PNG/SVG/WebM export. Takes plain language or pasted Mermaid, and can read the repo when the diagram must match real code.",
@@ -73,6 +124,19 @@
         "artifacts"
       ],
       "origin": "anthropic",
+      "output_language": "en"
+    },
+    "ask-sonner": {
+      "title": "Ask Sonner",
+      "summary": "Working guide to Sonner, the React toast library — wiring the Toaster, picking the right toast() call, promise and loading toasts, styling and theming, and the failures people actually hit: toasts that never appear, appear twice, lose Tailwind classes or sit behind a modal.",
+      "category": "Dev Tooling",
+      "tags": [
+        "react",
+        "toast",
+        "sonner",
+        "ui"
+      ],
+      "origin": "emilkowalski",
       "output_language": "en"
     },
     "banner-design": {
@@ -332,6 +396,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "emil-design-eng": {
+      "title": "Emil's Design Engineering",
+      "summary": "Emil Kowalski's philosophy on UI polish, component design, animation decisions and the invisible details that make software feel finished.",
+      "category": "Design & UI",
+      "tags": [
+        "design-engineering",
+        "polish",
+        "craft",
+        "ui"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
     "executing-plans": {
       "title": "Executing Plans",
       "summary": "Work through a written implementation plan in a separate session, with review checkpoints between steps.",
@@ -342,6 +419,18 @@
         "review"
       ],
       "origin": "obra",
+      "output_language": "en"
+    },
+    "find-animation-opportunities": {
+      "title": "Find Animation Opportunities",
+      "summary": "Search a codebase or UI for the places that don't animate but should, and reject everything that shouldn't. Read-only — it proposes motion with exact values rather than implementing it.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "audit",
+        "discovery"
+      ],
+      "origin": "emilkowalski",
       "output_language": "en"
     },
     "finishing-a-development-branch": {
@@ -472,6 +561,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "improve-animations": {
+      "title": "Improve Animations",
+      "summary": "Survey a codebase's motion code as a senior motion advisor and produce a prioritised audit plus self-contained implementation plans other agents can execute. Read-only on source — it plans the fixes, it doesn't apply them.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "audit",
+        "roadmap",
+        "refactor"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
     "internal-comms": {
       "title": "Internal Comms",
       "summary": "Write internal communications in house formats — status reports, leadership updates, newsletters, FAQs, incident reports and project updates.",
@@ -589,6 +691,18 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "pick-ui-library": {
+      "title": "Pick a UI Library",
+      "summary": "Pick the right frontend library for the task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state and styling. Explicit invocation only.",
+      "category": "Dev Tooling",
+      "tags": [
+        "frontend",
+        "libraries",
+        "selection"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
+    },
     "problem-note": {
       "title": "Problem Note Writer",
       "summary": "Write up an ICT incident, error log or troubleshooting session as a structured problem note for a Quartz v5 second brain — plus concept notes, MOC pages and a masking check before anything goes public.",
@@ -601,6 +715,19 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "prototype": {
+      "title": "Prototype Variants",
+      "summary": "Build several genuinely different versions of a UI piece behind a visual picker, so you can flip through them live and promote the one that feels right. Explicit invocation only.",
+      "category": "Design & UI",
+      "tags": [
+        "prototype",
+        "variants",
+        "ui",
+        "exploration"
+      ],
+      "origin": "emilkowalski",
+      "output_language": "en"
     },
     "receiving-code-review": {
       "title": "Receiving Code Review",
@@ -647,6 +774,19 @@
         "report"
       ],
       "origin": "jeonck",
+      "output_language": "en"
+    },
+    "review-animations": {
+      "title": "Review Animations",
+      "summary": "Review motion code against a high craft bar drawn from Emil Kowalski's design engineering standards. Defaults to flagging — approval is earned.",
+      "category": "Design & UI",
+      "tags": [
+        "animation",
+        "review",
+        "craft",
+        "standards"
+      ],
+      "origin": "emilkowalski",
       "output_language": "en"
     },
     "skill-creator": {
@@ -916,6 +1056,19 @@
         "browser"
       ],
       "origin": "anthropic",
+      "output_language": "en"
+    },
+    "write-swift": {
+      "title": "Write Modern Swift",
+      "summary": "How to write modern Swift well — value types, Swift 6 data-race safety and approachable concurrency, protocols and generics, API design, ARC and performance, Swift Testing and macros, including the language features agents don't know yet.",
+      "category": "Dev Tooling",
+      "tags": [
+        "swift",
+        "concurrency",
+        "ios",
+        "code-quality"
+      ],
+      "origin": "emilkowalski",
       "output_language": "en"
     },
     "writing-plans": {

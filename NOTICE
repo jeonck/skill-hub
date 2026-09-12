@@ -85,6 +85,24 @@ skills/diagram-maker is copied from https://github.com/openclaw/openclaw
 keeping its original LICENSE file. Only skills/diagram-maker is mirrored; the
 rest of that repository is not.
 
+The following directories under skills/ are copied from
+https://github.com/emilkowalski/skills (Copyright (c) 2026 Emil Kowalski) at
+commit d23d7f8 and are licensed under the MIT License. Each keeps a copy of
+that repository's LICENSE:
+
+  skills/animate
+  skills/animate-expo
+  skills/animation-vocabulary
+  skills/apple-design
+  skills/ask-sonner
+  skills/emil-design-eng
+  skills/find-animation-opportunities
+  skills/improve-animations
+  skills/pick-ui-library
+  skills/prototype
+  skills/review-animations
+  skills/write-swift
+
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.

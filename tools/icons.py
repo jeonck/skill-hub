@@ -61,6 +61,34 @@ ICONS: dict[str, str] = {
     "clapper": '<path d="M3 9.5h18v9.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19z"/>'
                '<path d="M3.4 9.5L2.6 6l17.6-2.4.8 3.5-17.6 2.4z"/>'
                '<path d="M8.4 4.9l1 3.4M13.6 4.2l1 3.4"/>',
+    # ---- motion / craft (emilkowalski)
+    "ease-curve": '<path d="M3.5 19.5C9.5 19.5 8.5 5 20.5 5"/>'
+                  '<circle cx="3.5" cy="19.5" r="1.5"/><circle cx="20.5" cy="5" r="1.5"/>',
+    "phone-swipe": '<rect x="3.5" y="3" width="10" height="18" rx="2.5"/><path d="M6.5 6h4"/>'
+                   '<path d="M16.5 9a4.5 4.5 0 010 6"/><path d="M19.5 6.5a8.5 8.5 0 010 11"/>',
+    "glossary": '<path d="M5.5 3.5h7.5L18 8v4"/><path d="M5.5 3.5v17h5"/>'
+                '<path d="M12.5 3.5V8H18"/><path d="M8.5 9.5h5"/>'
+                '<circle cx="16.8" cy="17.2" r="3.3"/><path d="M19.2 19.6l2.3 2.3"/>',
+    "depth-cards": '<rect x="6.5" y="3.5" width="14" height="14" rx="3.5"/>'
+                   '<path d="M16 20.5H7A3.5 3.5 0 013.5 17V8"/>',
+    "toast-stack": '<rect x="4.5" y="11.5" width="15" height="6.5" rx="2"/>'
+                   '<path d="M7.5 14.8h6"/><path d="M6.5 9h11M8.5 6.5h7"/>',
+    "sparkle-square": '<rect x="3.5" y="3.5" width="11.5" height="11.5" rx="2.5"/>'
+                      '<path d="M18 12.4l1.1 2.9 2.9 1.1-2.9 1.1-1.1 2.9-1.1-2.9-2.9-1.1 2.9-1.1 1.1-2.9z"/>',
+    "scan-spark": '<circle cx="10.5" cy="10.5" r="6.2"/><path d="M15 15l5.5 5.5"/>'
+                  '<path d="M10.5 7.6l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z"/>',
+    "audit-up": '<path d="M3.5 6.5h9M3.5 12h9M3.5 17.5h6"/>'
+                '<path d="M18 20.5V8.5"/><path d="M15 11.5l3-3 3 3"/>',
+    "pick-box": '<rect x="3.5" y="4" width="7" height="7" rx="1.5"/>'
+                '<rect x="13.5" y="4" width="7" height="7" rx="1.5"/>'
+                '<rect x="3.5" y="14" width="7" height="7" rx="1.5"/>'
+                '<path d="M13.8 17.6l2.1 2.1 4.6-4.8"/>',
+    "variants": '<rect x="7" y="5" width="10" height="14" rx="2"/>'
+                '<path d="M3.8 9.8L2 12l1.8 2.2"/><path d="M20.2 9.8L22 12l-1.8 2.2"/>',
+    "motion-check": '<path d="M20.5 13V6a2 2 0 00-2-2h-13a2 2 0 00-2 2v9a2 2 0 002 2h6.5"/>'
+                    '<circle cx="17.6" cy="17.6" r="3.9"/><path d="M16 17.6l1.1 1.1 2.3-2.4"/>',
+    "code-slash": '<path d="M8.5 5.5L3.5 12l5 6.5"/><path d="M15.5 5.5l5 6.5-5 6.5"/>'
+                  '<path d="M13.8 4l-3.6 16"/>',
     # ---- docs / writing
     "book": '<path d="M3.5 5.5A2 2 0 015.5 3.5H11v17H5.5a2 2 0 01-2-2v-13z"/>'
             '<path d="M20.5 5.5a2 2 0 00-2-2H13v17h5.5a2 2 0 002-2v-13z"/>',
@@ -203,6 +231,18 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "animate": "ease-curve",
+    "animate-expo": "phone-swipe",
+    "animation-vocabulary": "glossary",
+    "apple-design": "depth-cards",
+    "ask-sonner": "toast-stack",
+    "emil-design-eng": "sparkle-square",
+    "find-animation-opportunities": "scan-spark",
+    "improve-animations": "audit-up",
+    "pick-ui-library": "pick-box",
+    "prototype": "variants",
+    "review-animations": "motion-check",
+    "write-swift": "code-slash",
     "markitdown-convert": "doc-to-md",
     "humanize-korean": "polish-text",
     "diagram-maker": "pen-shapes",
