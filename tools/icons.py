@@ -200,6 +200,9 @@ ICONS: dict[str, str] = {
                  '<path d="M4 15.5h16v5.5H4z"/>'
                  '<path d="M6.5 19.5v-2.5l1.4 1.6 1.4-1.6v2.5"/>'
                  '<path d="M13.5 17v2.5M12.2 18.4l1.3 1.3 1.3-1.3"/>',
+    "child-bubble": '<circle cx="8" cy="8" r="3.2"/><path d="M2.5 19a5.5 5.5 0 0111 0"/>'
+                    '<path d="M14 5.5h6.5a1 1 0 011 1v4a1 1 0 01-1 1H17l-2.5 2v-2H14a1 1 0 01-1-1v-4a1 1 0 011-1z"/>'
+                    '<path d="M16 8.5h3"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -231,6 +234,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "eli5": "child-bubble",
     "animate": "ease-curve",
     "animate-expo": "phone-swipe",
     "animation-vocabulary": "glossary",

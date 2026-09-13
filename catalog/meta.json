@@ -396,6 +396,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "eli5": {
+      "title": "ELI5",
+      "summary": "Explain any topic, code, concept or error to a named audience — a five-year-old, a manager, a parent, a new engineer — matching vocabulary, analogies and depth to who is actually listening. Triggers on \"explain like I'm…\", \"dumb it down\", \"how do I tell my boss…\".",
+      "category": "Content & Writing",
+      "tags": [
+        "explanation",
+        "audience",
+        "teaching",
+        "simplify"
+      ],
+      "origin": "dreambigou",
+      "output_language": "en"
+    },
     "emil-design-eng": {
       "title": "Emil's Design Engineering",
       "summary": "Emil Kowalski's philosophy on UI polish, component design, animation decisions and the invisible details that make software feel finished.",

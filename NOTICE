@@ -74,6 +74,9 @@ the MIT License. Each keeps its original LICENSE file:
   skills/ui-styling
   skills/ui-ux-pro-max
 
+skills/eli5 is copied from https://github.com/DreambigOu/ELI5 and is licensed
+under the MIT License, keeping its original LICENSE file.
+
 skills/humanize-korean is copied from https://github.com/epoko77-ai/im-not-ai
 (Copyright (c) 2026 epoko77-ai) and is licensed under the MIT License, keeping
 its original LICENSE file. Only skills/humanize-korean is mirrored; the repo's
