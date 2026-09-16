@@ -268,6 +268,21 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "claude-red": {
+      "title": "Claude-Red (Offensive Security)",
+      "summary": "A curated library of 78 offensive-security skills for authorized red-team and pentest work — web (SQLi, SSRF, XSS, SSTI, deserialization…), cloud, containers/K8s, AD, wireless, exploit development, EDR evasion and more, each a SKILL.md priming Claude with methodology for one attack surface.",
+      "category": "Dev Tooling",
+      "tags": [
+        "security",
+        "pentest",
+        "red-team",
+        "offensive"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/SnailSploit/Claude-Red",
+      "external_note": "78 skills across 23 categories; large to mirror per-skill, so linked to upstream. MIT."
+    },
     "code-explainer-video": {
       "title": "Code Explainer Video",
       "summary": "Render a cinematic chaptered explainer video for any CLI or dev tool — Remotion \"Terminal Noir\": code that types itself, streaming terminal output, growing dependency graphs, continuous BGM.",
