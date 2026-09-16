@@ -298,6 +298,15 @@ def collect(meta: dict) -> list[dict]:
     for slug, m in meta["skills"].items():
         if not m.get("external_url"):
             continue
+        # Optional hub-hosted guide page (install / usage / prompts) for a
+        # link-only entry: catalog/guides/<slug>.md. When present the card links
+        # to a hub detail page instead of straight out to upstream.
+        guide_path = ROOT / "catalog" / "guides" / f"{slug}.md"
+        guide_html = (
+            markdown_to_html(guide_path.read_text(encoding="utf-8"))
+            if guide_path.exists()
+            else ""
+        )
         skills.append(
             {
                 "slug": slug,
@@ -312,6 +321,8 @@ def collect(meta: dict) -> list[dict]:
                 "license": "see upstream",
                 "external_url": m["external_url"],
                 "external_note": m.get("external_note", ""),
+                "guide_html": guide_html,
+                "has_guide": bool(guide_html),
                 "icon": SKILL_ICONS.get(slug, FALLBACK_ICON),
                 "cat_slug": CATEGORY_SLUGS.get(m.get("category", ""), "dev"),
             }
@@ -406,8 +417,13 @@ def render_index(skills: list[dict], meta: dict) -> str:
             " ".join([s["slug"], s["title"], s["summary"], s["category"], *s["tags"]]).lower()
         )
         ext = s.get("external_url")
+        guide = s.get("has_guide")
         if ext:
-            install_btn = '<span class="ext-note">on GitHub ↗</span>'
+            install_btn = (
+                '<span class="ext-note">View guide →</span>'
+                if guide
+                else '<span class="ext-note">on GitHub ↗</span>'
+            )
         else:
             cmd = (
                 f'curl -fsSL {SITE["base_url"]}/dist/{s["slug"]}.zip '
@@ -416,7 +432,7 @@ def render_index(skills: list[dict], meta: dict) -> str:
             install_btn = f'<button class="copy mini" data-copy="{html.escape(cmd)}">Copy install</button>'
         cards.append(
             f"""<article class="card" data-cat="{html.escape(s['category'])}" data-search="{haystack}">
-  <a class="card-link" href="{ext or f"s/{s['slug']}/"}"{' target="_blank" rel="noopener"' if ext else ''}>
+  <a class="card-link" href="{f"s/{s['slug']}/" if (guide or not ext) else ext}"{' target="_blank" rel="noopener"' if (ext and not guide) else ''}>
     <div class="card-top">
       <span class="tile c-{s['cat_slug']}">{icon_svg(s['icon'], 22)}</span>
       <div>
@@ -492,6 +508,52 @@ cp -r skill-hub/skills/* ~/.claude/skills/</code></pre>
 
 <script src="assets/app.js"></script>"""
     return page(SITE["title"], body, depth=0)
+
+
+def render_guide(s: dict) -> str:
+    """Hub-hosted page for a link-only entry that carries a guide: no zip, no
+    file facts — a get-it-upstream block plus the guide body."""
+    tags = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in s["tags"])
+    repo = s["external_url"].split("github.com/")[-1]
+    note = f'<p class="note">{html.escape(s["external_note"])}</p>' if s.get("external_note") else ""
+    body = f"""{site_header(2)}
+<nav class="crumb wrap"><a href="../../">← All skills</a></nav>
+<header class="wrap detail-head">
+  <div class="head-row">
+    <span class="tile lg c-{s['cat_slug']}">{icon_svg(s['icon'], 34)}</span>
+    <div>
+      <div class="cat">{html.escape(s['category'])} · <span class="badge link">Link only</span></div>
+      <h1>{html.escape(s['title'])}</h1>
+      <code class="slug big">{html.escape(s['slug'])}</code>
+    </div>
+  </div>
+  <p class="lede">{html.escape(s['summary'])}</p>
+  <div class="tags">{tags}</div>
+</header>
+
+<section class="wrap">
+  <div class="install">
+    <div class="install-head"><span>Source</span></div>
+    <pre><code>git clone {html.escape(s['external_url'])}.git</code></pre>
+  </div>
+  <p class="note">Not mirrored on the hub. Get it from
+  <a href="{html.escape(s['external_url'])}" rel="nofollow">{html.escape(repo)}</a>.</p>
+  {note}
+</section>
+
+<article class="wrap prose">
+  {s['guide_html']}
+</article>
+
+<footer class="wrap"><p><a href="../../">← Back to the catalog</a> · <a href="https://github.com/{SITE['repo']}">source</a></p></footer>
+<script src="../../assets/app.js"></script>"""
+    return page(
+        f"{s['title']} — {SITE['title']}",
+        body,
+        depth=2,
+        desc=s["summary"],
+        favicon=icon_data_uri(s["icon"]),
+    )
 
 
 def render_detail(s: dict, skills: list[dict]) -> str:
@@ -655,8 +717,17 @@ def write_repo_icons(skills: list[dict]) -> None:
         rows += [f"### {cat}", "", "| | Skill | What it does |", "| :-: | --- | --- |"]
         for s in sorted(group, key=lambda x: x["title"].lower()):
             img = f'<img src="assets/icons/{s["slug"]}.svg" width="22" alt="">'
-            href = s.get("external_url") or f'{SITE["base_url"]}/s/{s["slug"]}/'
-            note = " — link only, not mirrored" if s.get("external_url") else ""
+            # guide entries link to the hub page (install + usage); plain
+            # link-only entries link straight to upstream.
+            if s.get("external_url") and not s.get("has_guide"):
+                href = s["external_url"]
+                note = " — link only, not mirrored"
+            elif s.get("has_guide"):
+                href = f'{SITE["base_url"]}/s/{s["slug"]}/'
+                note = " — link only, guide on hub"
+            else:
+                href = f'{SITE["base_url"]}/s/{s["slug"]}/'
+                note = ""
             link = f'[**{s["title"]}**]({href})<br>`{s["slug"]}`{note}'
             rows.append(f"| {img} | {link} | {s['summary']} |")
         rows.append("")
@@ -689,6 +760,10 @@ def main() -> None:
     (OUT / "index.html").write_text(render_index(skills, meta), encoding="utf-8")
     for s in skills:
         if s.get("external_url"):
+            if s.get("has_guide"):  # hub-hosted guide page, but no mirrored files
+                d = OUT / "s" / s["slug"]
+                d.mkdir(parents=True, exist_ok=True)
+                (d / "index.html").write_text(render_guide(s), encoding="utf-8")
             continue
         d = OUT / "s" / s["slug"]
         d.mkdir(parents=True, exist_ok=True)
