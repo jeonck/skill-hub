@@ -666,6 +666,8 @@ ORIGINS = {
     "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
     "dreambigou": ("ELI5", "https://github.com/DreambigOu/ELI5", "MIT"),
     "epoko77": ("I'm Not AI", "https://github.com/epoko77-ai/im-not-ai", "MIT"),
+    "proffesor-for-testing": ("Agentic QE", "https://github.com/proffesor-for-testing/agentic-qe", "MIT"),
+    "premdevai": ("Brutal Skills", "https://github.com/premdevai/brutal-claude-skills", "MIT"),
     "uizze": ("UIZZE", "https://github.com/uizze/uizze", "MIT"),
     "vercel-labs": ("Vercel", "https://github.com/vercel-labs/skills", "MIT"),
     "openclaw": ("OpenClaw", "https://github.com/openclaw/openclaw", "MIT"),

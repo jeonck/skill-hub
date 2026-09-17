@@ -229,6 +229,32 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "brutal-code-reviewer": {
+      "title": "Brutal Code Reviewer",
+      "category": "Dev Tooling",
+      "summary": "A no-mercy, hyper-critical senior-engineer code review. Paste a snippet, file, PR or diff and ask for a roast — it tears the code apart with engineering-grade scrutiny. Triggers on \"be harsh\", \"no sugarcoating\", \"what sucks\".",
+      "tags": [
+        "code-review",
+        "critique",
+        "harsh",
+        "engineering"
+      ],
+      "origin": "premdevai",
+      "output_language": "en"
+    },
+    "brutal-honesty-review": {
+      "title": "Brutal Honesty Review",
+      "category": "Dev Tooling",
+      "summary": "Unvarnished technical criticism — Linus Torvalds' precision, Gordon Ramsay's standards, James Bach's BS-detection. Surgical, no sugar-coating: what is broken in your code, tests or technical decisions, and why. Ships assessment scripts and rubrics.",
+      "tags": [
+        "code-review",
+        "quality",
+        "testing",
+        "critique"
+      ],
+      "origin": "proffesor-for-testing",
+      "output_language": "en"
+    },
     "brutalist-skill": {
       "title": "Industrial Brutalist UI",
       "summary": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics — rigid grids, extreme type contrast, analog degradation.",
@@ -510,21 +536,6 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
-    },
-    "grill-me": {
-      "title": "Grill Me",
-      "category": "Dev Tooling",
-      "summary": "Interrogates you one question at a time until a plan or design is fully pinned down — walks each branch of the decision tree, surfacing assumptions and unmade decisions via multiple-choice prompts. A planning stress-test, not a code reviewer.",
-      "tags": [
-        "planning",
-        "interview",
-        "design",
-        "socratic"
-      ],
-      "origin": "external",
-      "output_language": "en",
-      "external_url": "https://github.com/RobMitt/grill-me-skill",
-      "external_note": "Upstream ships no licence, so the file is not mirrored here."
     },
     "hextra-kb-builder": {
       "title": "Hextra KB Builder",

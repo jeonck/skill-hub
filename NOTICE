@@ -83,6 +83,15 @@ its original LICENSE file. Only skills/humanize-korean is mirrored; the repo's
 agents, commands and build scripts are not. Its references/ include executable
 Python (metrics.py, metrics_v2.py) from that project.
 
+skills/brutal-honesty-review is copied from
+https://github.com/proffesor-for-testing/agentic-qe and is licensed under the
+MIT License, keeping a copy of the repository LICENSE. Its scripts/ contains
+executable shell from that project.
+
+skills/brutal-code-reviewer is copied from
+https://github.com/premdevai/brutal-claude-skills and is licensed under the MIT
+License, keeping a copy of the repository LICENSE.
+
 skills/anti-ui-slop is copied from https://github.com/uizze/uizze and is
 licensed under the MIT License, keeping its original LICENSE and NOTICE files.
 

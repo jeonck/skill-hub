@@ -214,6 +214,12 @@ ICONS: dict[str, str] = {
     "interrogate": '<path d="M20.5 12c0 3.9-3.8 7-8.5 7-1 0-2-.1-2.9-.4L4 21l1.3-3.6C4.1 15.9 3.5 14 3.5 12c0-3.9 3.8-7 8.5-7s8.5 3.1 8.5 7z"/>'
                    '<path d="M9.6 9.6a2.4 2.4 0 114.2 1.6c-.7.8-1.8 1-1.8 2.3"/>'
                    '<circle cx="12" cy="16" r=".9" fill="currentColor" stroke="none"/>',
+    "gavel": '<path d="M14 3.5l6.5 6.5-2.5 2.5L11.5 6z"/>'
+             '<path d="M9.5 8l2.5 2.5-6 6L3.5 14z"/>'
+             '<path d="M4 21h9"/><path d="M12.5 11.5l4 4"/>',
+    "roast-code": '<path d="M8.5 5.5L4 12l4.5 6.5"/><path d="M15.5 5.5L20 12l-4.5 6.5"/>'
+                  '<path d="M13.6 4l-3.2 16"/>'
+                  '<path d="M17.5 15.5l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1 1-2.6z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -245,9 +251,10 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "brutal-honesty-review": "gavel",
+    "brutal-code-reviewer": "roast-code",
     "anti-ui-slop": "no-slop",
     "find-skills": "skill-find",
-    "grill-me": "interrogate",
     "claude-red": "crosshair-shield",
     "eli5": "child-bubble",
     "animate": "ease-curve",
