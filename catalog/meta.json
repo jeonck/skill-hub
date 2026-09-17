@@ -87,6 +87,19 @@
       "origin": "emilkowalski",
       "output_language": "en"
     },
+    "anti-ui-slop": {
+      "title": "Anti UI Slop",
+      "category": "Design & UI",
+      "summary": "Stop coding agents from shipping generic UI — ground interfaces in UIZZE's library of 800k+ real web and iOS screens, define a design contract, cover required states, and run a hard pre-ship finish gate. Works in Claude Code, Cursor, Copilot, Codex.",
+      "tags": [
+        "ui",
+        "design",
+        "anti-slop",
+        "finish-gate"
+      ],
+      "origin": "uizze",
+      "output_language": "en"
+    },
     "apple-design": {
       "title": "Apple Design for the Web",
       "summary": "Apple's approach to interface design and fluid, physical motion translated for the web — gesture-driven UI, spring and interruptible transitions, translucent materials and depth, optical typography, reduced-motion.",
@@ -461,6 +474,19 @@
       "origin": "emilkowalski",
       "output_language": "en"
     },
+    "find-skills": {
+      "title": "Find Skills",
+      "category": "Dev Tooling",
+      "summary": "Vercel's official skill-discovery helper — when you ask \"is there a skill for X\" or \"how do I do Y\", it finds and installs matching agent skills via the open `npx skills` tool.",
+      "tags": [
+        "skills",
+        "discovery",
+        "install",
+        "meta"
+      ],
+      "origin": "vercel-labs",
+      "output_language": "en"
+    },
     "finishing-a-development-branch": {
       "title": "Finishing a Development Branch",
       "summary": "Decide how to integrate finished work once implementation is complete and the tests pass.",
@@ -484,6 +510,21 @@
       ],
       "origin": "jeonck",
       "output_language": "ko"
+    },
+    "grill-me": {
+      "title": "Grill Me",
+      "category": "Dev Tooling",
+      "summary": "Interrogates you one question at a time until a plan or design is fully pinned down — walks each branch of the decision tree, surfacing assumptions and unmade decisions via multiple-choice prompts. A planning stress-test, not a code reviewer.",
+      "tags": [
+        "planning",
+        "interview",
+        "design",
+        "socratic"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/RobMitt/grill-me-skill",
+      "external_note": "Upstream ships no licence, so the file is not mirrored here."
     },
     "hextra-kb-builder": {
       "title": "Hextra KB Builder",

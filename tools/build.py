@@ -666,6 +666,8 @@ ORIGINS = {
     "obra": ("Superpowers", "https://github.com/obra/superpowers", "MIT"),
     "dreambigou": ("ELI5", "https://github.com/DreambigOu/ELI5", "MIT"),
     "epoko77": ("I'm Not AI", "https://github.com/epoko77-ai/im-not-ai", "MIT"),
+    "uizze": ("UIZZE", "https://github.com/uizze/uizze", "MIT"),
+    "vercel-labs": ("Vercel", "https://github.com/vercel-labs/skills", "MIT"),
     "openclaw": ("OpenClaw", "https://github.com/openclaw/openclaw", "MIT"),
     "tt-a1i": ("Archify", "https://github.com/tt-a1i/archify", "MIT"),
     "vincentwei": (

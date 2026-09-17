@@ -206,6 +206,14 @@ ICONS: dict[str, str] = {
     "crosshair-shield": '<path d="M12 2.5l7.5 3v5.2c0 4.3-3 7.9-7.5 9.3-4.5-1.4-7.5-5-7.5-9.3V5.5L12 2.5z"/>'
                         '<circle cx="12" cy="11" r="3.3"/>'
                         '<path d="M12 5.5v2.2M12 14.3v2.2M6.7 11h2.2M15.1 11h2.2"/>',
+    "no-slop": '<rect x="3.5" y="4" width="17" height="16" rx="2.5"/>'
+               '<path d="M7.5 9.5h6M7.5 13h4"/>'
+               '<circle cx="16.5" cy="15.5" r="4.2"/><path d="M13.5 18.5l6-6"/>',
+    "skill-find": '<circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/>'
+                  '<path d="M10.5 7.8v5.4M7.8 10.5h5.4"/>',
+    "interrogate": '<path d="M20.5 12c0 3.9-3.8 7-8.5 7-1 0-2-.1-2.9-.4L4 21l1.3-3.6C4.1 15.9 3.5 14 3.5 12c0-3.9 3.8-7 8.5-7s8.5 3.1 8.5 7z"/>'
+                   '<path d="M9.6 9.6a2.4 2.4 0 114.2 1.6c-.7.8-1.8 1-1.8 2.3"/>'
+                   '<circle cx="12" cy="16" r=".9" fill="currentColor" stroke="none"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -237,6 +245,9 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "anti-ui-slop": "no-slop",
+    "find-skills": "skill-find",
+    "grill-me": "interrogate",
     "claude-red": "crosshair-shield",
     "eli5": "child-bubble",
     "animate": "ease-curve",
