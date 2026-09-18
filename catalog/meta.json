@@ -335,6 +335,21 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "compound-engineering": {
+      "title": "Compound Engineering",
+      "category": "Dev Tooling",
+      "summary": "Every's official Compound Engineering plugin — 35 skills that turn each solved problem into durable, reusable repo knowledge: capture non-obvious reasoning (ce-compound), plus review, debug, planning, commit/PR and brainstorm workflows built around it.",
+      "tags": [
+        "knowledge",
+        "workflow",
+        "review",
+        "planning"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/everyinc/compound-engineering-plugin",
+      "external_note": "A 35-skill plugin (MIT); large to mirror per-skill, so linked to upstream. Install via its own plugin flow or npx skills."
+    },
     "daily-diary-pipeline": {
       "title": "Daily Diary Pipeline",
       "summary": "Scaffold a pipeline where editing one line in a GitHub file triggers a scheduled Claude run that writes a post and publishes it to Hugo + GitHub Pages.",

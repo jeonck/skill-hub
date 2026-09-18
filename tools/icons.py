@@ -220,6 +220,9 @@ ICONS: dict[str, str] = {
     "roast-code": '<path d="M8.5 5.5L4 12l4.5 6.5"/><path d="M15.5 5.5L20 12l-4.5 6.5"/>'
                   '<path d="M13.6 4l-3.2 16"/>'
                   '<path d="M17.5 15.5l1 2.6 2.6 1-2.6 1-1 2.6-1-2.6-2.6-1 2.6-1 1-2.6z"/>',
+    "compound": '<circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/>'
+                '<circle cx="12" cy="16.5" r="3.2"/>'
+                '<path d="M9.4 9.2l1.4 2.6M14.6 9.2l-1.4 2.6M8.6 8.2h6.8"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -251,6 +254,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "compound-engineering": "compound",
     "brutal-honesty-review": "gavel",
     "brutal-code-reviewer": "roast-code",
     "anti-ui-slop": "no-slop",

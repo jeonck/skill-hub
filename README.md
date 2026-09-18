@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-92 skills, one glyph each. Click any name for its install command.
+93 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -120,6 +120,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/brutal-code-reviewer.svg" width="22" alt=""> | [**Brutal Code Reviewer**](https://skill.metacog.co.kr/s/brutal-code-reviewer/)<br>`brutal-code-reviewer` | A no-mercy, hyper-critical senior-engineer code review. Paste a snippet, file, PR or diff and ask for a roast — it tears the code apart with engineering-grade scrutiny. Triggers on "be harsh", "no sugarcoating", "what sucks". |
 | <img src="assets/icons/brutal-honesty-review.svg" width="22" alt=""> | [**Brutal Honesty Review**](https://skill.metacog.co.kr/s/brutal-honesty-review/)<br>`brutal-honesty-review` | Unvarnished technical criticism — Linus Torvalds' precision, Gordon Ramsay's standards, James Bach's BS-detection. Surgical, no sugar-coating: what is broken in your code, tests or technical decisions, and why. Ships assessment scripts and rubrics. |
 | <img src="assets/icons/claude-red.svg" width="22" alt=""> | [**Claude-Red (Offensive Security)**](https://skill.metacog.co.kr/s/claude-red/)<br>`claude-red` — link only, guide on hub | A curated library of 78 offensive-security skills for authorized red-team and pentest work — web (SQLi, SSRF, XSS, SSTI, deserialization…), cloud, containers/K8s, AD, wireless, exploit development, EDR evasion and more, each a SKILL.md priming Claude with methodology for one attack surface. |
+| <img src="assets/icons/compound-engineering.svg" width="22" alt=""> | [**Compound Engineering**](https://github.com/everyinc/compound-engineering-plugin)<br>`compound-engineering` — link only, not mirrored | Every's official Compound Engineering plugin — 35 skills that turn each solved problem into durable, reusable repo knowledge: capture non-obvious reasoning (ce-compound), plus review, debug, planning, commit/PR and brainstorm workflows built around it. |
 | <img src="assets/icons/diagram-maker.svg" width="22" alt=""> | [**Diagram Maker**](https://skill.metacog.co.kr/s/diagram-maker/)<br>`diagram-maker` | Draw concepts, architecture, flows and whiteboards in three output modes — clean SVG for explanatory and process diagrams, architecture SVG for software and cloud infrastructure, and Excalidraw for a file someone can keep editing. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
 | <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |
