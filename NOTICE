@@ -29,6 +29,12 @@ https://github.com/Vincentwei1021/video-shotcraft and is likewise licensed
 under the Apache License, Version 2.0, keeping its original LICENSE file. It
 bundles ~30 MB of audio and texture assets shipped by that project.
 
+skills/open-code-review and skills/open-code-review-delegate are copied from
+https://github.com/alibaba/open-code-review (Copyright Alibaba Group) at commit
+cf64e70 and are likewise licensed under the Apache License, Version 2.0, each
+keeping a copy of that repository's LICENSE. Only the two SKILL.md files are
+mirrored; the `ocr` CLI itself is installed from npm.
+
 A copy of the Apache License 2.0 is available at
 http://www.apache.org/licenses/LICENSE-2.0
 
@@ -121,6 +127,12 @@ that repository's LICENSE:
   skills/prototype
   skills/review-animations
   skills/write-swift
+
+skills/browser-skill is copied from https://github.com/Tencent/BrowserSkill
+(Copyright (c) Tencent) at commit 907b455 and is licensed under the MIT
+License, keeping a copy of that repository's LICENSE. Only skill/SKILL.md is
+mirrored; the `bsk` CLI and the browser extension it drives are installed
+separately from upstream.
 
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,

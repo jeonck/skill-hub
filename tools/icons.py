@@ -89,6 +89,14 @@ ICONS: dict[str, str] = {
                     '<circle cx="17.6" cy="17.6" r="3.9"/><path d="M16 17.6l1.1 1.1 2.3-2.4"/>',
     "code-slash": '<path d="M8.5 5.5L3.5 12l5 6.5"/><path d="M15.5 5.5l5 6.5-5 6.5"/>'
                   '<path d="M13.8 4l-3.6 16"/>',
+    # ---- review / browser control
+    "review-comment": '<path d="M4 5.5h10M4 9.5h7M4 13.5h5"/>'
+                      '<path d="M13.5 20.5l-3.2 1 1-3.2 6.1-6.1a1.6 1.6 0 012.2 2.2l-6.1 6.1z"/>',
+    "rules-check": '<path d="M6 3.5h9l4 4v9"/><path d="M6 3.5v17h6"/><path d="M14.5 3.5V8H19"/>'
+                   '<path d="M8.5 9.5h6M8.5 13h3"/>'
+                   '<path d="M14.5 18.2l2 2 4.3-4.5"/>',
+    "browser-hand": '<rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M2.5 7.5h19"/>'
+                    '<path d="M9 12v5.5a2 2 0 003.4 1.4l3.8-3.6-1-1a1.4 1.4 0 00-1.9 0l-1 .9V12"/>',
     # ---- docs / writing
     "book": '<path d="M3.5 5.5A2 2 0 015.5 3.5H11v17H5.5a2 2 0 01-2-2v-13z"/>'
             '<path d="M20.5 5.5a2 2 0 00-2-2H13v17h5.5a2 2 0 002-2v-13z"/>',
@@ -254,6 +262,9 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "browser-skill": "browser-hand",
+    "open-code-review": "review-comment",
+    "open-code-review-delegate": "rules-check",
     "compound-engineering": "compound",
     "brutal-honesty-review": "gavel",
     "brutal-code-reviewer": "roast-code",

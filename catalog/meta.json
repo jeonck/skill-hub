@@ -229,6 +229,19 @@
       "origin": "jeonck",
       "output_language": "en"
     },
+    "browser-skill": {
+      "title": "BrowserSkill",
+      "summary": "Drive the user's real, logged-in Chromium from an agent — work happens in a separate Agent Window, user tabs must be explicitly borrowed, and sessions you are already signed into just work. Needs the bsk CLI and browser extension installed first.",
+      "category": "Dev Tooling",
+      "tags": [
+        "browser",
+        "automation",
+        "chromium",
+        "cli"
+      ],
+      "origin": "tencent",
+      "output_language": "en"
+    },
     "brutal-code-reviewer": {
       "title": "Brutal Code Reviewer",
       "category": "Dev Tooling",
@@ -772,6 +785,32 @@
         "cli"
       ],
       "origin": "jeonck",
+      "output_language": "en"
+    },
+    "open-code-review": {
+      "title": "Open Code Review",
+      "summary": "Run Alibaba's `ocr` CLI over a diff, commit, branch comparison or whole file and get line-level review comments — a deterministic pipeline picks files and matches rules, then an LLM agent reads the surrounding code. Needs its own model endpoint configured.",
+      "category": "Dev Tooling",
+      "tags": [
+        "code-review",
+        "cli",
+        "security",
+        "static-analysis"
+      ],
+      "origin": "alibaba",
+      "output_language": "en"
+    },
+    "open-code-review-delegate": {
+      "title": "Open Code Review (Delegate)",
+      "summary": "The same review engine with no LLM endpoint to configure — `ocr` does only the deterministic part, file selection and rule resolution, and hands the reviewing to the agent already in the session. The way to use Alibaba's rulesets without a second API key.",
+      "category": "Dev Tooling",
+      "tags": [
+        "code-review",
+        "cli",
+        "rules",
+        "no-api-key"
+      ],
+      "origin": "alibaba",
       "output_language": "en"
     },
     "output-skill": {
