@@ -231,6 +231,8 @@ ICONS: dict[str, str] = {
     "compound": '<circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/>'
                 '<circle cx="12" cy="16.5" r="3.2"/>'
                 '<path d="M9.4 9.2l1.4 2.6M14.6 9.2l-1.4 2.6M8.6 8.2h6.8"/>',
+    "seo-flame": '<circle cx="10" cy="10" r="6"/><path d="M14.5 14.5L20 20"/>'
+                 '<path d="M10 6.5c1.7 1 2.4 2.4 1.8 3.8-.4 1-1.4 1.4-1.8 2.4-.9-.7-1.4-1.6-1.4-2.6 0-1.4.7-2.5 1.4-3.6z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -262,6 +264,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "fire-your-seo-agency": "seo-flame",
     "browser-skill": "browser-hand",
     "open-code-review": "review-comment",
     "open-code-review-delegate": "rules-check",

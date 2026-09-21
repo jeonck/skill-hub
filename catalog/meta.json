@@ -553,6 +553,19 @@
       "origin": "obra",
       "output_language": "en"
     },
+    "fire-your-seo-agency": {
+      "title": "Fire Your SEO Agency",
+      "category": "Content & Writing",
+      "summary": "Audit and optimise a site across five lanes — SEO, AEO, GEO, LLMO and NEO (Naver) — so it becomes a primary source that search, answer engines, generative AI and Naver's AI briefing cite. Diagnose → implement → measure, with a crawler's-eye check (what the HTML shows without JS), a no-black-hat rule, and a blog/content pipeline. Bilingual references.",
+      "tags": [
+        "seo",
+        "geo",
+        "aeo",
+        "content"
+      ],
+      "origin": "leopard627",
+      "output_language": "ko"
+    },
     "github-sponsors": {
       "title": "GitHub Sponsors Button",
       "summary": "Add a GitHub Sponsors funding button to any static site — Hugo, Jekyll, Docusaurus or plain HTML — including the FUNDING.yml wiring.",
