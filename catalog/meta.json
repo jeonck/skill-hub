@@ -152,6 +152,21 @@
       "origin": "emilkowalski",
       "output_language": "en"
     },
+    "awesome-design-skills": {
+      "title": "Awesome Design Skills",
+      "category": "Design & UI",
+      "summary": "A curated collection of 67 DESIGN.md / SKILL.md design systems — minimalism, brutalism, glassmorphism, luxury, dashboards and more — each with WCAG 2.2 AA typography, colour and spacing so agents ship magazine-grade layouts.",
+      "tags": [
+        "design",
+        "design-system",
+        "accessibility",
+        "collection"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/bergside/awesome-design-skills",
+      "external_note": "A 67-file collection (MIT); too many to mirror per-skill, so linked to upstream."
+    },
     "banner-design": {
       "title": "Banner Design",
       "summary": "Banners for social, ads, website heroes and print — multiple art directions per brief across Facebook, X, LinkedIn, YouTube, Instagram and Google Display sizes.",
@@ -680,6 +695,32 @@
         "image-generation"
       ],
       "origin": "jeonck",
+      "output_language": "en"
+    },
+    "img2threejs": {
+      "title": "img2threejs",
+      "category": "Design & UI",
+      "summary": "Turn one reference image into an animation-ready, procedural Three.js model built entirely in code — staged, quality-gated generation for object rebuilds and stylized characters, rendered live in the browser and orbitable by mouse. No 3D modeller needed.",
+      "tags": [
+        "threejs",
+        "3d",
+        "webgl",
+        "image-to-3d"
+      ],
+      "origin": "img2threejs",
+      "output_language": "en"
+    },
+    "impeccable": {
+      "title": "Impeccable",
+      "category": "Design & UI",
+      "summary": "A design language that pulls agent UI out of default-SaaS territory (Inter, purple-blue gradients) — 23 named commands like /critique and /colorize plus automatic checks, so you steer toward a real brand look with explicit instructions instead of \"make it nicer\".",
+      "tags": [
+        "ui",
+        "design",
+        "critique",
+        "brand"
+      ],
+      "origin": "pbakaus",
       "output_language": "en"
     },
     "improve-animations": {

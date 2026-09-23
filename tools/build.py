@@ -668,6 +668,8 @@ ORIGINS = {
     "epoko77": ("I'm Not AI", "https://github.com/epoko77-ai/im-not-ai", "MIT"),
     "proffesor-for-testing": ("Agentic QE", "https://github.com/proffesor-for-testing/agentic-qe", "MIT"),
     "premdevai": ("Brutal Skills", "https://github.com/premdevai/brutal-claude-skills", "MIT"),
+    "img2threejs": ("img2threejs", "https://github.com/img2threejs/img2threejs", "Apache-2.0"),
+    "pbakaus": ("Impeccable", "https://github.com/pbakaus/impeccable", "Apache-2.0"),
     "leopard627": ("leopard627", "https://github.com/leopard627/fire-your-seo-agency", "MIT"),
     "uizze": ("UIZZE", "https://github.com/uizze/uizze", "MIT"),
     "vercel-labs": ("Vercel", "https://github.com/vercel-labs/skills", "MIT"),

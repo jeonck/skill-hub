@@ -233,6 +233,14 @@ ICONS: dict[str, str] = {
                 '<path d="M9.4 9.2l1.4 2.6M14.6 9.2l-1.4 2.6M8.6 8.2h6.8"/>',
     "seo-flame": '<circle cx="10" cy="10" r="6"/><path d="M14.5 14.5L20 20"/>'
                  '<path d="M10 6.5c1.7 1 2.4 2.4 1.8 3.8-.4 1-1.4 1.4-1.8 2.4-.9-.7-1.4-1.6-1.4-2.6 0-1.4.7-2.5 1.4-3.6z"/>',
+    "cube-3d": '<path d="M12 2.5l8.5 4.9v9.2L12 21.5l-8.5-4.9V7.4z"/>'
+               '<path d="M3.5 7.4L12 12.3l8.5-4.9"/><path d="M12 12.3v9.2"/>',
+    "diamond-check": '<path d="M6 3.5h12l3.5 5-9.5 12L2.5 8.5z"/><path d="M2.5 8.5h19"/>'
+                     '<path d="M8.5 12.5l2.4 2.4 4.6-4.8"/>',
+    "design-grid": '<rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/>'
+                   '<rect x="13.5" y="3" width="7.5" height="7.5" rx="3.75"/>'
+                   '<rect x="3" y="13.5" width="7.5" height="7.5" rx="3.75"/>'
+                   '<rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -264,6 +272,9 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "img2threejs": "cube-3d",
+    "impeccable": "diamond-check",
+    "awesome-design-skills": "design-grid",
     "fire-your-seo-agency": "seo-flame",
     "browser-skill": "browser-hand",
     "open-code-review": "review-comment",

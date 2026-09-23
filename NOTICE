@@ -98,6 +98,14 @@ skills/brutal-code-reviewer is copied from
 https://github.com/premdevai/brutal-claude-skills and is licensed under the MIT
 License, keeping a copy of the repository LICENSE.
 
+skills/img2threejs is copied from https://github.com/img2threejs/img2threejs
+and is licensed under the Apache License, Version 2.0, keeping its LICENSE. It
+carries staged code-generation pipelines (Python/Node) from that project.
+
+skills/impeccable is copied from https://github.com/pbakaus/impeccable and is
+licensed under the Apache License, Version 2.0, keeping a copy of the repository
+LICENSE. Only the .claude/skills/impeccable directory is mirrored.
+
 skills/fire-your-seo-agency is copied from
 https://github.com/leopard627/fire-your-seo-agency and is licensed under the MIT
 License, keeping its original LICENSE file. The 1.25 MB marketing preview image
