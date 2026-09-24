@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-100 skills, one glyph each. Click any name for its install command.
+101 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -161,6 +161,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/sync-shopshorts-higgs.svg" width="22" alt=""> | [**Shopping Shorts Workflow**](https://skill.metacog.co.kr/s/sync-shopshorts-higgs/)<br>`sync-shopshorts-higgs` | Turn a product URL into a Korean-market shopping short — crawl the product, profile the target persona, recommend script × preset, approve the scene map, then generate via Higgsfield. |
 | <img src="assets/icons/slack-gif-creator.svg" width="22" alt=""> | [**Slack GIF Creator**](https://skill.metacog.co.kr/s/slack-gif-creator/)<br>`slack-gif-creator` | Build animated GIFs sized for Slack — composable animation primitives plus validators for Slack's size constraints. |
 | <img src="assets/icons/video-shotcraft.svg" width="22" alt=""> | [**Video Shotcraft**](https://skill.metacog.co.kr/s/video-shotcraft/)<br>`video-shotcraft` | Turn a frontend project or webpage into a cinematic product video — Remotion with real page screenshots, 2.5D camera moves, beat-synced cuts and sound design, driven by shot recipe cards against a validated template. |
+| <img src="assets/icons/webtoon-harness.svg" width="22" alt=""> | [**Webtoon Harness**](https://skill.metacog.co.kr/s/webtoon-harness/)<br>`webtoon-harness` — link only, guide on hub | A Claude Code harness — 27 agents and 6 skills — that produces one webtoon episode end to end: trend research → scenario → panel breakdown → panel render → a finished vertical-scroll HTML viewer, with a quality-review agent gating each stage. Driven by the webtoon-orchestrator skill. |
 
 ### Research
 

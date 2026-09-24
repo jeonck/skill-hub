@@ -1246,6 +1246,21 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "webtoon-harness": {
+      "title": "Webtoon Harness",
+      "category": "Media & Video",
+      "summary": "A Claude Code harness — 27 agents and 6 skills — that produces one webtoon episode end to end: trend research → scenario → panel breakdown → panel render → a finished vertical-scroll HTML viewer, with a quality-review agent gating each stage. Driven by the webtoon-orchestrator skill.",
+      "tags": [
+        "webtoon",
+        "multi-agent",
+        "comics",
+        "pipeline"
+      ],
+      "origin": "external",
+      "output_language": "ko",
+      "external_url": "https://github.com/jeonck/webtoon-harness",
+      "external_note": "A 27-agent + 6-skill harness (MIT); used from a clone, so linked rather than mirrored per-skill."
+    },
     "write-swift": {
       "title": "Write Modern Swift",
       "summary": "How to write modern Swift well — value types, Swift 6 data-race safety and approachable concurrency, protocols and generics, API design, ARC and performance, Swift Testing and macros, including the language features agents don't know yet.",
