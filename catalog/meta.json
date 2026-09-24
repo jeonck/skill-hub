@@ -1282,6 +1282,21 @@
       ],
       "origin": "obra",
       "output_language": "en"
+    },
+    "yylo-skills": {
+      "title": "YYLO Skills",
+      "summary": "YYLO's official skills pack — 8 skills for coding-agent projects: Kanban and task planning on a hash-chained Markdown ledger, durable wiki records, workflow and artifact receipts, a guided implementation loop, and pre-change architecture inspection. Installable via npx skills or the yylo CLI.",
+      "category": "Dev Tooling",
+      "tags": [
+        "coding-agents",
+        "kanban",
+        "workflow",
+        "ledger"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/yylo-dev/yylo-skills",
+      "external_note": "An 8-skill pack (MIT) with its own npx skills install flow; coordinated, cross-referenced skills, so linked to upstream."
     }
   }
 }

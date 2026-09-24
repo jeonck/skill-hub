@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-100 skills, one glyph each. Click any name for its install command.
+101 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -150,6 +150,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/write-swift.svg" width="22" alt=""> | [**Write Modern Swift**](https://skill.metacog.co.kr/s/write-swift/)<br>`write-swift` | How to write modern Swift well — value types, Swift 6 data-race safety and approachable concurrency, protocols and generics, API design, ARC and performance, Swift Testing and macros, including the language features agents don't know yet. |
 | <img src="assets/icons/writing-plans.svg" width="22" alt=""> | [**Writing Plans**](https://skill.metacog.co.kr/s/writing-plans/)<br>`writing-plans` | Turn a spec or set of requirements into a written multi-step implementation plan before touching code. |
 | <img src="assets/icons/writing-skills.svg" width="22" alt=""> | [**Writing Skills**](https://skill.metacog.co.kr/s/writing-skills/)<br>`writing-skills` | Create, edit and verify Claude skills before deploying them. |
+| <img src="assets/icons/yylo-skills.svg" width="22" alt=""> | [**YYLO Skills**](https://github.com/yylo-dev/yylo-skills)<br>`yylo-skills` — link only, not mirrored | YYLO's official skills pack — 8 skills for coding-agent projects: Kanban and task planning on a hash-chained Markdown ledger, durable wiki records, workflow and artifact receipts, a guided implementation loop, and pre-change architecture inspection. Installable via npx skills or the yylo CLI. |
 
 ### Media & Video
 
