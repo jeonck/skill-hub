@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-101 skills, one glyph each. Click any name for its install command.
+102 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -60,6 +60,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 | | Skill | What it does |
 | :-: | --- | --- |
+| <img src="assets/icons/book-writer.svg" width="22" alt=""> | [**Book Writer**](https://skill.metacog.co.kr/s/book-writer/)<br>`book-writer` — link only, guide on hub | A Claude Code harness — 14 agents and 15 skills — that takes a topic to a finished EPUB: research (web/paper/community) → plan → chapter drafting → editing → continuity and fact-check → cover → EPUB build, with review gates between stages. Driven by the book-writing-orchestrator skill. |
 | <img src="assets/icons/us-work-english-idiom-section.svg" width="22" alt=""> | [**Business Idiom Section**](https://skill.metacog.co.kr/s/us-work-english-idiom-section/)<br>`us-work-english-idiom-section` | Write a business-idiom section as collapsible blocks — one bold English line and a single key bullet per expression, nothing else. |
 | <img src="assets/icons/ccnp-ccie-writer.svg" width="22" alt=""> | [**CCNP / CCIE Knowledge Writer**](https://skill.metacog.co.kr/s/ccnp-ccie-writer/)<br>`ccnp-ccie-writer` | Write Cisco CCNP/CCIE knowledge-base docs in a fixed structure — definition, characteristics, components, packet flow, comparison tables, config and exam points — with Mermaid diagrams. |
 | <img src="assets/icons/cisa-content-writer.svg" width="22" alt=""> | [**CISA Content Writer**](https://skill.metacog.co.kr/s/cisa-content-writer/)<br>`cisa-content-writer` | Author CISA (IS audit) best-practice guides across the six ISACA domains — a standard 10-section layout with Mermaid diagrams and HTML audit checklists. |

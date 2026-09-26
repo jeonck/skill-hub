@@ -194,6 +194,21 @@
       "origin": "virgiliojr94",
       "output_language": "en"
     },
+    "book-writer": {
+      "title": "Book Writer",
+      "category": "Content & Writing",
+      "summary": "A Claude Code harness — 14 agents and 15 skills — that takes a topic to a finished EPUB: research (web/paper/community) → plan → chapter drafting → editing → continuity and fact-check → cover → EPUB build, with review gates between stages. Driven by the book-writing-orchestrator skill.",
+      "tags": [
+        "book",
+        "epub",
+        "multi-agent",
+        "writing"
+      ],
+      "origin": "external",
+      "output_language": "en",
+      "external_url": "https://github.com/tobyilee/book-writer",
+      "external_note": "A 14-agent + 15-skill harness (MIT); used from a clone, so linked rather than mirrored per-skill."
+    },
     "brainstorming": {
       "title": "Brainstorming",
       "summary": "Explore intent, requirements and design before any implementation, so creative work starts from a settled brief rather than a guess.",

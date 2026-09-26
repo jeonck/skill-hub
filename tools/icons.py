@@ -244,6 +244,9 @@ ICONS: dict[str, str] = {
     "webtoon-scroll": '<rect x="6" y="2.5" width="12" height="19" rx="1.5"/>'
                       '<path d="M8.5 5.5h7"/><path d="M8.5 9h7v3.5h-7z"/><path d="M8.5 15h7M8.5 17.5h4.5"/>'
                       '<path d="M20 9.5v5l-1.5-1.5M20 14.5l1.5-1.5" fill="none"/>',
+    "book-build": '<path d="M4 4.5A2 2 0 016 3h6.5v15H6a2 2 0 00-2 1.2z"/>'
+                  '<path d="M20 4.5A2 2 0 0018 3h-5.5v15H18a2 2 0 012 1.2z"/>'
+                  '<path d="M12.5 21.5l2-2 2 2v-4h-4z"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -275,6 +278,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "book-writer": "book-build",
     "webtoon-harness": "webtoon-scroll",
     "img2threejs": "cube-3d",
     "impeccable": "diamond-check",
