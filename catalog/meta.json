@@ -776,6 +776,19 @@
       "origin": "jeonck",
       "output_language": "ko"
     },
+    "jevgrep": {
+      "title": "Jevgrep",
+      "category": "Dev Tooling",
+      "summary": "Find code by asking what it does — the `jg` CLI uses the Jev relevance model to walk folders, files and declarations and returns a ranked file list plus verbatim source excerpts, so a coding agent starts from the right files. Upstream measured ~26% lower total agent cost at the same solve rate on 10 SWE-bench tasks. Needs Node 22+ and a Vercel AI Gateway, TypeSafe, OpenRouter or OpenCode Zen key; searched source is sent to the provider.",
+      "tags": [
+        "code-search",
+        "cli",
+        "agent",
+        "cost"
+      ],
+      "origin": "dzhng",
+      "output_language": "en"
+    },
     "lotusdocs-kb-builder": {
       "title": "Lotus Docs KB Builder",
       "summary": "Build a documentation or knowledge-base site on Hugo's Lotus Docs theme (installed as a Hugo Module) and deploy it to GitHub Pages, custom domain included. Topic-agnostic.",

@@ -670,6 +670,7 @@ ORIGINS = {
     "premdevai": ("Brutal Skills", "https://github.com/premdevai/brutal-claude-skills", "MIT"),
     "img2threejs": ("img2threejs", "https://github.com/img2threejs/img2threejs", "Apache-2.0"),
     "pbakaus": ("Impeccable", "https://github.com/pbakaus/impeccable", "Apache-2.0"),
+    "dzhng": ("dzhng", "https://github.com/dzhng/jevgrep", "MIT"),
     "leopard627": ("leopard627", "https://github.com/leopard627/fire-your-seo-agency", "MIT"),
     "uizze": ("UIZZE", "https://github.com/uizze/uizze", "MIT"),
     "vercel-labs": ("Vercel", "https://github.com/vercel-labs/skills", "MIT"),
