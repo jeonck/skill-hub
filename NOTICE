@@ -98,6 +98,10 @@ skills/brutal-code-reviewer is copied from
 https://github.com/premdevai/brutal-claude-skills and is licensed under the MIT
 License, keeping a copy of the repository LICENSE.
 
+skills/notebooklm is copied from https://github.com/teng-lin/notebooklm-py
+(MIT); only its SKILL.md and LICENSE are mirrored. The notebooklm-py Python
+package itself is installed separately by the user (pip).
+
 skills/img2threejs is copied from https://github.com/img2threejs/img2threejs
 and is licensed under the Apache License, Version 2.0, keeping its LICENSE. It
 carries staged code-generation pipelines (Python/Node) from that project.

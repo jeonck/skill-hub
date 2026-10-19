@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-103 skills, one glyph each. Click any name for its install command.
+104 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -170,6 +170,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/hyperresearch.svg" width="22" alt=""> | [**HyperResearch Pipeline**](https://skill.metacog.co.kr/s/hyperresearch/)<br>`hyperresearch` | A Claude Code research harness: installs a /hyperresearch entry skill plus 16 step skills, then runs decompose → width sweep → depth → synthesis, where 4 parallel adversarial critics only file findings and a patcher applies them as surgical edits instead of regenerating the draft. |
+| <img src="assets/icons/notebooklm.svg" width="22" alt=""> | [**NotebookLM (notebooklm-py)**](https://skill.metacog.co.kr/s/notebooklm/)<br>`notebooklm` | Drive Google's Gemini Notebook (NotebookLM) programmatically through the notebooklm-py CLI and typed async Python API — notebook and source management, grounded chat and research, and artifact generation or download, including capabilities the web UI doesn't expose. Install/auth/troubleshoot covered. |
 | <img src="assets/icons/research-agent-team.svg" width="22" alt=""> | [**Research Agent Team**](https://skill.metacog.co.kr/s/research-agent-team/)<br>`research-agent-team` | Run an 8-agent research pipeline — Orchestrator, 3 Researchers, 2 Fact-Checkers, Writer, Gatekeeper — applying MECE and the Pyramid Principle to produce a sourced consulting-style report. |
 
 ### Sites & Docs

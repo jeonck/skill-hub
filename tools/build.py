@@ -668,6 +668,7 @@ ORIGINS = {
     "epoko77": ("I'm Not AI", "https://github.com/epoko77-ai/im-not-ai", "MIT"),
     "proffesor-for-testing": ("Agentic QE", "https://github.com/proffesor-for-testing/agentic-qe", "MIT"),
     "premdevai": ("Brutal Skills", "https://github.com/premdevai/brutal-claude-skills", "MIT"),
+    "teng-lin": ("teng-lin", "https://github.com/teng-lin/notebooklm-py", "MIT"),
     "img2threejs": ("img2threejs", "https://github.com/img2threejs/img2threejs", "Apache-2.0"),
     "pbakaus": ("Impeccable", "https://github.com/pbakaus/impeccable", "Apache-2.0"),
     "dzhng": ("dzhng", "https://github.com/dzhng/jevgrep", "MIT"),

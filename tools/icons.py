@@ -247,6 +247,12 @@ ICONS: dict[str, str] = {
     "book-build": '<path d="M4 4.5A2 2 0 016 3h6.5v15H6a2 2 0 00-2 1.2z"/>'
                   '<path d="M20 4.5A2 2 0 0018 3h-5.5v15H18a2 2 0 012 1.2z"/>'
                   '<path d="M12.5 21.5l2-2 2 2v-4h-4z"/>',
+    "notebook-spark": '<path d="M6 3h11a1.5 1.5 0 011.5 1.5v15a1.5 1.5 0 01-1.5 1.5H6z"/>'
+                      '<path d="M6 3v18"/><path d="M3.5 7h2.5M3.5 12h2.5M3.5 17h2.5"/>'
+                      '<path d="M13 7.5l.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9.9-2.3z"/>',
+    "code-search": '<path d="M7.5 7L4.5 10l3 3"/><path d="M14 7l3 3-3 3"/>'
+                   '<path d="M11.5 5.5l-2 9"/>'
+                   '<circle cx="16.5" cy="16.5" r="3"/><path d="M18.6 18.6L21 21"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -278,7 +284,8 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
-    "jevgrep": "search",
+    "notebooklm": "notebook-spark",
+    "jevgrep": "code-search",
     "book-writer": "book-build",
     "webtoon-harness": "webtoon-scroll",
     "img2threejs": "cube-3d",
