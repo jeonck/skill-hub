@@ -154,6 +154,19 @@ License, keeping a copy of that repository's LICENSE. Only skill/SKILL.md is
 mirrored; the `bsk` CLI and the browser extension it drives are installed
 separately from upstream.
 
+skills/council is copied from
+https://github.com/0xNyk/council-of-high-intelligence (Copyright (c) 2026 nyk)
+at commit 34fd7bb and is likewise licensed under the MIT License, keeping its
+original LICENSE. Only the Claude Code path is mirrored -- SKILL.md, the 18
+agents/council-*.md subagent definitions, scripts/detect-providers.sh and
+configs/*.yaml -- not the repo's Codex/Gemini/OpenCode variants, demos, or
+maintainer tooling (star-history, roster validation).
+
+The 18 agents/*.md files are symlinked into .claude/agents/ rather than nested
+under .claude/skills/council/, because that is where Claude Code's Task tool
+looks for a named subagent; see skills/council/README.md and
+tools/link_skills.py.
+
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.

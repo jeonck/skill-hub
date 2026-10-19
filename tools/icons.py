@@ -284,6 +284,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "council": "interrogate",
     "notebooklm": "notebook-spark",
     "jevgrep": "code-search",
     "book-writer": "book-build",

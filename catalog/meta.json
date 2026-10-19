@@ -393,6 +393,19 @@
       "external_url": "https://github.com/everyinc/compound-engineering-plugin",
       "external_note": "A 35-skill plugin (MIT); large to mirror per-skill, so linked to upstream. Install via its own plugin flow or npx skills."
     },
+    "council": {
+      "title": "Council of High Intelligence",
+      "summary": "Convene 18 historical-thinker subagents (Socrates, Feynman, Kahneman, Torvalds, Taleb and more, each a distinct reasoning method) to deliberate a hard decision — independent analysis, anonymized cross-examination with enforced dissent, confidence-weighted tiebreaking, a Chairman's verdict and Minority Report. Needs real subagents installed, not just the skill — see its README.",
+      "category": "Research",
+      "tags": [
+        "decision-making",
+        "multi-agent",
+        "deliberation",
+        "subagents"
+      ],
+      "origin": "0xnyk",
+      "output_language": "en"
+    },
     "daily-diary-pipeline": {
       "title": "Daily Diary Pipeline",
       "summary": "Scaffold a pipeline where editing one line in a GitHub file triggers a scheduled Claude run that writes a post and publishes it to Hugo + GitHub Pages.",
