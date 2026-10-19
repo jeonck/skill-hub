@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-105 skills, one glyph each. Click any name for its install command.
+106 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -133,6 +133,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/find-skills.svg" width="22" alt=""> | [**Find Skills**](https://skill.metacog.co.kr/s/find-skills/)<br>`find-skills` | Vercel's official skill-discovery helper — when you ask "is there a skill for X" or "how do I do Y", it finds and installs matching agent skills via the open `npx skills` tool. |
 | <img src="assets/icons/finishing-a-development-branch.svg" width="22" alt=""> | [**Finishing a Development Branch**](https://skill.metacog.co.kr/s/finishing-a-development-branch/)<br>`finishing-a-development-branch` | Decide how to integrate finished work once implementation is complete and the tests pass. |
 | <img src="assets/icons/output-skill.svg" width="22" alt=""> | [**Full Output Enforcement**](https://skill.metacog.co.kr/s/output-skill/)<br>`output-skill` | Override default truncation behavior — enforce complete code generation, ban placeholder patterns, and handle token-limit splits cleanly. |
+| <img src="assets/icons/insane-search.svg" width="22" alt=""> | [**Insane Search**](https://skill.metacog.co.kr/s/insane-search/)<br>`insane-search` | Fetch public web content that WAFs and bot-protection block from generic HTTP clients — an adaptive fetch chain (curl_cffi TLS impersonation, mobile-URL transforms, real-Chrome Playwright) plus yt-dlp, Jina Reader and public APIs, across X, Reddit, YouTube, Naver, LinkedIn and more. Public content only: it stops at logins and paywalls. Dual-use — authorized use and ToS/robots compliance are the operator's responsibility. |
 | <img src="assets/icons/jevgrep.svg" width="22" alt=""> | [**Jevgrep**](https://skill.metacog.co.kr/s/jevgrep/)<br>`jevgrep` | Find code by asking what it does — the `jg` CLI uses the Jev relevance model to walk folders, files and declarations and returns a ranked file list plus verbatim source excerpts, so a coding agent starts from the right files. Upstream measured ~26% lower total agent cost at the same solve rate on 10 SWE-bench tasks. Needs Node 22+ and a Vercel AI Gateway, TypeSafe, OpenRouter or OpenCode Zen key; searched source is sent to the provider. |
 | <img src="assets/icons/markitdown-convert.svg" width="22" alt=""> | [**MarkItDown Convert**](https://skill.metacog.co.kr/s/markitdown-convert/)<br>`markitdown-convert` | Drive microsoft/markitdown to turn PDF, Word, PowerPoint, Excel, images, audio, HTML, CSV/JSON/XML, ZIP, EPUB and YouTube URLs into LLM-ready Markdown — CLI, batch folders, Python API, and the Azure Document Intelligence and Content Understanding paths when local conversion is not enough. |
 | <img src="assets/icons/mcp-builder.svg" width="22" alt=""> | [**MCP Builder**](https://skill.metacog.co.kr/s/mcp-builder/)<br>`mcp-builder` | Build high-quality MCP servers that expose external APIs to LLMs through well-designed tools — in Python (FastMCP) or Node/TypeScript (MCP SDK). |

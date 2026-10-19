@@ -98,6 +98,12 @@ skills/brutal-code-reviewer is copied from
 https://github.com/premdevai/brutal-claude-skills and is licensed under the MIT
 License, keeping a copy of the repository LICENSE.
 
+skills/insane-search is copied from https://github.com/fivetaku/insane-search
+(Copyright (c) 2026 fivetaku) and is licensed under the MIT License, keeping its
+LICENSE and DISCLAIMER. It is a dual-use web-fetch tool for public content; its
+engine/ is executable Python that auto-installs browser dependencies on first
+run, and the 5 MB of marketing images are not mirrored.
+
 skills/notebooklm is copied from https://github.com/teng-lin/notebooklm-py
 (MIT); only its SKILL.md and LICENSE are mirrored. The notebooklm-py Python
 package itself is installed separately by the user (pip).

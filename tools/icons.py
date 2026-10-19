@@ -253,6 +253,9 @@ ICONS: dict[str, str] = {
     "code-search": '<path d="M7.5 7L4.5 10l3 3"/><path d="M14 7l3 3-3 3"/>'
                    '<path d="M11.5 5.5l-2 9"/>'
                    '<circle cx="16.5" cy="16.5" r="3"/><path d="M18.6 18.6L21 21"/>',
+    "search-unlock": '<circle cx="10" cy="10" r="6"/><path d="M14.5 14.5L20 20"/>'
+                     '<rect x="7.8" y="9.3" width="4.4" height="3.4" rx="0.6"/>'
+                     '<path d="M8.8 9.3V8.2a1.2 1.2 0 012.2-.7"/>',
     # ---- structure / infra
     "network": '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18.5" r="2.2"/>'
                '<circle cx="19" cy="18.5" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.4 16.7"/>'
@@ -285,6 +288,7 @@ ICONS: dict[str, str] = {
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
     "council": "interrogate",
+    "insane-search": "search-unlock",
     "notebooklm": "notebook-spark",
     "jevgrep": "code-search",
     "book-writer": "book-build",

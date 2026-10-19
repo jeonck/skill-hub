@@ -764,6 +764,19 @@
       "origin": "emilkowalski",
       "output_language": "en"
     },
+    "insane-search": {
+      "title": "Insane Search",
+      "category": "Dev Tooling",
+      "summary": "Fetch public web content that WAFs and bot-protection block from generic HTTP clients — an adaptive fetch chain (curl_cffi TLS impersonation, mobile-URL transforms, real-Chrome Playwright) plus yt-dlp, Jina Reader and public APIs, across X, Reddit, YouTube, Naver, LinkedIn and more. Public content only: it stops at logins and paywalls. Dual-use — authorized use and ToS/robots compliance are the operator's responsibility.",
+      "tags": [
+        "web-fetch",
+        "scraping",
+        "waf",
+        "dual-use"
+      ],
+      "origin": "fivetaku",
+      "output_language": "en"
+    },
     "internal-comms": {
       "title": "Internal Comms",
       "summary": "Write internal communications in house formats — status reports, leadership updates, newsletters, FAQs, incident reports and project updates.",
