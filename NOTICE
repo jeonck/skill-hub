@@ -173,6 +173,14 @@ under .claude/skills/council/, because that is where Claude Code's Task tool
 looks for a named subagent; see skills/council/README.md and
 tools/link_skills.py.
 
+skills/cybersecurity is copied from
+https://github.com/AgriciDaniel/claude-cybersecurity (Copyright (c) 2026
+AgriciDaniel) at commit bcc9638 and is likewise licensed under the MIT
+License, keeping its original LICENSE. Only skills/cybersecurity/ (SKILL.md +
+references/) is mirrored; the repo's install/uninstall scripts, its own
+self-audit report, and its README banner assets are not. Upstream ships a
+checksums.sha256 over these same files -- verified against it before copying.
+
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.

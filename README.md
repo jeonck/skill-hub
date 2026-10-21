@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-106 skills, one glyph each. Click any name for its install command.
+107 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -127,6 +127,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | <img src="assets/icons/brutal-honesty-review.svg" width="22" alt=""> | [**Brutal Honesty Review**](https://skill.metacog.co.kr/s/brutal-honesty-review/)<br>`brutal-honesty-review` | Unvarnished technical criticism — Linus Torvalds' precision, Gordon Ramsay's standards, James Bach's BS-detection. Surgical, no sugar-coating: what is broken in your code, tests or technical decisions, and why. Ships assessment scripts and rubrics. |
 | <img src="assets/icons/claude-red.svg" width="22" alt=""> | [**Claude-Red (Offensive Security)**](https://skill.metacog.co.kr/s/claude-red/)<br>`claude-red` — link only, guide on hub | A curated library of 78 offensive-security skills for authorized red-team and pentest work — web (SQLi, SSRF, XSS, SSTI, deserialization…), cloud, containers/K8s, AD, wireless, exploit development, EDR evasion and more, each a SKILL.md priming Claude with methodology for one attack surface. |
 | <img src="assets/icons/compound-engineering.svg" width="22" alt=""> | [**Compound Engineering**](https://github.com/everyinc/compound-engineering-plugin)<br>`compound-engineering` — link only, not mirrored | Every's official Compound Engineering plugin — 35 skills that turn each solved problem into durable, reusable repo knowledge: capture non-obvious reasoning (ce-compound), plus review, debug, planning, commit/PR and brainstorm workflows built around it. |
+| <img src="assets/icons/cybersecurity.svg" width="22" alt=""> | [**Cybersecurity Code Audit**](https://skill.metacog.co.kr/s/cybersecurity/)<br>`cybersecurity` | Spawn 8 parallel specialist agents over a codebase — vulnerability detection (OWASP Top 10, CWE Top 25), authz review, secrets, dependency/supply-chain, IaC, threat intel with MITRE ATT&CK mapping, AI-generated-code audit, compliance — then aggregate into a weighted 0-100 score with framework-aware false-positive suppression. Treats the scanned code as untrusted input and flags prompt-injection attempts in it as findings, not instructions. |
 | <img src="assets/icons/diagram-maker.svg" width="22" alt=""> | [**Diagram Maker**](https://skill.metacog.co.kr/s/diagram-maker/)<br>`diagram-maker` | Draw concepts, architecture, flows and whiteboards in three output modes — clean SVG for explanatory and process diagrams, architecture SVG for software and cloud infrastructure, and Excalidraw for a file someone can keep editing. |
 | <img src="assets/icons/dispatching-parallel-agents.svg" width="22" alt=""> | [**Dispatching Parallel Agents**](https://skill.metacog.co.kr/s/dispatching-parallel-agents/)<br>`dispatching-parallel-agents` | Split 2+ tasks that share no state or ordering across parallel agents instead of running them in sequence. |
 | <img src="assets/icons/executing-plans.svg" width="22" alt=""> | [**Executing Plans**](https://skill.metacog.co.kr/s/executing-plans/)<br>`executing-plans` | Work through a written implementation plan in a separate session, with review checkpoints between steps. |

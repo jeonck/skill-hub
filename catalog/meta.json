@@ -406,6 +406,20 @@
       "origin": "0xnyk",
       "output_language": "en"
     },
+    "cybersecurity": {
+      "title": "Cybersecurity Code Audit",
+      "summary": "Spawn 8 parallel specialist agents over a codebase — vulnerability detection (OWASP Top 10, CWE Top 25), authz review, secrets, dependency/supply-chain, IaC, threat intel with MITRE ATT&CK mapping, AI-generated-code audit, compliance — then aggregate into a weighted 0-100 score with framework-aware false-positive suppression. Treats the scanned code as untrusted input and flags prompt-injection attempts in it as findings, not instructions.",
+      "category": "Dev Tooling",
+      "tags": [
+        "security",
+        "owasp",
+        "audit",
+        "vulnerability",
+        "compliance"
+      ],
+      "origin": "agricidaniel",
+      "output_language": "en"
+    },
     "daily-diary-pipeline": {
       "title": "Daily Diary Pipeline",
       "summary": "Scaffold a pipeline where editing one line in a GitHub file triggers a scheduled Claude run that writes a post and publishes it to Hugo + GitHub Pages.",
