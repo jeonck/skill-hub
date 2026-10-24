@@ -45,7 +45,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 
 <!-- icons:start -->
 
-107 skills, one glyph each. Click any name for its install command.
+108 skills, one glyph each. Click any name for its install command.
 
 ### Automation Pipelines
 
@@ -78,6 +78,7 @@ cp -r skill-hub/skills/* ~/.claude/skills/
 | | Skill | What it does |
 | :-: | --- | --- |
 | <img src="assets/icons/algorithmic-art.svg" width="22" alt=""> | [**Algorithmic Art**](https://skill.metacog.co.kr/s/algorithmic-art/)<br>`algorithmic-art` | Generative art with p5.js — seeded randomness, flow fields, particle systems, and an interactive parameter-exploration loop. |
+| <img src="assets/icons/anatomy.svg" width="22" alt=""> | [**Anatomy Isometric Figures**](https://skill.metacog.co.kr/s/anatomy/)<br>`anatomy` | Build crafted, highly detailed isometric SVG figures that explain a technical idea as a real physical object — a dial gauge, a rocket engine on a test stand, an arcade cabinet — with hundreds of precise parts, correct painter's order, calm eased motion, optional WebGL shaders and 3D, and a zero-tolerance geometry audit before anything ships. Needs Node.js 20.10+ and Chrome/Chromium for the checks. |
 | <img src="assets/icons/animate.svg" width="22" alt=""> | [**Animate**](https://skill.metacog.co.kr/s/animate/)<br>`animate` | Build a web animation from scratch by making the decisions in the order that settles whether it feels right — whether to animate at all, which tool, which properties, which curve, how it interrupts and exits — then write the implementation. |
 | <img src="assets/icons/animate-expo.svg" width="22" alt=""> | [**Animate in Expo**](https://skill.metacog.co.kr/s/animate-expo/)<br>`animate-expo` | The same animation decision order for React Native and Expo — which thread it runs on, spring or timing, how the gesture hands off, how it degrades — implemented with Reanimated, Gesture Handler, Expo Router and expo-haptics. |
 | <img src="assets/icons/animation-vocabulary.svg" width="22" alt=""> | [**Animation Vocabulary**](https://skill.metacog.co.kr/s/animation-vocabulary/)<br>`animation-vocabulary` | Reverse-lookup glossary that turns a vague description of a motion effect into its exact term — "the bouncy thing when a popover opens" becomes Pop in, "the iOS rubber-band scroll" becomes Rubber-banding. |

@@ -181,6 +181,20 @@ references/) is mirrored; the repo's install/uninstall scripts, its own
 self-audit report, and its README banner assets are not. Upstream ships a
 checksums.sha256 over these same files -- verified against it before copying.
 
+skills/anatomy is copied from https://github.com/wheresryan22/anatomy
+(Copyright (c) 2026 Ryan) at commit 1482e84 and is likewise licensed under the
+MIT License, keeping its original LICENSE. Mirrored: SKILL.md, kit/,
+references/, the runtime (non-test) scripts/*.mjs, and examples/ with its
+generated PDF/WebP/PNG exports stripped (regenerate them with each example's
+own build.mjs). Not mirrored: tests/, evals/, the repo's own CI and GitHub
+issue templates, .github/assets/ (its README banners), and agents/openai.yaml
+(an OpenAI Agents SDK manifest; this catalog targets Claude Code). Verified
+before trimming: the vendored copy has zero third-party npm dependencies
+(Node built-ins plus its own kit, and `react` only for the optional
+kit/react/*.tsx) and makes no network calls; `node examples/dial-indicator/
+build.mjs` was run end-to-end from the vendored copy and produced a correct
+standalone SVG page.
+
 skills/archify is copied from https://github.com/tt-a1i/archify
 (Copyright (c) 2026 tt-a1i) and is likewise licensed under the MIT License,
 keeping its original LICENSE file.

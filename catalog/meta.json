@@ -35,6 +35,20 @@
       "origin": "anthropic",
       "output_language": "en"
     },
+    "anatomy": {
+      "title": "Anatomy Isometric Figures",
+      "summary": "Build crafted, highly detailed isometric SVG figures that explain a technical idea as a real physical object — a dial gauge, a rocket engine on a test stand, an arcade cabinet — with hundreds of precise parts, correct painter's order, calm eased motion, optional WebGL shaders and 3D, and a zero-tolerance geometry audit before anything ships. Needs Node.js 20.10+ and Chrome/Chromium for the checks.",
+      "category": "Design & UI",
+      "tags": [
+        "svg",
+        "isometric",
+        "illustration",
+        "webgl",
+        "diagrams"
+      ],
+      "origin": "wheresryan22",
+      "output_language": "en"
+    },
     "andrej-karpathy-skills": {
       "title": "Andrej Karpathy Guidelines",
       "summary": "Behavioural guidelines that head off the coding mistakes Karpathy flags in LLM output — overcomplication, sprawling edits, unstated assumptions, and success criteria nobody can verify.",

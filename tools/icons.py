@@ -91,6 +91,9 @@ ICONS: dict[str, str] = {
                   '<path d="M13.8 4l-3.6 16"/>',
     "shield-scan": '<path d="M11 3.3L5 5.8v4.6c0 3.6 2.4 6.5 6 7.8 1-.4 1.9-.9 2.7-1.5"/>'
                    '<circle cx="15.5" cy="15.5" r="4"/><path d="M18.3 18.3L20.5 20.5"/>',
+    "exploded-view": '<path d="M12 3l7 4v4l-7 4-7-4V7z"/>'
+                     '<path d="M12 11v9"/><path d="M5 7l7 4 7-4"/>'
+                     '<path d="M5 15.5l3 1.7M19 15.5l-3 1.7"/>',
     # ---- review / browser control
     "review-comment": '<path d="M4 5.5h10M4 9.5h7M4 13.5h5"/>'
                       '<path d="M13.5 20.5l-3.2 1 1-3.2 6.1-6.1a1.6 1.6 0 012.2 2.2l-6.1 6.1z"/>',
@@ -289,6 +292,7 @@ ICONS: dict[str, str] = {
 
 # Skill slug -> icon key. Every skill in the catalog must appear here.
 SKILL_ICONS: dict[str, str] = {
+    "anatomy": "exploded-view",
     "cybersecurity": "shield-scan",
     "council": "interrogate",
     "insane-search": "search-unlock",
